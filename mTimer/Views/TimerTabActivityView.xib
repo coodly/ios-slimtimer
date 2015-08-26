@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="a4N-bZ-iGg" customClass="TimerTabActivityView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view alpha="0.39999999999999963" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2XU-X3-TfF">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SMx-F7-9jm">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="3oU-Oa-bMN"/>
+                    </constraints>
+                </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="ZOG-3m-GQK">
+                    <rect key="frame" x="20" y="12" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="Cfv-15-1pF"/>
+                        <constraint firstAttribute="height" constant="20" id="aBD-in-GYA"/>
+                    </constraints>
+                </activityIndicatorView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Qt-ty-lSJ">
+                    <rect key="frame" x="48" y="11" width="252" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="aeO-Xc-5V3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="ZOG-3m-GQK" secondAttribute="centerY" id="Iho-9Q-lNw"/>
+                <constraint firstItem="SMx-F7-9jm" firstAttribute="top" secondItem="a4N-bZ-iGg" secondAttribute="top" id="Vb4-kQ-GIu"/>
+                <constraint firstAttribute="centerY" secondItem="5Qt-ty-lSJ" secondAttribute="centerY" id="byX-ta-HDm"/>
+                <constraint firstAttribute="trailing" secondItem="5Qt-ty-lSJ" secondAttribute="trailing" constant="20" id="c6S-YC-1Qr"/>
+                <constraint firstItem="5Qt-ty-lSJ" firstAttribute="leading" secondItem="ZOG-3m-GQK" secondAttribute="trailing" constant="8" id="dXA-7c-Ksp"/>
+                <constraint firstItem="2XU-X3-TfF" firstAttribute="top" secondItem="a4N-bZ-iGg" secondAttribute="top" id="frc-MW-PZY"/>
+                <constraint firstAttribute="bottom" secondItem="2XU-X3-TfF" secondAttribute="bottom" id="gqN-0l-JIc"/>
+                <constraint firstItem="ZOG-3m-GQK" firstAttribute="leading" secondItem="a4N-bZ-iGg" secondAttribute="leading" constant="20" id="n9K-0o-53q"/>
+                <constraint firstAttribute="trailing" secondItem="2XU-X3-TfF" secondAttribute="trailing" id="pb7-LL-HmX"/>
+                <constraint firstAttribute="trailing" secondItem="SMx-F7-9jm" secondAttribute="trailing" id="q1C-br-Hqb"/>
+                <constraint firstItem="SMx-F7-9jm" firstAttribute="leading" secondItem="a4N-bZ-iGg" secondAttribute="leading" id="tjT-gf-lgI"/>
+                <constraint firstItem="2XU-X3-TfF" firstAttribute="leading" secondItem="a4N-bZ-iGg" secondAttribute="leading" id="yLg-gC-wEv"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="messageLabel" destination="5Qt-ty-lSJ" id="tQV-5K-QOb"/>
+            </connections>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

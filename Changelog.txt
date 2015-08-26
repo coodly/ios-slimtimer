@@ -1,0 +1,16 @@
+Version 2.2
+Added: 1Password login
+Added: Support for iPhone6 and iPhone6+
+Changed: app icon
+Changed: history date format
+Fixed: Remove task that has been deleted on server
+
+Version 2.1.1
+Fixed: workaround on duplicate entries issue
+
+Version 2.1
+Added: add tasks from device
+Added: edit task name and default tags on device
+Fixed: comment disappears when marking task complete
+
+Version 2.0

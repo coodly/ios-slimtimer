@@ -1,0 +1,87 @@
+"add.tag.controller.title" = "Add tag";
+"add.tag.error.alert.title" = "Tag not added";
+"add.tag.error.dismiss.button" = "OK";
+"add.tag.exists.error.message" = "Tag with given name already exists";
+"add.tag.no.input.error.message" = "Please enter a value for tag";
+
+"day.entries.full.history.purchase.dismiss.button" = "OK";
+"day.entries.full.history.purchase.message" = "Please purchase access to full SlimTimer history. For that go into app settings. Thanx!";
+"day.entries.full.history.purchase.title" = "Full history access";
+"day.entries.loading.entries" = "Loading entries...";
+"day.entries.purchase.history.message" = "Purchase 'full history' for more details";
+
+"delete.task.confirmation.cancel.button" = "Cancel";
+"delete.task.confirmation.delete.button" = "Delete";
+"delete.task.entry.confirmation.message" = "Delete entry?";
+
+"edit.entry.controller.title" = "Edit entry";
+"edit.entry.end.time.label" = "End:";
+"edit.entry.start.time.label" = "Start:";
+"edit.entry.tags.title" = "Tags:";
+"edit.task.controller.add.title" = "Add task";
+"edit.task.controller.cancel.button.title" = "Cancel";
+"edit.task.controller.default.tags.section.title" = "Default tags";
+"edit.task.controller.done.button.title" = "Done";
+"edit.task.controller.edit.title" = "Edit task";
+"edit.task.controller.name.section.title" = "Task name";
+
+"history.controller.tab.title" = "History";
+"history.controller.today.button" = "Today";
+
+"login.controller.email.title" = "Email:";
+"login.controller.log.in.button" = "Log in";
+"login.controller.password.title" = "Password:";
+"login.controller.title" = "Log in";
+"login.entry.invalid.alert.dismiss.button" = "OK";
+"login.entry.invalid.alert.message" = "Please fill both email and pasword fields.";
+"login.entry.invalid.alert.title" = "Missing input";
+"login.error.dismiss.button.title" = "OK";
+"login.error.title" = "Login error";
+
+"manage.tasks.controller.done.button.title" = "Done";
+"manage.tasks.controller.title" = "Manage";
+"manage.tasks.pull.error.dismiss.button" = "OK";
+"manage.tasks.pull.error.title" = "Could not refresh tasks";
+
+"server.error.authentication.failed" = "Authentication failed";
+
+"settings.controller.cant.make.payments.error.dismiss.button" = "OK";
+"settings.controller.cant.make.payments.error.message" = "Payments are not available on this device.";
+"settings.controller.cant.make.payments.error.title" = "Can't make purchase";
+"settings.controller.cant.send.email.confirm.button" = "OK";
+"settings.controller.cant.send.email.message" = "Please check your settings.";
+"settings.controller.cant.send.email.title" = "Can't send email";
+"settings.controller.feedback.email.subject" = "mTimer feedback";
+"settings.controller.logout.button" = "Log out";
+"settings.controller.logout.cancel.button" = "Cancel";
+"settings.controller.logout.confirm.message" = "Are you sure you wish to log out?";
+"settings.controller.logout.confirm.title" = "Log out?";
+"settings.controller.payment.failed.dismiss.button" = "OK";
+"settings.controller.payment.failed.title" = "Payment failed";
+"settings.controller.products.full.history" = "Access full history";
+"settings.controller.products.remove.ads" = "Remove ads";
+"settings.controller.pull.products.error.dismiss.button" = "OK";
+"settings.controller.pull.products.error.message" = "Could not access in-app purchases. Please try again later.";
+"settings.controller.pull.products.error.title" = "Products error";
+"settings.controller.rate.app.button" = "Rate mTimer on AppStore";
+"settings.controller.restore.failed.dismiss.button" = "OK";
+"settings.controller.restore.failed.title" = "Restore failed";
+"settings.controller.restore.purchases" = "Restore purchases";
+"settings.controller.send.email.error.button.ok" = "OK";
+"settings.controller.send.email.error.message" = "Email could not be sent. Please try again later.";
+"settings.controller.send.email.error.title" = "Email not sent";
+"settings.controller.send.feedback.button" = "Send feedback to developer";
+"settings.controller.show.complete.tasks.label" = "Show complete tasks";
+"settings.controller.title" = "Settings";
+
+"tags.controller.title" = "Tags";
+
+"task.comment.entry.done.button.title" = "Done";
+"task.selection.controller.title" = "Tasks";
+
+"tasks.list.controller.manage.tasks.button" = "Manage";
+"tasks.list.controller.refreshing.message" = "Checking tasks...";
+"tasks.list.controller.tab.title" = "Tasks";
+"tasks.list.controller.title" = "Tasks";
+"tasks.list.pull.error.dismiss.button" = "OK";
+"tasks.list.pull.error.title" = "Could not pull tasks";

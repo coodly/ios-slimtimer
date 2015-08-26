@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13A603" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Day" representedClassName="Day" syncable="YES">
+        <attribute name="value" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="month" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Month" inverseName="days" inverseEntity="Month" syncable="YES"/>
+    </entity>
+    <entity name="Month" representedClassName="Month" syncable="YES">
+        <attribute name="value" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="days" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Day" inverseName="month" inverseEntity="Day" syncable="YES"/>
+        <relationship name="year" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Year" inverseName="months" inverseEntity="Year" syncable="YES"/>
+    </entity>
+    <entity name="Setting" representedClassName="Setting" syncable="YES">
+        <attribute name="key" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SyncStatus" representedClassName="SyncStatus" syncable="YES">
+        <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="syncFailed" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="syncNeeded" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <relationship name="statusForEntry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TimeEntry" inverseName="syncStatus" inverseEntity="TimeEntry" syncable="YES"/>
+        <relationship name="statusForReport" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="TimeReport" inverseName="syncStatus" inverseEntity="TimeReport" syncable="YES"/>
+    </entity>
+    <entity name="Tag" representedClassName="Tag" syncable="YES">
+        <attribute name="value" attributeType="String" syncable="YES"/>
+        <relationship name="defaultForTasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="defaultTags" inverseEntity="Task" syncable="YES"/>
+        <relationship name="usedForEntries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TimeEntry" inverseName="tags" inverseEntity="TimeEntry" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="tags" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Task" representedClassName="Task" syncable="YES">
+        <attribute name="complete" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="hidden" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="taskId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="touchedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="defaultTags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="defaultForTasks" inverseEntity="Tag" syncable="YES"/>
+        <relationship name="timeEntry" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="TimeEntry" inverseName="task" inverseEntity="TimeEntry" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="tasks" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="TimeEntry" representedClassName="TimeEntry" syncable="YES">
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="markedForDeletion" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="remoteId" optional="YES" attributeType="Integer 32" syncable="YES"/>
+        <attribute name="startTime" attributeType="Date" syncable="YES"/>
+        <attribute name="touchedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="syncStatus" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SyncStatus" inverseName="statusForEntry" inverseEntity="SyncStatus" syncable="YES"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="usedForEntries" inverseEntity="Tag" syncable="YES"/>
+        <relationship name="task" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="timeEntry" inverseEntity="Task" syncable="YES"/>
+    </entity>
+    <entity name="TimeReport" representedClassName="TimeReport" syncable="YES">
+        <attribute name="seconds" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="syncStatus" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SyncStatus" inverseName="statusForReport" inverseEntity="SyncStatus" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="userId" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Tag" inverseName="user" inverseEntity="Tag" syncable="YES"/>
+        <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Task" inverseName="user" inverseEntity="Task" syncable="YES"/>
+        <relationship name="years" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Year" inverseName="user" inverseEntity="Year" syncable="YES"/>
+    </entity>
+    <entity name="Year" representedClassName="Year" syncable="YES">
+        <attribute name="value" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="months" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Month" inverseName="year" inverseEntity="Month" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="years" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Day" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Month" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Setting" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="SyncStatus" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Tag" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Task" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="TimeEntry" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="User" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Year" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="TimeReport" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>
