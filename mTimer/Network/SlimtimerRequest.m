@@ -23,6 +23,7 @@
 #import "SlimtimerResponse.h"
 #import "NSString+UrlEncode.h"
 #import "JCSFoundationConstants.h"
+#import "Secrets.h"
 
 @interface SlimtimerRequest ()
 

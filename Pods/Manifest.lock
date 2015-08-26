@@ -20,11 +20,113 @@ PODS:
   - AFNetworking/UIKit (2.4.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - CDYFoundation (0.1.0):
+    - CDYFoundation/Base (= 0.1.0)
+    - CDYFoundation/Extensions (= 0.1.0)
+    - CDYFoundation/ViewControllers (= 0.1.0)
+    - CDYFoundation/Views (= 0.1.0)
+  - CDYFoundation/Base (0.1.0)
+  - CDYFoundation/Extensions (0.1.0)
+  - CDYFoundation/ViewControllers (0.1.0)
+  - CDYFoundation/Views (0.1.0)
+  - CDYObjectModel (1.0):
+    - CDYObjectModel/Core (= 1.0)
+  - CDYObjectModel/Core (1.0)
+  - Crashlytics (3.1.1)
+  - Fabric (1.4.0):
+    - Fabric/Base (= 1.4.0)
+  - Fabric/Base (1.4.0)
+  - Google-AdMob-Ads-SDK (6.12.2)
+  - JCSFoundation/Core (0.1.0)
+  - JCSFoundation/CoreData (0.1.0):
+    - JCSFoundation/Core
+  - JCSFoundation/PopupViews (0.1.0):
+    - JCSFoundation/Core
+  - JCSFoundation/UserInput (0.1.0):
+    - JCSFoundation/Core
+  - MRProgress (0.8.2):
+    - MRProgress/ActivityIndicator (= 0.8.2)
+    - MRProgress/Blur (= 0.8.2)
+    - MRProgress/Circular (= 0.8.2)
+    - MRProgress/Icons (= 0.8.2)
+    - MRProgress/NavigationBarProgress (= 0.8.2)
+    - MRProgress/Overlay (= 0.8.2)
+  - MRProgress/ActivityIndicator (0.8.2):
+    - MRProgress/Stopable
+  - MRProgress/Blur (0.8.2):
+    - MRProgress/Helper
+  - MRProgress/Circular (0.8.2):
+    - MRProgress/Helper
+    - MRProgress/ProgressBaseClass
+    - MRProgress/Stopable
+  - MRProgress/Helper (0.8.2)
+  - MRProgress/Icons (0.8.2)
+  - MRProgress/NavigationBarProgress (0.8.2):
+    - MRProgress/ProgressBaseClass
+  - MRProgress/Overlay (0.8.2):
+    - MRProgress/ActivityIndicator
+    - MRProgress/Blur
+    - MRProgress/Circular
+    - MRProgress/Helper
+    - MRProgress/Icons
+  - MRProgress/ProgressBaseClass (0.8.2)
+  - MRProgress/Stopable (0.8.2):
+    - MRProgress/Helper
+  - NSString-UrlEncode (2.0.0)
+  - OpenSSL (1.0.204)
+  - RMStore/AppReceiptVerificator (0.6.0):
+    - OpenSSL (~> 1.0.1)
+    - RMStore/Core
+  - RMStore/Core (0.6.0)
+  - RMStore/KeychainPersistence (0.6.0):
+    - RMStore/Core
 
 DEPENDENCIES:
   - AFNetworking
+  - CDYFoundation (from `https://github.com/coodly/CDYFoundation.git`)
+  - CDYObjectModel (from `https://github.com/coodly/CDYObjectModel.git`)
+  - Crashlytics
+  - Fabric
+  - Google-AdMob-Ads-SDK (~> 6.12.2)
+  - JCSFoundation/CoreData (from `https://github.com/jaanussiim/JCSFoundation.git`)
+  - JCSFoundation/PopupViews (from `https://github.com/jaanussiim/JCSFoundation.git`)
+  - JCSFoundation/UserInput (from `https://github.com/jaanussiim/JCSFoundation.git`)
+  - MRProgress
+  - NSString-UrlEncode
+  - RMStore/AppReceiptVerificator (= 0.6)
+  - RMStore/Core (= 0.6)
+  - RMStore/KeychainPersistence (= 0.6)
+
+EXTERNAL SOURCES:
+  CDYFoundation:
+    :git: https://github.com/coodly/CDYFoundation.git
+  CDYObjectModel:
+    :git: https://github.com/coodly/CDYObjectModel.git
+  JCSFoundation:
+    :git: https://github.com/jaanussiim/JCSFoundation.git
+
+CHECKOUT OPTIONS:
+  CDYFoundation:
+    :commit: 4ec1d0a9a374df8875fcbbec2d307dd96a8e3f51
+    :git: https://github.com/coodly/CDYFoundation.git
+  CDYObjectModel:
+    :commit: eda2aff2073c0f560cf75531b91c12695558c819
+    :git: https://github.com/coodly/CDYObjectModel.git
+  JCSFoundation:
+    :commit: d38f7ae07154ce0dfad8825ea115b62043519572
+    :git: https://github.com/jaanussiim/JCSFoundation.git
 
 SPEC CHECKSUMS:
   AFNetworking: 41d45d2c14219af0fa5addf3cfd433a002c13c9f
+  CDYFoundation: 73415093cb919cc0f7b40343fced9a68b3b0d305
+  CDYObjectModel: 22a37c4a1d22b067965668711d69f92fa1a144c7
+  Crashlytics: 39ab395565bc03c29cdecd2b9d103ebf30930c10
+  Fabric: 6d1d1c1eaf7ebc76fc3307e2c0259456411baf26
+  Google-AdMob-Ads-SDK: ac0ee01532f1bd6afd59847b05b69ac3df6b1c73
+  JCSFoundation: 2f986cfd674d8c2d06db8f6a236b97f01c136e9d
+  MRProgress: f4cfe862082418e8f542f077772283f425d6c699
+  NSString-UrlEncode: d26eb4378531911d54694733143dd493c1571f5c
+  OpenSSL: 576b352e6e6e60793ca133c6785736e3cbc31a09
+  RMStore: d6a1fa44111f843a0c24cfc6ee934ae30a4b54ac
 
 COCOAPODS: 0.38.2

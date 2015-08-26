@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0F9CF05B03CF4A7BBD2AD24E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4217C2CC8D40818F0A944E /* libPods.a */; };
-		86326960FB264344BB630416 /* libPods-mTimerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 537D801AC1204340BB8D840F /* libPods-mTimerTests.a */; };
 		BA665EB06E953FAAC406440A /* ObjectModel+Purchases.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6653AB46AF2E3BC9EF2787 /* ObjectModel+Purchases.m */; };
 		EA00792F18657BFD00D16DFD /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA00792E18657BFD00D16DFD /* HistoryViewController.m */; };
 		EA0079341865880500D16DFD /* DayEntriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0079331865880500D16DFD /* DayEntriesViewController.m */; };
@@ -97,15 +96,12 @@
 		EA96C5961861735600CA40C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA96C5951861735600CA40C2 /* main.m */; };
 		EA96C59A1861735600CA40C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA96C5991861735600CA40C2 /* AppDelegate.m */; };
 		EA96C59F1861735600CA40C2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA96C59E1861735600CA40C2 /* Images.xcassets */; };
-		EA96C5A61861735600CA40C2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA96C5A51861735600CA40C2 /* XCTest.framework */; };
-		EA96C5A71861735600CA40C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA96C5871861735600CA40C2 /* Foundation.framework */; };
-		EA96C5A81861735600CA40C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA96C58B1861735600CA40C2 /* UIKit.framework */; };
-		EA96C5A91861735600CA40C2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA96C58D1861735600CA40C2 /* CoreData.framework */; };
-		EA96C5B11861735600CA40C2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA96C5AF1861735600CA40C2 /* InfoPlist.strings */; };
 		EA96C5C01861774E00CA40C2 /* mTimer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA96C5BE1861774E00CA40C2 /* mTimer.xcdatamodeld */; };
 		EA96C5C41861793A00CA40C2 /* ObjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA96C5C31861793A00CA40C2 /* ObjectModel.m */; };
 		EA96C5CA18617DC000CA40C2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA96C5C918617DC000CA40C2 /* MainViewController.m */; };
 		EAB066DD1B8E3C320087FCF9 /* Secrets.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB066DC1B8E3C320087FCF9 /* Secrets.m */; };
+		EAB066E11B8E439A0087FCF9 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB066E01B8E439A0087FCF9 /* GDataXMLNode.m */; };
+		EAB066E31B8E469C0087FCF9 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB066E21B8E469C0087FCF9 /* libxml2.2.dylib */; };
 		EAB83F611861D4EC00FB6605 /* ObjectModel+Credentials.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB83F601861D4EC00FB6605 /* ObjectModel+Credentials.m */; };
 		EAB83F641861D5AF00FB6605 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB83F631861D5AF00FB6605 /* LoginViewController.m */; };
 		EAB83F681861D68800FB6605 /* LoginCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB83F671861D68800FB6605 /* LoginCell.m */; };
@@ -151,16 +147,6 @@
 		EAE802E51874A2CB00DC4651 /* PushEntryResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE802E41874A2CB00DC4651 /* PushEntryResponse.m */; };
 		EAF70CEC188187310011D9F8 /* UIColor+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF70CEB188187310011D9F8 /* UIColor+Theme.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		EA96C5AA1861735600CA40C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EA96C57C1861735500CA40C2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA96C5831861735600CA40C2;
-			remoteInfo = mTimer;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3F4217C2CC8D40818F0A944E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -317,10 +303,7 @@
 		EA96C5981861735600CA40C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EA96C5991861735600CA40C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EA96C59E1861735600CA40C2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		EA96C5A41861735600CA40C2 /* mTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA96C5A51861735600CA40C2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		EA96C5AE1861735600CA40C2 /* mTimerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mTimerTests-Info.plist"; sourceTree = "<group>"; };
-		EA96C5B01861735600CA40C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA96C5BF1861774E00CA40C2 /* mTimer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mTimer.xcdatamodel; sourceTree = "<group>"; };
 		EA96C5C21861793A00CA40C2 /* ObjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectModel.h; sourceTree = "<group>"; };
 		EA96C5C31861793A00CA40C2 /* ObjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectModel.m; sourceTree = "<group>"; };
@@ -328,6 +311,9 @@
 		EA96C5C918617DC000CA40C2 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		EAB066DB1B8E3C320087FCF9 /* Secrets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Secrets.h; sourceTree = "<group>"; };
 		EAB066DC1B8E3C320087FCF9 /* Secrets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Secrets.m; sourceTree = "<group>"; };
+		EAB066DF1B8E439A0087FCF9 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		EAB066E01B8E439A0087FCF9 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		EAB066E21B8E469C0087FCF9 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		EAB83F5F1861D4EC00FB6605 /* ObjectModel+Credentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ObjectModel+Credentials.h"; sourceTree = "<group>"; };
 		EAB83F601861D4EC00FB6605 /* ObjectModel+Credentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ObjectModel+Credentials.m"; sourceTree = "<group>"; };
 		EAB83F621861D5AF00FB6605 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -418,6 +404,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAB066E31B8E469C0087FCF9 /* libxml2.2.dylib in Frameworks */,
 				EAC635D618DEE7A800DAF1F2 /* UIKit.framework in Frameworks */,
 				EA3E4FFF187F145300002667 /* AudioToolbox.framework in Frameworks */,
 				EA3E4FFD187F143600002667 /* AdSupport.framework in Frameworks */,
@@ -428,18 +415,6 @@
 				EA96C58E1861735600CA40C2 /* CoreData.framework in Frameworks */,
 				EA96C5881861735600CA40C2 /* Foundation.framework in Frameworks */,
 				0F9CF05B03CF4A7BBD2AD24E /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA96C5A11861735600CA40C2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA96C5A61861735600CA40C2 /* XCTest.framework in Frameworks */,
-				EA96C5A91861735600CA40C2 /* CoreData.framework in Frameworks */,
-				EA96C5A81861735600CA40C2 /* UIKit.framework in Frameworks */,
-				EA96C5A71861735600CA40C2 /* Foundation.framework in Frameworks */,
-				86326960FB264344BB630416 /* libPods-mTimerTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +435,7 @@
 		EA77A7A91A0267AF0082E411 /* Thirdparty */ = {
 			isa = PBXGroup;
 			children = (
+				EAB066DE1B8E439A0087FCF9 /* GDataXMLNode */,
 				EA77A7AA1A0267AF0082E411 /* 1Password */,
 			);
 			path = Thirdparty;
@@ -480,7 +456,6 @@
 			children = (
 				EA62104D18B0C71100131285 /* Changelog.txt */,
 				EA96C58F1861735600CA40C2 /* mTimer */,
-				EA96C5AC1861735600CA40C2 /* mTimerTests */,
 				EA96C5861861735600CA40C2 /* Frameworks */,
 				EA96C5851861735600CA40C2 /* Products */,
 				83815433987714F3EC7F47FC /* Pods */,
@@ -492,7 +467,6 @@
 			isa = PBXGroup;
 			children = (
 				EA96C5841861735600CA40C2 /* mTimer.app */,
-				EA96C5A41861735600CA40C2 /* mTimerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -500,6 +474,7 @@
 		EA96C5861861735600CA40C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAB066E21B8E469C0087FCF9 /* libxml2.2.dylib */,
 				EA3E4FFE187F145300002667 /* AudioToolbox.framework */,
 				EA3E4FFC187F143600002667 /* AdSupport.framework */,
 				EA3E4FFA187F142100002667 /* StoreKit.framework */,
@@ -546,23 +521,6 @@
 				EA96C5951861735600CA40C2 /* main.m */,
 				EA96C5911861735600CA40C2 /* mTimer-Info.plist */,
 				EA96C5971861735600CA40C2 /* mTimer-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		EA96C5AC1861735600CA40C2 /* mTimerTests */ = {
-			isa = PBXGroup;
-			children = (
-				EA96C5AD1861735600CA40C2 /* Supporting Files */,
-			);
-			path = mTimerTests;
-			sourceTree = "<group>";
-		};
-		EA96C5AD1861735600CA40C2 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				EA96C5AE1861735600CA40C2 /* mTimerTests-Info.plist */,
-				EA96C5AF1861735600CA40C2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -655,6 +613,15 @@
 				EA007955186847EB00D16DFD /* TasksListViewController.xib */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EAB066DE1B8E439A0087FCF9 /* GDataXMLNode */ = {
+			isa = PBXGroup;
+			children = (
+				EAB066DF1B8E439A0087FCF9 /* GDataXMLNode.h */,
+				EAB066E01B8E439A0087FCF9 /* GDataXMLNode.m */,
+			);
+			path = GDataXMLNode;
 			sourceTree = "<group>";
 		};
 		EAB83F651861D67800FB6605 /* Cell */ = {
@@ -852,26 +819,6 @@
 			productReference = EA96C5841861735600CA40C2 /* mTimer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EA96C5A31861735600CA40C2 /* mTimerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EA96C5B91861735600CA40C2 /* Build configuration list for PBXNativeTarget "mTimerTests" */;
-			buildPhases = (
-				E60409DD265643F8A54B35DA /* Check Pods Manifest.lock */,
-				EA96C5A01861735600CA40C2 /* Sources */,
-				EA96C5A11861735600CA40C2 /* Frameworks */,
-				EA96C5A21861735600CA40C2 /* Resources */,
-				FBDAA3BCFC2E4D68B26FE36A /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EA96C5AB1861735600CA40C2 /* PBXTargetDependency */,
-			);
-			name = mTimerTests;
-			productName = mTimerTests;
-			productReference = EA96C5A41861735600CA40C2 /* mTimerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -883,9 +830,6 @@
 				TargetAttributes = {
 					EA96C5831861735600CA40C2 = {
 						DevelopmentTeam = 5T8DRBFCBP;
-					};
-					EA96C5A31861735600CA40C2 = {
-						TestTargetID = EA96C5831861735600CA40C2;
 					};
 				};
 			};
@@ -902,7 +846,6 @@
 			projectRoot = "";
 			targets = (
 				EA96C5831861735600CA40C2 /* mTimer */,
-				EA96C5A31861735600CA40C2 /* mTimerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -945,14 +888,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA96C5A21861735600CA40C2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA96C5B11861735600CA40C2 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -984,21 +919,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E60409DD265643F8A54B35DA /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		EA0079521867558B00D16DFD /* Crashlytics */ = {
@@ -1042,21 +962,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "ruby scripts/check_localizable.rb mTimer";
-		};
-		FBDAA3BCFC2E4D68B26FE36A /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mTimerTests/Pods-mTimerTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1150,6 +1055,7 @@
 				EA00794018670DE600D16DFD /* ListTimeEntriesResponse.m in Sources */,
 				EA62103318AF6D8B00131285 /* ManageTaskCell.m in Sources */,
 				EA3E4EFF187D397D00002667 /* ObjectModel+TimeReports.m in Sources */,
+				EAB066E11B8E439A0087FCF9 /* GDataXMLNode.m in Sources */,
 				EA96C5CA18617DC000CA40C2 /* MainViewController.m in Sources */,
 				EA96C5C01861774E00CA40C2 /* mTimer.xcdatamodeld in Sources */,
 				EAB83FDE18641F1A00FB6605 /* TimeEntry.m in Sources */,
@@ -1165,36 +1071,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA96C5A01861735600CA40C2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		EA96C5AB1861735600CA40C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA96C5831861735600CA40C2 /* mTimer */;
-			targetProxy = EA96C5AA1861735600CA40C2 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EA96C5921861735600CA40C2 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				EA96C5931861735600CA40C2 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		EA96C5AF1861735600CA40C2 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EA96C5B01861735600CA40C2 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1294,8 +1177,60 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mTimer/mTimer-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/CDYFoundation\"",
+					"\"${PODS_ROOT}/Headers/Public/CDYObjectModel\"",
+					"\"${PODS_ROOT}/Headers/Public/Crashlytics\"",
+					"\"${PODS_ROOT}/Headers/Public/Crashlytics/Crashlytics\"",
+					"\"${PODS_ROOT}/Headers/Public/Fabric\"",
+					"\"${PODS_ROOT}/Headers/Public/Fabric/Fabric\"",
+					"\"${PODS_ROOT}/Headers/Public/JCSFoundation\"",
+					"\"${PODS_ROOT}/Headers/Public/MRProgress\"",
+					"\"${PODS_ROOT}/Headers/Public/OpenSSL\"",
+					"\"${PODS_ROOT}/Headers/Public/OpenSSL/openssl\"",
+					"\"${PODS_ROOT}/Headers/Public/RMStore\"",
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "mTimer/mTimer-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"CDYFoundation\"",
+					"-l\"CDYObjectModel\"",
+					"-l\"JCSFoundation\"",
+					"-l\"MRProgress\"",
+					"-l\"RMStore\"",
+					"-l\"c++\"",
+					"-l\"crypto\"",
+					"-l\"ssl\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Crashlytics\"",
+					"-framework",
+					"\"Fabric\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-lxml2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
@@ -1318,55 +1253,65 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mTimer/mTimer-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/CDYFoundation\"",
+					"\"${PODS_ROOT}/Headers/Public/CDYObjectModel\"",
+					"\"${PODS_ROOT}/Headers/Public/Crashlytics\"",
+					"\"${PODS_ROOT}/Headers/Public/Crashlytics/Crashlytics\"",
+					"\"${PODS_ROOT}/Headers/Public/Fabric\"",
+					"\"${PODS_ROOT}/Headers/Public/Fabric/Fabric\"",
+					"\"${PODS_ROOT}/Headers/Public/JCSFoundation\"",
+					"\"${PODS_ROOT}/Headers/Public/MRProgress\"",
+					"\"${PODS_ROOT}/Headers/Public/OpenSSL\"",
+					"\"${PODS_ROOT}/Headers/Public/OpenSSL/openssl\"",
+					"\"${PODS_ROOT}/Headers/Public/RMStore\"",
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "mTimer/mTimer-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"CDYFoundation\"",
+					"-l\"CDYObjectModel\"",
+					"-l\"JCSFoundation\"",
+					"-l\"MRProgress\"",
+					"-l\"RMStore\"",
+					"-l\"c++\"",
+					"-l\"crypto\"",
+					"-l\"ssl\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Crashlytics\"",
+					"-framework",
+					"\"Fabric\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-lxml2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		EA96C5BA1861735600CA40C2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 908F3A031B7AF9CB35FD47A7 /* Pods-mTimerTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/mTimer.app/mTimer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "mTimer/mTimer-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "mTimerTests/mTimerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		EA96C5BB1861735600CA40C2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BEF8A6DE3D22A202A60B67A /* Pods-mTimerTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/mTimer.app/mTimer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "mTimer/mTimer-Prefix.pch";
-				INFOPLIST_FILE = "mTimerTests/mTimerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -1387,15 +1332,6 @@
 			buildConfigurations = (
 				EA96C5B71861735600CA40C2 /* Debug */,
 				EA96C5B81861735600CA40C2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EA96C5B91861735600CA40C2 /* Build configuration list for PBXNativeTarget "mTimerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EA96C5BA1861735600CA40C2 /* Debug */,
-				EA96C5BB1861735600CA40C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

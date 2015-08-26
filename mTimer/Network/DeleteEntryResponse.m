@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-#import <GDataXML-HTML/GDataXMLNode.h>
+#import "GDataXMLNode.h"
 #import "DeleteEntryResponse.h"
 
 @implementation DeleteEntryResponse
