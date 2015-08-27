@@ -1,0 +1,50 @@
+{
+  "name": "CDYAdLoader",
+  "version": "0.1.0",
+  "summary": "Utility classes to coordinate ad banners from different services.",
+  "homepage": "https://github.com/coodly/CDYAdLoader",
+  "authors": {
+    "Jaanus Siim": "jaanus@coodly.com"
+  },
+  "source": {
+    "git": "https://github.com/coodly/CDYAdLoader.git",
+    "tag": "v0.1.0"
+  },
+  "license": {
+    "type": "Apache 2",
+    "file": "LICENSE"
+  },
+  "requires_arc": true,
+  "subspecs": [
+    {
+      "name": "Core",
+      "platforms": {
+        "ios": "7.0"
+      },
+      "source_files": "Core/*.{h,m}"
+    },
+    {
+      "name": "AdMob",
+      "platforms": {
+        "ios": "7.0"
+      },
+      "source_files": "Services/AdMob/*.{h,m}",
+      "dependencies": {
+        "Google-AdMob-Ads-SDK": [
+
+        ]
+      }
+    },
+    {
+      "name": "iAd",
+      "platforms": {
+        "ios": "7.0"
+      },
+      "source_files": "Services/iAd/*.{h,m}",
+      "frameworks": "iAd"
+    },
+    {
+      "name": "Services"
+    }
+  ]
+}

@@ -171,7 +171,7 @@
     for (id key in params) {
         id value = params[key];
         NSString *append = [value isKindOfClass:[NSString class]] ? value : [NSString stringWithFormat:@"%@", value];
-        [result appendFormat:@"%@=%@&", key, [append urlEncode]];
+        [result appendFormat:@"%@=%@&", key, [append URLEncode]];
     }
 
     [result deleteCharactersInRange:NSMakeRange(result.length - 1, 1)];

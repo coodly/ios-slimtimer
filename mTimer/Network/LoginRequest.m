@@ -20,6 +20,7 @@
 #import "LoginResponse.h"
 #import "ObjectModel+Credentials.h"
 #import "ObjectModel+Users.h"
+#import "Secrets.h"
 
 NSString *const kLoginPath = @"/users/token";
 

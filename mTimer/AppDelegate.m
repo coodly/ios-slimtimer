@@ -15,7 +15,6 @@
 */
 
 #import <Crashlytics/Crashlytics.h>
-#import <Google-AdMob-Ads-SDK/GADRequest.h>
 #import "AppDelegate.h"
 #import "ObjectModel.h"
 #import "MainViewController.h"
@@ -31,6 +30,8 @@
 #import "CDYAdLoader.h"
 #import "CDYIAdLoader.h"
 #import "CDYAdMobLoader.h"
+#import "Secrets.h"
+#import "GADRequest.h"
 
 @interface AppDelegate ()
 

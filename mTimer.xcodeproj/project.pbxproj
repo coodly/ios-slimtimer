@@ -808,7 +808,6 @@
 				EA96C5811861735600CA40C2 /* Frameworks */,
 				EA96C5821861735600CA40C2 /* Resources */,
 				A1CEA1E6B26A4337B060149F /* Copy Pods Resources */,
-				EA0079521867558B00D16DFD /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -920,20 +919,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		EA0079521867558B00D16DFD /* Crashlytics */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = Crashlytics;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "./Crashlytics.framework/run bf6a713619d873c16d74390dc0463c0387c49052";
 		};
 		EA96C5C11861777000CA40C2 /* mogenerator */ = {
 			isa = PBXShellScriptBuildPhase;
