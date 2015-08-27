@@ -14,6 +14,7 @@
 * limitations under the License.
 */
 
+#import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
 #import "AppDelegate.h"
 #import "ObjectModel.h"
@@ -65,7 +66,7 @@
     [self setPersistence:[[RMStoreKeychainPersistence alloc] init]];
     [[RMStore defaultStore] setTransactionPersistor:self.persistence];
 
-    [Crashlytics startWithAPIKey:@"bf6a713619d873c16d74390dc0463c0387c49052"];
+    [Fabric with:@[[Crashlytics class]]];
 
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [[UINavigationBar appearance] setBarTintColor:[UIColor navigationBarColor]];
