@@ -87,8 +87,6 @@
 		EA62104618AFB74100131285 /* EditTaskTagsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA62104418AFB74100131285 /* EditTaskTagsCell.xib */; };
 		EA62104918AFC76400131285 /* PushTaskRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EA62104818AFC76400131285 /* PushTaskRequest.m */; };
 		EA62104C18B0AC1600131285 /* PushTaskResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EA62104B18B0AC1600131285 /* PushTaskResponse.m */; };
-		EA77A7AD1A0267C90082E411 /* OnePasswordExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA77A7AC1A0267C90082E411 /* OnePasswordExtension.m */; };
-		EA77A7AF1A02681C0082E411 /* 1Password.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA77A7AE1A02681C0082E411 /* 1Password.xcassets */; };
 		EA96C5881861735600CA40C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA96C5871861735600CA40C2 /* Foundation.framework */; };
 		EA96C58A1861735600CA40C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA96C5891861735600CA40C2 /* CoreGraphics.framework */; };
 		EA96C58E1861735600CA40C2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA96C58D1861735600CA40C2 /* CoreData.framework */; };
@@ -288,9 +286,6 @@
 		EA62104A18B0AC1600131285 /* PushTaskResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushTaskResponse.h; sourceTree = "<group>"; };
 		EA62104B18B0AC1600131285 /* PushTaskResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushTaskResponse.m; sourceTree = "<group>"; };
 		EA62104D18B0C71100131285 /* Changelog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Changelog.txt; sourceTree = "<group>"; };
-		EA77A7AB1A0267C90082E411 /* OnePasswordExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnePasswordExtension.h; sourceTree = "<group>"; };
-		EA77A7AC1A0267C90082E411 /* OnePasswordExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnePasswordExtension.m; sourceTree = "<group>"; };
-		EA77A7AE1A02681C0082E411 /* 1Password.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = 1Password.xcassets; sourceTree = "<group>"; };
 		EA96C5841861735600CA40C2 /* mTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA96C5871861735600CA40C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA96C5891861735600CA40C2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -436,19 +431,8 @@
 			isa = PBXGroup;
 			children = (
 				EAB066DE1B8E439A0087FCF9 /* GDataXMLNode */,
-				EA77A7AA1A0267AF0082E411 /* 1Password */,
 			);
 			path = Thirdparty;
-			sourceTree = "<group>";
-		};
-		EA77A7AA1A0267AF0082E411 /* 1Password */ = {
-			isa = PBXGroup;
-			children = (
-				EA77A7AE1A02681C0082E411 /* 1Password.xcassets */,
-				EA77A7AB1A0267C90082E411 /* OnePasswordExtension.h */,
-				EA77A7AC1A0267C90082E411 /* OnePasswordExtension.m */,
-			);
-			path = 1Password;
 			sourceTree = "<group>";
 		};
 		EA96C57B1861735500CA40C2 = {
@@ -867,7 +851,6 @@
 				EAB83F6F1861D7B100FB6605 /* ButtonCell.xib in Resources */,
 				EA0079B318716E3C00D16DFD /* AddTagViewController.xib in Resources */,
 				EA3E5004187FD41200002667 /* ProductCell.xib in Resources */,
-				EA77A7AF1A02681C0082E411 /* 1Password.xcassets in Resources */,
 				EA0079BE1871BD7700D16DFD /* SettingSwitchCell.xib in Resources */,
 				EA0079581868489100D16DFD /* DayEntriesViewController.xib in Resources */,
 				EA96C59F1861735600CA40C2 /* Images.xcassets in Resources */,
@@ -1062,7 +1045,6 @@
 				EAB83FDE18641F1A00FB6605 /* TimeEntry.m in Sources */,
 				EAB83F92186232AA00FB6605 /* GDataXMLDocument+Helpers.m in Sources */,
 				EAE802D61874208300DC4651 /* EntriesSyncService.m in Sources */,
-				EA77A7AD1A0267C90082E411 /* OnePasswordExtension.m in Sources */,
 				EAB83F951862336900FB6605 /* GDataXMLElement+Extension.m in Sources */,
 				EA0079B218716E3C00D16DFD /* AddTagViewController.m in Sources */,
 				EAB83F681861D68800FB6605 /* LoginCell.m in Sources */,
@@ -1173,6 +1155,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/jaanus/projects/ios-mtimer",
@@ -1236,7 +1219,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.coodly.mtimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "825a7f50-738f-418b-ac32-b5a9bcc0d902";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;
@@ -1251,6 +1234,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/jaanus/projects/ios-mtimer",
@@ -1314,7 +1298,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.coodly.mtimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "825a7f50-738f-418b-ac32-b5a9bcc0d902";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;

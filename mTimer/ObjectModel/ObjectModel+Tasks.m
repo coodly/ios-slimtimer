@@ -101,7 +101,7 @@
 - (void)deleteTasksWithIds:(NSArray *)idsToDelete {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"taskId IN %@", idsToDelete];
     NSArray *tasksToDelete = [self fetchEntitiesNamed:[Task entityName] withPredicate:predicate];
-    TimerLog(@"Will delete %d tasks removed from server", tasksToDelete.count);
+    TimerLog(@"Will delete %tu tasks removed from server", tasksToDelete.count);
     [self deleteObjects:tasksToDelete saveAfter:YES];
 }
 

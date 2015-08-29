@@ -50,7 +50,7 @@ NSString *const kListTasksPathBase = @"/users/%@/tasks";
 }
 
 - (void)executeWithOffset:(NSInteger)offset {
-    TimerLog(@"executeWithOffset:%d", offset);
+    TimerLog(@"executeWithOffset:%tu", offset);
     NSString *path = [NSString stringWithFormat:kListTasksPathBase, [self.objectModel loggedInUserId]];
 
     __weak ListTasksRequest *weakSelf = self;

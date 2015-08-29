@@ -85,10 +85,13 @@ NSUInteger const kButtonSection = 1;
     [super viewWillAppear:animated];
 
     if (![[OnePasswordExtension sharedExtension] isAppExtensionAvailable]) {
+        TimerLog(@"No 1Pass");
         return;
+    } else {
+        TimerLog(@"1Pass present");
     }
 
-    UIBarButtonItem *login = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"onepassword-navbar"] style:UIBarButtonItemStylePlain target:self action:@selector(onePasswordLogin)];
+    UIBarButtonItem *login = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"OnePasswordExtensionResources.bundle/onepassword-navbar-light.png"] style:UIBarButtonItemStylePlain target:self action:@selector(onePasswordLogin)];
     [self.navigationItem setRightBarButtonItem:login];
 }
 

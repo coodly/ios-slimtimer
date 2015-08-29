@@ -1,4 +1,5 @@
 PODS:
+  - 1PasswordExtension (1.5)
   - AFNetworking (2.6.0):
     - AFNetworking/NSURLConnection (= 2.6.0)
     - AFNetworking/NSURLSession (= 2.6.0)
@@ -93,6 +94,7 @@ PODS:
     - RMStore/Core
 
 DEPENDENCIES:
+  - 1PasswordExtension (~> 1.5)
   - AFNetworking
   - CDYAdLoader (from `https://github.com/coodly/CDYAdLoader.git`)
   - CDYFoundation (from `https://github.com/coodly/CDYFoundation.git`)
@@ -135,6 +137,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/jaanussiim/JCSFoundation.git
 
 SPEC CHECKSUMS:
+  1PasswordExtension: d2392e44526be30ae7d23f305e96e411ede9b9d1
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
   CDYAdLoader: b4486f58ee133f0f9b7a7b4e8e8372d69f8d5e27
   CDYFoundation: 73415093cb919cc0f7b40343fced9a68b3b0d305
