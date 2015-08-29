@@ -27,7 +27,6 @@
 
 @interface ManageTasksViewController ()
 
-@property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) ManageTaskCell *measureCell;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 @property (nonatomic, strong) ListTasksRequest *executedRequest;

@@ -39,7 +39,6 @@
 
 @property (nonatomic, strong) SlimtimerRequest *executedRequest;
 @property (nonatomic, strong) TasksListCell *measureCell;
-@property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 @end
 

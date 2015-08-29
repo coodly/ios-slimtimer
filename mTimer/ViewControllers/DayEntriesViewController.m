@@ -34,7 +34,6 @@
 @property (nonatomic, strong) NSDate *presentedDate;
 @property (nonatomic, strong) SlimtimerRequest *executedRequest;
 @property (nonatomic, strong) TimeEntryCell *measureCell;
-@property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 
 @end

@@ -27,7 +27,7 @@
 }
 
 - (NSDate *)startOfDay {
-    NSDateComponents *components = [[NSDate gregorian] components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:self];
+    NSDateComponents *components = [[NSDate gregorian] components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:self];
     [components setHour:0];
     [components setMinute:0];
     [components setSecond:0];
@@ -45,7 +45,7 @@
 }
 
 - (BOOL)isToday {
-    NSCalendarUnit dayComponents = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
+    NSCalendarUnit dayComponents = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;
     NSDateComponents *myComponents = [[NSDate gregorian] components:dayComponents fromDate:self];
     NSDateComponents *nowComponents = [[NSDate gregorian] components:dayComponents fromDate:[NSDate date]];
 
@@ -64,7 +64,7 @@
 static NSCalendar *__gregorian;
 + (NSCalendar *)gregorian {
     if (!__gregorian) {
-        __gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+        __gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     }
 
     return __gregorian;

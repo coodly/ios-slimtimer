@@ -32,12 +32,12 @@
 }
 
 - (NSString *)formattedDifferenceFromDate:(NSDate *)date {
-    NSDateComponents *components = [[NSDate gregorian] components:NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit fromDate:date toDate:self options:0];
+    NSDateComponents *components = [[NSDate gregorian] components:NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond fromDate:date toDate:self options:0];
 
     if (components.hour > 0) {
-        return  [NSString stringWithFormat:@"%ld:%02d.%02d", (long)components.hour, components.minute, components.second];
+        return  [NSString stringWithFormat:@"%ld:%02tu.%02tu", (long)components.hour, components.minute, components.second];
     } else {
-        return  [NSString stringWithFormat:@"%ld.%02d", (long)components.minute, components.second];
+        return  [NSString stringWithFormat:@"%ld.%02tu", (long)components.minute, components.second];
     }
 }
 

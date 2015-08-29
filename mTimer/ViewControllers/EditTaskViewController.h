@@ -24,6 +24,5 @@
 
 @property (nonatomic, strong) ObjectModel *objectModel;
 @property (nonatomic, strong) Task *task;
-@property (nonatomic, copy) NSString *title;
 
 @end

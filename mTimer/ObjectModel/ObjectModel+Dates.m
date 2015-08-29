@@ -24,7 +24,7 @@
 @implementation ObjectModel (Dates)
 
 - (BOOL)hasMarkerForDate:(NSDate *)date {
-    NSDateComponents *components = [[NSDate gregorian] components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:date];
+    NSDateComponents *components = [[NSDate gregorian] components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:date];
 
     NSPredicate *dayPredicate = [NSPredicate predicateWithFormat:@"value = %d", components.day];
     NSPredicate *monthPredicate = [NSPredicate predicateWithFormat:@"month.value = %d", components.month];
@@ -37,7 +37,7 @@
 
 - (void)addMarkerForDate:(NSDate *)date {
     [self performBlock:^{
-        NSDateComponents *components = [[NSDate gregorian] components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:date];
+        NSDateComponents *components = [[NSDate gregorian] components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:date];
 
         Year *year = [self yearWithValue:components.year];
         Month *month = [self monthWithValue:components.month year:year];

@@ -44,7 +44,7 @@ NSString *const kListTasksPathBase = @"/users/%@/tasks";
 
 - (void)execute {
     NSArray *knownIds =  [self.objectModel knownTaskIds];
-    TimerLog(@"Know %d ids", [knownIds count]);
+    TimerLog(@"Know %tu ids", [knownIds count]);
     [self setKnownTaskIds:[NSMutableArray arrayWithArray:knownIds]];
     [self executeWithOffset:0];
 }

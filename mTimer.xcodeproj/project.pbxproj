@@ -166,7 +166,7 @@
 		EA007938186599E500D16DFD /* ListTimeEntriesRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTimeEntriesRequest.h; sourceTree = "<group>"; };
 		EA007939186599E500D16DFD /* ListTimeEntriesRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTimeEntriesRequest.m; sourceTree = "<group>"; };
 		EA00793B18659B7100D16DFD /* NSDate+Formatting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Formatting.h"; sourceTree = "<group>"; };
-		EA00793C18659B7100D16DFD /* NSDate+Formatting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatting.m"; sourceTree = "<group>"; };
+		EA00793C18659B7100D16DFD /* NSDate+Formatting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatting.m"; sourceTree = "<group>"; wrapsLines = 0; };
 		EA00793E18670DE600D16DFD /* ListTimeEntriesResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTimeEntriesResponse.h; sourceTree = "<group>"; };
 		EA00793F18670DE600D16DFD /* ListTimeEntriesResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTimeEntriesResponse.m; sourceTree = "<group>"; };
 		EA00794118673DAB00D16DFD /* TimeEntryObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeEntryObject.h; sourceTree = "<group>"; };
@@ -462,6 +462,7 @@
 				EA77A7A91A0267AF0082E411 /* Thirdparty */,
 			);
 			sourceTree = "<group>";
+			wrapsLines = 0;
 		};
 		EA96C5851861735600CA40C2 /* Products */ = {
 			isa = PBXGroup;

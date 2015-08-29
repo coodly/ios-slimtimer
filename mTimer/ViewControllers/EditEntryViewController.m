@@ -272,11 +272,11 @@ NSString *const kEditTaskCommentCellIdentifier = @"kEditTaskCommentCellIdentifie
 - (void)updateToolbarButtons {
     NSMutableArray *items = [NSMutableArray array];
     if (!self.timeEntry.endTime) {
-        [items addObject:[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"1040-checkmark"] style:UIBarButtonItemStyleBordered target:self action:@selector(markCompletePressed)]];
+        [items addObject:[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"1040-checkmark"] style:UIBarButtonItemStylePlain target:self action:@selector(markCompletePressed)]];
     }
 
     [items addObject:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil]];
-    [items addObject:[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"711-trash"] style:UIBarButtonItemStyleBordered target:self action:@selector(deleteEntryPressed)]];
+    [items addObject:[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"711-trash"] style:UIBarButtonItemStylePlain target:self action:@selector(deleteEntryPressed)]];
 
     [self.toolbar setItems:items animated:YES];
 }
