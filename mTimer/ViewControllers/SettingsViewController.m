@@ -304,31 +304,31 @@ NSUInteger const kLogoutSection = 3;
 - (void)restorePurchases {
     TimerLog(@"restorePurchases");
     TimerProgressHUD *hud = [TimerProgressHUD showHUDOnView:self.navigationController.view];
-    [[RMStore defaultStore] restoreTransactionsOnSuccess:^{
+    [[RMStore defaultStore] restoreTransactionsOnSuccess:^(NSArray *transactions) {
         TimerLog(@"Restore success");
         [hud hide];
-
+        
         [self updateProductsInformation];
         [[NSNotificationCenter defaultCenter] postNotificationName:kTimerCheckShowAddStatus object:nil];
         [[NSNotificationCenter defaultCenter] postNotificationName:kTimerCheckFullHistoryStatus object:nil];
-
+        
         if ([self.objectModel adsHaveBeenDisabled]) {
             [self.adsCell markPurchased];
         }
-
+        
         if ([self.objectModel hasPurchasedFullHistory]) {
             [self.historyCell markPurchased];
         }
-
+        
         [self updateProductsInformation];
     } failure:^(NSError *error) {
         TimerLog(@"Restore error:%@", error);
         [hud hide];
-
+        
         if (error.code == SKErrorPaymentCancelled) {
             return;
         }
-
+        
         TimerAlertView *alertView = [TimerAlertView alertViewWithTitle:NSLocalizedString(@"settings.controller.restore.failed.title", nil) error:error];
         [alertView setConfirmButtonTitle:NSLocalizedString(@"settings.controller.restore.failed.dismiss.button", nil)];
         [alertView show];

@@ -1,6 +1,6 @@
 #RMStore
-[![Version](https://cocoapod-badges.herokuapp.com/v/RMStore/badge.png)](http://cocoadocs.org/docsets/RMStore) [![Platform](https://cocoapod-badges.herokuapp.com/p/RMStore/badge.png)](http://cocoadocs.org/docsets/RMStore) <!--[![Build Status](https://travis-ci.org/robotmedia/RMStore.png)](https://travis-ci.org/robotmedia/RMStore)-->
-
+[![Version](https://cocoapod-badges.herokuapp.com/v/RMStore/badge.png)](http://cocoadocs.org/docsets/RMStore) [![Platform](https://cocoapod-badges.herokuapp.com/p/RMStore/badge.png)](http://cocoadocs.org/docsets/RMStore)
+[![Build Status](https://travis-ci.org/robotmedia/RMStore.png)](https://travis-ci.org/robotmedia/RMStore)
 
 A lightweight iOS library for In-App Purchases.
 
@@ -19,7 +19,7 @@ RMStore adds [blocks](#storekit-with-blocks) and [notifications](#notifications)
 Using [CocoaPods](http://cocoapods.org/):
 
 ```ruby
-pod 'RMStore', '~> 0.5'
+pod 'RMStore', '~> 0.7'
 ```
 
 Or add the files from the [RMStore](https://github.com/robotmedia/RMStore/tree/master/RMStore) directory if you're doing it manually.
@@ -54,7 +54,7 @@ NSSet *products = [NSSet setWithArray:@[@"fabulousIdol", @"rootBeer", @"rubberCh
 ###Restore transactions
 
 ```objective-c
-[[RMStore defaultStore] restoreTransactionsOnSuccess:^{
+[[RMStore defaultStore] restoreTransactionsOnSuccess:^(NSArray *transactions){
     NSLog(@"Transactions restored");
 } failure:^(NSError *error) {
     NSLog(@"Something went wrong");
@@ -103,6 +103,12 @@ RMStore sends notifications of StoreKit related events and extends `NSNotificati
 Payment transaction notifications are sent after a payment has been requested or for each restored transaction.
 
 ```objective-c
+- (void)storePaymentTransactionFinished:(NSNotification*)notification
+{
+    NSString *productIdentifier = notification.rm_productIdentifier;
+    SKPaymentTransaction *transaction = notification.rm_transaction;
+}
+
 - (void)storePaymentTransactionFailed:(NSNotification*)notification
 {
     NSError *error = notification.rm_storeError;
@@ -110,7 +116,9 @@ Payment transaction notifications are sent after a payment has been requested or
     SKPaymentTransaction *transaction = notification.rm_transaction;
 }
 
-- (void)storePaymentTransactionFinished:(NSNotification*)notification
+// iOS 8+ only
+
+- (void)storePaymentTransactionDeferred:(NSNotification*)notification
 {
     NSString *productIdentifier = notification.rm_productIdentifier;
     SKPaymentTransaction *transaction = notification.rm_transaction;
@@ -125,7 +133,10 @@ Payment transaction notifications are sent after a payment has been requested or
     NSError *error = notification.rm_storeError;
 }
 
-- (void)storeRestoreTransactionsFinished:(NSNotification*)notification { }
+- (void)storeRestoreTransactionsFinished:(NSNotification*)notification 
+{
+	NSArray *transactions = notification.rm_transactions;
+}
 ```
 
 ###Download notifications (iOS 6+ only)
@@ -255,7 +266,7 @@ For more info, check out the [wiki](https://github.com/robotmedia/RMStore/wiki/T
 
 ##Requirements
 
-RMStore requires iOS 5.0 or above and ARC. Some features are only available for iOS 6.0 and iOS 7.0.
+RMStore requires iOS 5.0 or above and ARC.
 
 ##Roadmap
 

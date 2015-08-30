@@ -24,6 +24,7 @@
 #import "ObjectModel.h"
 #import "LoginRequest.h"
 #import "OnePasswordExtension.h"
+#import "Constants.h"
 
 NSString *const kLoginCellIdentifier = @"kLoginCellIdentifier";
 NSString *const kLoginButtonCellIdentifier = @"kLoginButtonCellIdentifier";

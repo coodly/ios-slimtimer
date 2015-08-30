@@ -21,16 +21,6 @@ PODS:
   - AFNetworking/UIKit (2.6.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - CDYAdLoader (0.1.0):
-    - CDYAdLoader/AdMob (= 0.1.0)
-    - CDYAdLoader/Core (= 0.1.0)
-    - CDYAdLoader/iAd (= 0.1.0)
-    - CDYAdLoader/Services (= 0.1.0)
-  - CDYAdLoader/AdMob (0.1.0):
-    - Google-AdMob-Ads-SDK
-  - CDYAdLoader/Core (0.1.0)
-  - CDYAdLoader/iAd (0.1.0)
-  - CDYAdLoader/Services (0.1.0)
   - CDYFoundation (0.1.0):
     - CDYFoundation/Base (= 0.1.0)
     - CDYFoundation/Extensions (= 0.1.0)
@@ -47,7 +37,6 @@ PODS:
   - Fabric (1.4.0):
     - Fabric/Base (= 1.4.0)
   - Fabric/Base (1.4.0)
-  - Google-AdMob-Ads-SDK (6.8.0)
   - JCSFoundation/Core (0.1.0)
   - JCSFoundation/CoreData (0.1.0):
     - JCSFoundation/Core
@@ -86,35 +75,31 @@ PODS:
     - MRProgress/Helper
   - NSString-UrlEncode (2.0.0)
   - OpenSSL (1.0.204)
-  - RMStore/AppReceiptVerificator (0.6.0):
+  - RMStore/AppReceiptVerificator (0.7.1):
     - OpenSSL (~> 1.0.1)
     - RMStore/Core
-  - RMStore/Core (0.6.0)
-  - RMStore/KeychainPersistence (0.6.0):
+  - RMStore/Core (0.7.1)
+  - RMStore/KeychainPersistence (0.7.1):
     - RMStore/Core
 
 DEPENDENCIES:
   - 1PasswordExtension (~> 1.5)
   - AFNetworking
-  - CDYAdLoader (from `https://github.com/coodly/CDYAdLoader.git`)
   - CDYFoundation (from `https://github.com/coodly/CDYFoundation.git`)
   - CDYObjectModel (from `https://github.com/coodly/CDYObjectModel.git`)
   - Crashlytics
   - Fabric
-  - Google-AdMob-Ads-SDK (= 6.8.0)
   - JCSFoundation/CoreData (from `https://github.com/jaanussiim/JCSFoundation.git`)
   - JCSFoundation/PopupViews (from `https://github.com/jaanussiim/JCSFoundation.git`)
   - JCSFoundation/UserInput (from `https://github.com/jaanussiim/JCSFoundation.git`)
   - Lockbox
   - MRProgress
   - NSString-UrlEncode
-  - RMStore/AppReceiptVerificator (= 0.6)
-  - RMStore/Core (= 0.6)
-  - RMStore/KeychainPersistence (= 0.6)
+  - RMStore/AppReceiptVerificator (= 0.7.1)
+  - RMStore/Core (= 0.7.1)
+  - RMStore/KeychainPersistence (= 0.7.1)
 
 EXTERNAL SOURCES:
-  CDYAdLoader:
-    :git: https://github.com/coodly/CDYAdLoader.git
   CDYFoundation:
     :git: https://github.com/coodly/CDYFoundation.git
   CDYObjectModel:
@@ -123,9 +108,6 @@ EXTERNAL SOURCES:
     :git: https://github.com/jaanussiim/JCSFoundation.git
 
 CHECKOUT OPTIONS:
-  CDYAdLoader:
-    :commit: 5c32b1fad4b63a57dee9c9061e77d31292c5aaa7
-    :git: https://github.com/coodly/CDYAdLoader.git
   CDYFoundation:
     :commit: 4ec1d0a9a374df8875fcbbec2d307dd96a8e3f51
     :git: https://github.com/coodly/CDYFoundation.git
@@ -139,17 +121,15 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   1PasswordExtension: d2392e44526be30ae7d23f305e96e411ede9b9d1
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
-  CDYAdLoader: b4486f58ee133f0f9b7a7b4e8e8372d69f8d5e27
   CDYFoundation: 73415093cb919cc0f7b40343fced9a68b3b0d305
   CDYObjectModel: 22a37c4a1d22b067965668711d69f92fa1a144c7
   Crashlytics: 39ab395565bc03c29cdecd2b9d103ebf30930c10
   Fabric: 6d1d1c1eaf7ebc76fc3307e2c0259456411baf26
-  Google-AdMob-Ads-SDK: 04f4ac67568c5ae4b684ac2ef0c84ed445352741
   JCSFoundation: 2f986cfd674d8c2d06db8f6a236b97f01c136e9d
   Lockbox: 16442da35d9d4286966936763be728a931d589c3
   MRProgress: f4cfe862082418e8f542f077772283f425d6c699
   NSString-UrlEncode: d26eb4378531911d54694733143dd493c1571f5c
   OpenSSL: 576b352e6e6e60793ca133c6785736e3cbc31a09
-  RMStore: d6a1fa44111f843a0c24cfc6ee934ae30a4b54ac
+  RMStore: 64ba13a9c040e3b7572765d169f77175cd3243e5
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0.beta.3

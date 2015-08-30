@@ -28,11 +28,7 @@
 #import "RMStoreAppReceiptVerificator.h"
 #import "RMStoreKeychainPersistence.h"
 #import "UIColor+Theme.h"
-#import "CDYAdLoader.h"
-#import "CDYIAdLoader.h"
-#import "CDYAdMobLoader.h"
 #import "Secrets.h"
-#import "GADRequest.h"
 
 @interface AppDelegate ()
 
@@ -82,18 +78,18 @@
     [self.window setRootViewController:controller];
 
 #if SHOW_ADS
-    [[CDYAdLoader sharedInstance] addService:[[CDYIAdLoader alloc] init]];
-    CDYAdMobLoader *adMobLoader = [[CDYAdMobLoader alloc] initWithAdMobUnit:TimerAdMobUnit];
-    [adMobLoader setRootViewController:controller];
+    //[[CDYAdLoader sharedInstance] addService:[[CDYIAdLoader alloc] init]];
+    //CDYAdMobLoader *adMobLoader = [[CDYAdMobLoader alloc] initWithAdMobUnit:TimerAdMobUnit];
+    //[adMobLoader setRootViewController:controller];
 #if DEBUG
-    [adMobLoader setTesting:YES];
-    [adMobLoader setTestDevices:@[@"4c330763bc5b214c8bd93a3b8f68f9db", GAD_SIMULATOR_ID]];
+    //[adMobLoader setTesting:YES];
+    //[adMobLoader setTestDevices:@[@"4c330763bc5b214c8bd93a3b8f68f9db", GAD_SIMULATOR_ID]];
 #endif
-    [[CDYAdLoader sharedInstance] addService:adMobLoader];
+    //[[CDYAdLoader sharedInstance] addService:adMobLoader];
 #endif
 
-    [[CDYAdLoader sharedInstance] setBannerAdPosition:AdPositionBottom];
-    [[CDYAdLoader sharedInstance] setAdCheckTime:TimerAdCheckTimeSeconds];
+    //[[CDYAdLoader sharedInstance] setBannerAdPosition:AdPositionBottom];
+    //[[CDYAdLoader sharedInstance] setAdCheckTime:TimerAdCheckTimeSeconds];
 
     EntriesSyncService *service = [[EntriesSyncService alloc] initWithObjectModel:model];
     [self setEntriesSync:service];
@@ -137,7 +133,7 @@
     [self.mainViewController.tasksListViewController checkForRunningEntries];
     [self.entriesSync checkStatusesToPush];
     [[NSNotificationCenter defaultCenter] postNotificationName:kTimerCheckShowAddStatus object:nil];
-    [[CDYAdLoader sharedInstance] reloadAds];
+    //[[CDYAdLoader sharedInstance] reloadAds];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
