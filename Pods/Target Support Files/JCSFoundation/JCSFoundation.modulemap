@@ -1,0 +1,6 @@
+framework module JCSFoundation {
+  umbrella header "JCSFoundation-umbrella.h"
+
+  export *
+  module * { export * }
+}

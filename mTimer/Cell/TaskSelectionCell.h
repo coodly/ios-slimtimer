@@ -15,7 +15,7 @@
 */
 
 #import <UIKit/UIKit.h>
-#import "JCSSelectionCell.h"
+#import <JCSFoundation/JCSSelectionCell.h>
 
 @interface TaskSelectionCell : JCSSelectionCell
 

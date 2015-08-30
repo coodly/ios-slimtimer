@@ -15,7 +15,7 @@
 */
 
 #import <UIKit/UIKit.h>
-#import "JCSSingleInputEntryViewController.h"
+#import <JCSFoundation/JCSSingleInputEntryViewController.h>
 
 @interface AddTagViewController : JCSSingleInputEntryViewController
 

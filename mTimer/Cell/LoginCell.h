@@ -15,7 +15,7 @@
 */
 
 #import <UIKit/UIKit.h>
-#import "JCSTextEntryCell.h"
+#import <JCSFoundation/JCSTextEntryCell.h>
 
 @interface LoginCell : JCSTextEntryCell
 

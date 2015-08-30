@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-#import "JCSMultiSelectionViewController.h"
+#import <JCSFoundation/JCSMultiSelectionViewController.h>
 
 @class ObjectModel;
 

@@ -15,7 +15,7 @@
 */
 
 #import <UIKit/UIKit.h>
-#import "JCSInputCellsViewController.h"
+#import <JCSFoundation/JCSInputCellsViewController.h>
 
 @class ObjectModel;
 

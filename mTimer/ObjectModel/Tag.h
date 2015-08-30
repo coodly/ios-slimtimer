@@ -15,7 +15,7 @@
 */
 
 #import "_Tag.h"
-#import "JCSSelectable.h"
+#import <JCSFoundation/JCSSelectable.h>
 
 @interface Tag : _Tag <JCSSelectable>
 

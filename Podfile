@@ -1,5 +1,6 @@
 platform :ios, '8.0'
 
+use_frameworks!
 inhibit_all_warnings!
 
 pod 'AFNetworking'
@@ -14,9 +15,6 @@ pod 'CDYFoundation', :git => 'https://github.com/coodly/CDYFoundation.git'
 pod 'Fabric'
 pod 'Crashlytics'
 pod 'MRProgress'
-pod 'RMStore/Core', '0.7.1'
-pod 'RMStore/KeychainPersistence', '0.7.1'
-pod 'RMStore/AppReceiptVerificator', '0.7.1'
 pod 'NSString-UrlEncode'
 #pod 'Google-AdMob-Ads-SDK', '6.8.0'
 #pod 'CDYAdLoader', :git => 'https://github.com/coodly/CDYAdLoader.git'

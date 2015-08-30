@@ -15,8 +15,8 @@
 */
 
 #import <Lockbox/Lockbox.h>
-#import <RMStore/RMStore.h>
-#import <RMStore/RMStoreKeychainPersistence.h>
+#import "RMStore.h"
+#import "RMStoreKeychainPersistence.h"
 #import "ObjectModel+Purchases.h"
 #import "Task.h"
 #import "ObjectModel+Tasks.h"

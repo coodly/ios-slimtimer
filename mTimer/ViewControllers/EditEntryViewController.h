@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-#import "JCSInputCellsViewController.h"
+#import <JCSFoundation/JCSInputCellsViewController.h>
 
 @class ObjectModel;
 @class TimeEntry;

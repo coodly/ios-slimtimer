@@ -23,7 +23,7 @@
 #import "PushTaskResponse.h"
 #import "TaskObject.h"
 #import "ObjectModel+Tasks.h"
-#import "JCSFoundationConstants.h"
+#import <JCSFoundation/JCSFoundationConstants.h>
 
 NSString *const kTaskCreatePathBase = @"/users/%@/tasks";
 NSString *const kTaskUpdatePathBase = @"/users/%@/tasks/%@";

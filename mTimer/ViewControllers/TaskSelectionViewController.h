@@ -15,7 +15,7 @@
 */
 
 #import <UIKit/UIKit.h>
-#import "JCSSingleSelectionViewController.h"
+#import <JCSFoundation/JCSSingleSelectionViewController.h>
 
 @class ObjectModel;
 

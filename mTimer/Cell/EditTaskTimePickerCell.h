@@ -15,7 +15,7 @@
 */
 
 #import <UIKit/UIKit.h>
-#import "JCSInlinePickerCell.h"
+#import <JCSFoundation/JCSInlinePickerCell.h>
 
 typedef void (^TimePickerValueCangedBlock)(NSDate *date);
 

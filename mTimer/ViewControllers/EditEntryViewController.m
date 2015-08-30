@@ -25,7 +25,7 @@
 #import "EditTaskTimePickerCell.h"
 #import "EditEntryTagsCell.h"
 #import "EditTaskCommentCell.h"
-#import "JCSQuickActionSheet.h"
+#import <JCSFoundation/JCSQuickActionSheet.h>
 #import "ObjectModel+TimeEntries.h"
 #import "TagsViewController.h"
 #import "ObjectModel+TimeReports.h"

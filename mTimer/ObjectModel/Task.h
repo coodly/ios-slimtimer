@@ -15,7 +15,7 @@
 */
 
 #import "_Task.h"
-#import "JCSSelectable.h"
+#import <JCSFoundation/JCSSelectable.h>
 
 @interface Task : _Task <JCSSelectable>
 

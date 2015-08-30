@@ -14,8 +14,8 @@
 * limitations under the License.
 */
 
-#import "JCSQuickAlertView.h"
-#import "JCSFoundationConstants.h"
+#import <JCSFoundation/JCSQuickAlertView.h>
+#import <JCSFoundation/JCSFoundationConstants.h>
 
 @interface TimerAlertView : UIAlertView
 

@@ -74,13 +74,6 @@ PODS:
   - MRProgress/Stopable (0.8.2):
     - MRProgress/Helper
   - NSString-UrlEncode (2.0.0)
-  - OpenSSL (1.0.204)
-  - RMStore/AppReceiptVerificator (0.7.1):
-    - OpenSSL (~> 1.0.1)
-    - RMStore/Core
-  - RMStore/Core (0.7.1)
-  - RMStore/KeychainPersistence (0.7.1):
-    - RMStore/Core
 
 DEPENDENCIES:
   - 1PasswordExtension (~> 1.5)
@@ -95,9 +88,6 @@ DEPENDENCIES:
   - Lockbox
   - MRProgress
   - NSString-UrlEncode
-  - RMStore/AppReceiptVerificator (= 0.7.1)
-  - RMStore/Core (= 0.7.1)
-  - RMStore/KeychainPersistence (= 0.7.1)
 
 EXTERNAL SOURCES:
   CDYFoundation:
@@ -115,7 +105,7 @@ CHECKOUT OPTIONS:
     :commit: eda2aff2073c0f560cf75531b91c12695558c819
     :git: https://github.com/coodly/CDYObjectModel.git
   JCSFoundation:
-    :commit: 3224cc2b6e57456445d18fabf5f228b288c29624
+    :commit: 8e8947a0197427396e91f386a433b3aa152dd2f2
     :git: https://github.com/jaanussiim/JCSFoundation.git
 
 SPEC CHECKSUMS:
@@ -129,7 +119,5 @@ SPEC CHECKSUMS:
   Lockbox: 16442da35d9d4286966936763be728a931d589c3
   MRProgress: f4cfe862082418e8f542f077772283f425d6c699
   NSString-UrlEncode: d26eb4378531911d54694733143dd493c1571f5c
-  OpenSSL: 576b352e6e6e60793ca133c6785736e3cbc31a09
-  RMStore: 64ba13a9c040e3b7572765d169f77175cd3243e5
 
 COCOAPODS: 0.39.0.beta.3
