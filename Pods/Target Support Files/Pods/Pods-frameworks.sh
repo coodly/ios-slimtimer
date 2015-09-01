@@ -90,6 +90,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/Lockbox.framework"
   install_framework "Pods/MRProgress.framework"
   install_framework "Pods/NSString_UrlEncode.framework"
+  install_framework "Pods/SWLogger.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/OnePasswordExtension.framework"
@@ -100,4 +101,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/Lockbox.framework"
   install_framework "Pods/MRProgress.framework"
   install_framework "Pods/NSString_UrlEncode.framework"
+  install_framework "Pods/SWLogger.framework"
 fi

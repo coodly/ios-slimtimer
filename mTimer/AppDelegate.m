@@ -54,14 +54,16 @@
 #endif
 
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
-
+    
     [self setVerificator:[[RMStoreAppReceiptVerificator alloc] init]];
     [self.verificator setBundleIdentifier:@"com.coodly.mtimer"];
     //TODO jaanus: think something with bundle version
     [[RMStore defaultStore] setReceiptVerificator:self.verificator];
     [self setPersistence:[[RMStoreKeychainPersistence alloc] init]];
     [[RMStore defaultStore] setTransactionPersistor:self.persistence];
-
+    
+    [LogCaller setUp];
+        
     [Fabric with:@[[Crashlytics class]]];
 
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];

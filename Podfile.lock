@@ -74,6 +74,7 @@ PODS:
   - MRProgress/Stopable (0.8.2):
     - MRProgress/Helper
   - NSString-UrlEncode (2.0.0)
+  - SWLogger (0.1.0)
 
 DEPENDENCIES:
   - 1PasswordExtension (~> 1.5)
@@ -88,6 +89,7 @@ DEPENDENCIES:
   - Lockbox
   - MRProgress
   - NSString-UrlEncode
+  - SWLogger (from `git@github.com:coodly/swlogger.git`)
 
 EXTERNAL SOURCES:
   CDYFoundation:
@@ -96,6 +98,8 @@ EXTERNAL SOURCES:
     :git: https://github.com/coodly/CDYObjectModel.git
   JCSFoundation:
     :git: https://github.com/jaanussiim/JCSFoundation.git
+  SWLogger:
+    :git: git@github.com:coodly/swlogger.git
 
 CHECKOUT OPTIONS:
   CDYFoundation:
@@ -107,6 +111,9 @@ CHECKOUT OPTIONS:
   JCSFoundation:
     :commit: 8e8947a0197427396e91f386a433b3aa152dd2f2
     :git: https://github.com/jaanussiim/JCSFoundation.git
+  SWLogger:
+    :commit: c4feb2a13b55aa4e947b6495253cf9a76484c2ad
+    :git: git@github.com:coodly/swlogger.git
 
 SPEC CHECKSUMS:
   1PasswordExtension: d2392e44526be30ae7d23f305e96e411ede9b9d1
@@ -119,5 +126,6 @@ SPEC CHECKSUMS:
   Lockbox: 16442da35d9d4286966936763be728a931d589c3
   MRProgress: f4cfe862082418e8f542f077772283f425d6c699
   NSString-UrlEncode: d26eb4378531911d54694733143dd493c1571f5c
+  SWLogger: 5af8abc168ea8840d71877c5b6fa2000ea326e08
 
 COCOAPODS: 0.39.0.beta.3

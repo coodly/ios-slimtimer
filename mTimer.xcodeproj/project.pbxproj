@@ -62,6 +62,7 @@
 		EA0079D91871CB7D00D16DFD /* Year.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0079D81871CB7D00D16DFD /* Year.m */; };
 		EA0079DC1871D69B00D16DFD /* ObjectModel+Dates.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0079DB1871D69B00D16DFD /* ObjectModel+Dates.m */; };
 		EA0079DF1872A20E00D16DFD /* UIView+AdjustHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0079DE1872A20E00D16DFD /* UIView+AdjustHeight.m */; };
+		EA3911941B96099800895E1D /* LogCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3911931B96099800895E1D /* LogCaller.swift */; settings = {ASSET_TAGS = (); }; };
 		EA3E4EFF187D397D00002667 /* ObjectModel+TimeReports.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E4EFE187D397D00002667 /* ObjectModel+TimeReports.m */; };
 		EA3E4F06187F069D00002667 /* VersionDisplayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA3E4F05187F069D00002667 /* VersionDisplayView.xib */; };
 		EA3E4F09187F06AA00002667 /* VersionDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E4F08187F06AA00002667 /* VersionDisplayView.m */; };
@@ -151,6 +152,19 @@
 		EAE802E51874A2CB00DC4651 /* PushEntryResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE802E41874A2CB00DC4651 /* PushEntryResponse.m */; };
 		EAF70CEC188187310011D9F8 /* UIColor+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF70CEB188187310011D9F8 /* UIColor+Theme.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EA1CEB551B9394D000B0B3D8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		41D55B27F687C10A6944B9F3 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -249,6 +263,9 @@
 		EA0079DB1871D69B00D16DFD /* ObjectModel+Dates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ObjectModel+Dates.m"; sourceTree = "<group>"; };
 		EA0079DD1872A20E00D16DFD /* UIView+AdjustHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AdjustHeight.h"; sourceTree = "<group>"; };
 		EA0079DE1872A20E00D16DFD /* UIView+AdjustHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AdjustHeight.m"; sourceTree = "<group>"; };
+		EA1CEB461B9394D000B0B3D8 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		EA3911931B96099800895E1D /* LogCaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogCaller.swift; sourceTree = "<group>"; };
+		EA3911951B9609BC00895E1D /* mTimer-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mTimer-Bridging-Header.h"; sourceTree = "<group>"; };
 		EA3E4EFD187D397D00002667 /* ObjectModel+TimeReports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ObjectModel+TimeReports.h"; sourceTree = "<group>"; };
 		EA3E4EFE187D397D00002667 /* ObjectModel+TimeReports.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ObjectModel+TimeReports.m"; sourceTree = "<group>"; };
 		EA3E4F00187D83F200002667 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
@@ -516,6 +533,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EA3911911B96098500895E1D /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				EA3911931B96099800895E1D /* LogCaller.swift */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
 		EA77A7A91A0267AF0082E411 /* Thirdparty */ = {
 			isa = PBXGroup;
 			children = (
@@ -563,6 +588,7 @@
 				EA96C5A51861735600CA40C2 /* XCTest.framework */,
 				537D801AC1204340BB8D840F /* libPods-mTimerTests.a */,
 				41D55B27F687C10A6944B9F3 /* Pods.framework */,
+				EA1CEB461B9394D000B0B3D8 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -572,6 +598,7 @@
 			children = (
 				EAB83F651861D67800FB6605 /* Cell */,
 				EAB83F8F1862329D00FB6605 /* Extensions */,
+				EA3911911B96098500895E1D /* Logging */,
 				EAB83F731861E3F600FB6605 /* Network */,
 				EA96C5BD1861774E00CA40C2 /* ObjectModel */,
 				EA96C5901861735600CA40C2 /* Supporting Files */,
@@ -594,6 +621,7 @@
 				EA96C5921861735600CA40C2 /* InfoPlist.strings */,
 				EAB83F6B1861D77700FB6605 /* Localizable.strings */,
 				EA96C5951861735600CA40C2 /* main.m */,
+				EA3911951B9609BC00895E1D /* mTimer-Bridging-Header.h */,
 				EA96C5911861735600CA40C2 /* mTimer-Info.plist */,
 				EA96C5971861735600CA40C2 /* mTimer-Prefix.pch */,
 			);
@@ -1017,6 +1045,7 @@
 				A1CEA1E6B26A4337B060149F /* Copy Pods Resources */,
 				EAB066E41B8EC8670087FCF9 /* Crashlytics */,
 				F492B940667C10092BA6AFC4 /* Embed Pods Frameworks */,
+				EA1CEB551B9394D000B0B3D8 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -1033,6 +1062,7 @@
 		EA96C57C1861735500CA40C2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Coodly LLC";
 				TargetAttributes = {
@@ -1047,6 +1077,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = EA96C57B1861735500CA40C2;
 			productRefGroup = EA96C5851861735600CA40C2 /* Products */;
@@ -1283,6 +1314,7 @@
 				EA96C5CA18617DC000CA40C2 /* MainViewController.m in Sources */,
 				EA96C5C01861774E00CA40C2 /* mTimer.xcdatamodeld in Sources */,
 				EAB83FDE18641F1A00FB6605 /* TimeEntry.m in Sources */,
+				EA3911941B96099800895E1D /* LogCaller.swift in Sources */,
 				EAB83F92186232AA00FB6605 /* GDataXMLDocument+Helpers.m in Sources */,
 				EAE802D61874208300DC4651 /* EntriesSyncService.m in Sources */,
 				EAB83F951862336900FB6605 /* GDataXMLElement+Extension.m in Sources */,
@@ -1395,8 +1427,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1424,6 +1458,7 @@
 				);
 				INFOPLIST_FILE = "mTimer/mTimer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Thirdparty/RMStore/0.7.1/openssl-1.0.1e/lib",
@@ -1460,6 +1495,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.coodly.mtimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "mTimer/mTimer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;
@@ -1472,8 +1509,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1501,6 +1540,7 @@
 				);
 				INFOPLIST_FILE = "mTimer/mTimer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Thirdparty/RMStore/0.7.1/openssl-1.0.1e/lib",
@@ -1537,6 +1577,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.coodly.mtimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "mTimer/mTimer-Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;
