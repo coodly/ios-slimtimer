@@ -43,7 +43,9 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+    self.window = [LogCaller shakeWindow];
 
 #if DEBUG
     UITapGestureRecognizer *toggleHistoryRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeTransactions)];

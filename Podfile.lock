@@ -112,7 +112,7 @@ CHECKOUT OPTIONS:
     :commit: 8e8947a0197427396e91f386a433b3aa152dd2f2
     :git: https://github.com/jaanussiim/JCSFoundation.git
   SWLogger:
-    :commit: 03b28090c80a14aa2560f4de51f312ef21906953
+    :commit: bb3c6a5085e02b469dd4a634b3e8e2f336e37ed5
     :git: git@github.com:coodly/swlogger.git
 
 SPEC CHECKSUMS:

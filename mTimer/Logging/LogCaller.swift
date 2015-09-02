@@ -31,4 +31,8 @@ import SWLogger
     static func info(message:String) {
         Log.info(message);
     }
+    
+    static func shakeWindow() -> UIWindow {
+        return ShakeWindow(frame: UIScreen.mainScreen().bounds)
+    }
 }
