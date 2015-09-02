@@ -21,6 +21,7 @@ import SWLogger
     static func setUp() {
         Logger.sharedInstance.setLogLevel(Log.Level.DEBUG)
         Logger.sharedInstance.addOutput(ConsoleOutput())
+        Logger.sharedInstance.addOutput(FileOutput())
     }
     
     static func startSession() {

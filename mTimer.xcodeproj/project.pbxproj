@@ -1494,7 +1494,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.coodly.mtimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "825a7f50-738f-418b-ac32-b5a9bcc0d902";
 				SWIFT_OBJC_BRIDGING_HEADER = "mTimer/mTimer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
@@ -1576,7 +1576,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.coodly.mtimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "825a7f50-738f-418b-ac32-b5a9bcc0d902";
 				SWIFT_OBJC_BRIDGING_HEADER = "mTimer/mTimer-Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				VALID_ARCHS = "arm64 armv7";
