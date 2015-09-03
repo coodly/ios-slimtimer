@@ -44,6 +44,7 @@ PODS:
     - JCSFoundation/Core
   - JCSFoundation/UserInput (0.1.0):
     - JCSFoundation/Core
+  - LaughingAdventure (0.1.0)
   - Lockbox (2.1.0)
   - MRProgress (0.8.2):
     - MRProgress/ActivityIndicator (= 0.8.2)
@@ -86,6 +87,7 @@ DEPENDENCIES:
   - JCSFoundation/CoreData (from `https://github.com/jaanussiim/JCSFoundation.git`)
   - JCSFoundation/PopupViews (from `https://github.com/jaanussiim/JCSFoundation.git`)
   - JCSFoundation/UserInput (from `https://github.com/jaanussiim/JCSFoundation.git`)
+  - LaughingAdventure (from `git@github.com:coodly/laughing-adventure.git`)
   - Lockbox
   - MRProgress
   - NSString-UrlEncode
@@ -98,6 +100,8 @@ EXTERNAL SOURCES:
     :git: https://github.com/coodly/CDYObjectModel.git
   JCSFoundation:
     :git: https://github.com/jaanussiim/JCSFoundation.git
+  LaughingAdventure:
+    :git: git@github.com:coodly/laughing-adventure.git
   SWLogger:
     :git: git@github.com:coodly/swlogger.git
 
@@ -111,6 +115,9 @@ CHECKOUT OPTIONS:
   JCSFoundation:
     :commit: 8e8947a0197427396e91f386a433b3aa152dd2f2
     :git: https://github.com/jaanussiim/JCSFoundation.git
+  LaughingAdventure:
+    :commit: cba0dc6aa28b35783c2bb4332335414699c8e5c0
+    :git: git@github.com:coodly/laughing-adventure.git
   SWLogger:
     :commit: bb3c6a5085e02b469dd4a634b3e8e2f336e37ed5
     :git: git@github.com:coodly/swlogger.git
@@ -123,9 +130,10 @@ SPEC CHECKSUMS:
   Crashlytics: 39ab395565bc03c29cdecd2b9d103ebf30930c10
   Fabric: 6d1d1c1eaf7ebc76fc3307e2c0259456411baf26
   JCSFoundation: 2f986cfd674d8c2d06db8f6a236b97f01c136e9d
+  LaughingAdventure: ebb782e95d151015a7e244c0dd309a77b64b0844
   Lockbox: 16442da35d9d4286966936763be728a931d589c3
   MRProgress: f4cfe862082418e8f542f077772283f425d6c699
   NSString-UrlEncode: d26eb4378531911d54694733143dd493c1571f5c
   SWLogger: 5af8abc168ea8840d71877c5b6fa2000ea326e08
 
-COCOAPODS: 0.39.0.beta.3
+COCOAPODS: 0.39.0.beta.4
