@@ -62,6 +62,8 @@
 		EA0079D91871CB7D00D16DFD /* Year.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0079D81871CB7D00D16DFD /* Year.m */; };
 		EA0079DC1871D69B00D16DFD /* ObjectModel+Dates.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0079DB1871D69B00D16DFD /* ObjectModel+Dates.m */; };
 		EA0079DF1872A20E00D16DFD /* UIView+AdjustHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0079DE1872A20E00D16DFD /* UIView+AdjustHeight.m */; };
+		EA1E7D401B9AC328001C45C9 /* AppContentContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1E7D3F1B9AC328001C45C9 /* AppContentContainerController.swift */; settings = {ASSET_TAGS = (); }; };
+		EA1E7D421B9AC473001C45C9 /* AppContentContainerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1E7D411B9AC473001C45C9 /* AppContentContainerController.xib */; settings = {ASSET_TAGS = (); }; };
 		EA3911941B96099800895E1D /* LogCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3911931B96099800895E1D /* LogCaller.swift */; settings = {ASSET_TAGS = (); }; };
 		EA3E4EFF187D397D00002667 /* ObjectModel+TimeReports.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E4EFE187D397D00002667 /* ObjectModel+TimeReports.m */; };
 		EA3E4F06187F069D00002667 /* VersionDisplayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA3E4F05187F069D00002667 /* VersionDisplayView.xib */; };
@@ -264,6 +266,8 @@
 		EA0079DD1872A20E00D16DFD /* UIView+AdjustHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AdjustHeight.h"; sourceTree = "<group>"; };
 		EA0079DE1872A20E00D16DFD /* UIView+AdjustHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AdjustHeight.m"; sourceTree = "<group>"; };
 		EA1CEB461B9394D000B0B3D8 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		EA1E7D3F1B9AC328001C45C9 /* AppContentContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppContentContainerController.swift; sourceTree = "<group>"; };
+		EA1E7D411B9AC473001C45C9 /* AppContentContainerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppContentContainerController.xib; sourceTree = "<group>"; };
 		EA3911931B96099800895E1D /* LogCaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogCaller.swift; sourceTree = "<group>"; };
 		EA3911951B9609BC00895E1D /* mTimer-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mTimer-Bridging-Header.h"; sourceTree = "<group>"; };
 		EA3E4EFD187D397D00002667 /* ObjectModel+TimeReports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ObjectModel+TimeReports.h"; sourceTree = "<group>"; };
@@ -685,6 +689,8 @@
 				EA0079AF18716E3C00D16DFD /* AddTagViewController.h */,
 				EA0079B018716E3C00D16DFD /* AddTagViewController.m */,
 				EA0079B118716E3C00D16DFD /* AddTagViewController.xib */,
+				EA1E7D3F1B9AC328001C45C9 /* AppContentContainerController.swift */,
+				EA1E7D411B9AC473001C45C9 /* AppContentContainerController.xib */,
 				EA0079321865880500D16DFD /* DayEntriesViewController.h */,
 				EA0079331865880500D16DFD /* DayEntriesViewController.m */,
 				EA0079571868489100D16DFD /* DayEntriesViewController.xib */,
@@ -1099,6 +1105,7 @@
 				EA00797B186CB61700D16DFD /* EditTaskTimeCell.xib in Resources */,
 				EA007989186D81F800D16DFD /* EditTaskTimePickerCell.xib in Resources */,
 				EAB83F6D1861D77700FB6605 /* Localizable.strings in Resources */,
+				EA1E7D421B9AC473001C45C9 /* AppContentContainerController.xib in Resources */,
 				EA96C5941861735600CA40C2 /* InfoPlist.strings in Resources */,
 				EA62103B18AFB07200131285 /* EditTaskViewController.xib in Resources */,
 				EA3E4F06187F069D00002667 /* VersionDisplayView.xib in Resources */,
@@ -1270,6 +1277,7 @@
 				EAB83FAB1863244C00FB6605 /* ObjectModel+Users.m in Sources */,
 				EA007979186CB60700D16DFD /* EditTaskTimeCell.m in Sources */,
 				EA00796A186C27C400D16DFD /* EditTaskTaskCell.m in Sources */,
+				EA1E7D401B9AC328001C45C9 /* AppContentContainerController.swift in Sources */,
 				EA00799C186F6A4500D16DFD /* _Tag.m in Sources */,
 				EAB83F851862198B00FB6605 /* Constants.m in Sources */,
 				EAB83F981862C9E500FB6605 /* NSMutableString+Issues.m in Sources */,

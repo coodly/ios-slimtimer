@@ -79,21 +79,10 @@
     MainViewController *controller = [[MainViewController alloc] init];
     [self setMainViewController:controller];
     [controller setObjectModel:model];
-    [self.window setRootViewController:controller];
-
-#if SHOW_ADS
-    //[[CDYAdLoader sharedInstance] addService:[[CDYIAdLoader alloc] init]];
-    //CDYAdMobLoader *adMobLoader = [[CDYAdMobLoader alloc] initWithAdMobUnit:TimerAdMobUnit];
-    //[adMobLoader setRootViewController:controller];
-#if DEBUG
-    //[adMobLoader setTesting:YES];
-    //[adMobLoader setTestDevices:@[@"4c330763bc5b214c8bd93a3b8f68f9db", GAD_SIMULATOR_ID]];
-#endif
-    //[[CDYAdLoader sharedInstance] addService:adMobLoader];
-#endif
-
-    //[[CDYAdLoader sharedInstance] setBannerAdPosition:AdPositionBottom];
-    //[[CDYAdLoader sharedInstance] setAdCheckTime:TimerAdCheckTimeSeconds];
+    
+    AppContentContainerController *content = [[AppContentContainerController alloc] init];
+    [content setPresented:controller];
+    [self.window setRootViewController:content];
 
     EntriesSyncService *service = [[EntriesSyncService alloc] initWithObjectModel:model];
     [self setEntriesSync:service];

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8187.4"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppContentContainerController" customModule="mTimer" customModuleProvider="target">
+            <connections>
+                <outlet property="adContainerHeightConstraint" destination="s8T-BF-Qjw" id="LMA-1r-Mex"/>
+                <outlet property="adContainerView" destination="JtC-S2-LVY" id="goi-7K-em6"/>
+                <outlet property="contentPresentingView" destination="5YQ-3F-rpE" id="714-Jd-Hvx"/>
+                <outlet property="view" destination="iRm-rR-vsw" id="Yr3-Zh-tYL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iRm-rR-vsw">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5YQ-3F-rpE" userLabel="Content">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JtC-S2-LVY" userLabel="Ad">
+                    <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="s8T-BF-Qjw"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="JtC-S2-LVY" secondAttribute="bottom" id="3gm-RF-u4N"/>
+                <constraint firstItem="5YQ-3F-rpE" firstAttribute="top" secondItem="iRm-rR-vsw" secondAttribute="top" id="99t-k4-hxI"/>
+                <constraint firstItem="5YQ-3F-rpE" firstAttribute="leading" secondItem="iRm-rR-vsw" secondAttribute="leading" id="TYy-dD-xrj"/>
+                <constraint firstItem="JtC-S2-LVY" firstAttribute="top" secondItem="5YQ-3F-rpE" secondAttribute="bottom" id="gHN-TA-v6A"/>
+                <constraint firstItem="JtC-S2-LVY" firstAttribute="leading" secondItem="iRm-rR-vsw" secondAttribute="leading" id="mWL-t2-cxA"/>
+                <constraint firstAttribute="trailing" secondItem="JtC-S2-LVY" secondAttribute="trailing" id="rKj-po-36y"/>
+                <constraint firstAttribute="trailing" secondItem="5YQ-3F-rpE" secondAttribute="trailing" id="uCN-3b-R8X"/>
+            </constraints>
+            <point key="canvasLocation" x="362" y="432"/>
+        </view>
+    </objects>
+</document>
