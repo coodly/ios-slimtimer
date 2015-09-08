@@ -27,7 +27,6 @@ CGFloat const kMiddleSpacing = 3;
 @property (nonatomic, strong) IBOutlet UILabel *runTimeLabel;
 @property (nonatomic, strong) IBOutlet UILabel *tagsLabel;
 @property (nonatomic, strong) IBOutlet UILabel *commentLabel;
-@property (nonatomic, strong) IBOutlet UILabel *purchaseHistory;
 
 @end
 
@@ -49,8 +48,6 @@ CGFloat const kMiddleSpacing = 3;
     [super awakeFromNib];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(adjustContentFont:) name:UIContentSizeCategoryDidChangeNotification object:nil];
-    [self.purchaseHistory setTextColor:[UIColor lightGrayColor]];
-    [self.purchaseHistory setText:NSLocalizedString(@"day.entries.purchase.history.message", nil)];
 
     [self adjustContentFont:nil];
 }
@@ -60,7 +57,6 @@ CGFloat const kMiddleSpacing = 3;
     [self.tagsLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleCaption2]];
     [self.timesLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleFootnote]];
     [self.runTimeLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleFootnote]];
-    [self.purchaseHistory setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleFootnote]];
     [self.commentLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]];
 }
 
@@ -76,7 +72,7 @@ CGFloat const kMiddleSpacing = 3;
     myFrame.size.height = totalHeight;
     [self setFrame:myFrame];
 
-    [self positionLabels:@[@[self.taskNameLabel], @[self.tagsLabel], @[self.timesLabel, self.runTimeLabel, self.purchaseHistory], @[self.commentLabel]] offset:kLeadSpacing];
+    [self positionLabels:@[@[self.taskNameLabel], @[self.tagsLabel], @[self.timesLabel, self.runTimeLabel], @[self.commentLabel]] offset:kLeadSpacing];
 }
 
 - (void)hideContent:(BOOL)hide {
@@ -84,7 +80,6 @@ CGFloat const kMiddleSpacing = 3;
     [self.timesLabel setHidden:hide];
     [self.runTimeLabel setHidden:hide];
     [self.commentLabel setHidden:hide];
-    [self.purchaseHistory setHidden:!hide];
 }
 
 - (void)positionLabels:(NSArray *)rows offset:(CGFloat)offset {

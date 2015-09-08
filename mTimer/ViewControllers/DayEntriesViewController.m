@@ -26,7 +26,6 @@
 #import "TimerTabActivityView.h"
 #import "EditEntryViewController.h"
 #import "ObjectModel+Dates.h"
-#import "ObjectModel+Purchases.h"
 #import "TimerAlertView.h"
 
 @interface DayEntriesViewController ()
@@ -64,7 +63,6 @@
     [self.tableView addSubview:refreshControl];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contentSizeChanged:) name:UIContentSizeCategoryDidChangeNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkFullHistoryStatus) name:kTimerCheckFullHistoryStatus object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -78,8 +76,6 @@
     if (![self.objectModel hasMarkerForDate:self.presentedDate]) {
         [self refreshTimeEntries];
     }
-
-    [self checkForUnlockedTask];
 }
 
 - (NSFetchedResultsController *)createFetchedController {
@@ -97,7 +93,6 @@
     [entryCell.commentLabel setText:[entry comment]];
 
     [entryCell adjustHeight];
-    [entryCell hideContent:![self canSeeDetailsForEntry:entry]];
 }
 
 - (void)setFormattedTime:(NSString *)formattedTime intoLabel:(UILabel *)label {
@@ -127,22 +122,11 @@
 }
 
 - (void)tappedOnObject:(id)tapped {
-    if (![self canSeeDetailsForEntry:tapped]) {
-        TimerAlertView *alertView = [TimerAlertView alertViewWithTitle:NSLocalizedString(@"day.entries.full.history.purchase.title", nil) message:NSLocalizedString(@"day.entries.full.history.purchase.message", nil)];
-        [alertView setConfirmButtonTitle:NSLocalizedString(@"day.entries.full.history.purchase.dismiss.button", nil)];
-        [alertView show];
-        return;
-    }
-
     EditEntryViewController *controller = [[EditEntryViewController alloc] init];
     [controller setObjectModel:self.objectModel];
     [controller setTimeEntry:tapped];
     [controller setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:controller animated:YES];
-}
-
-- (BOOL)canSeeDetailsForEntry:(TimeEntry *)entry {
-    return [self.objectModel hasPurchasedFullHistory] || [entry.task taskIdValue] == [self objectModel].unlockedTaskId;
 }
 
 - (void)pullRefresh {
@@ -189,31 +173,6 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.tableView reloadData];
     });
-}
-
-- (void)checkForUnlockedTask {
-    TimerLog(@"checkForUnlockedTask");
-    NSInteger unlocked = [self.objectModel unlockedTaskId];
-    if (unlocked != 0) {
-        TimerLog(@"Unlocked set to:%ld", unlocked);
-        return;
-    }
-
-    if ([self.allObjects.fetchedObjects count] == 0) {
-        TimerLog(@"No entries shown");
-        return;
-    }
-
-    TimeEntry *entry = [self.allObjects objectAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
-    TimerLog(@"Will set %@ unlocked", entry.task.name);
-    [self.objectModel setUnlockedTaskId:entry.task.taskIdValue];
-    [self checkFullHistoryStatus];
-}
-
-- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
-    [super controllerDidChangeContent:controller];
-
-    [self checkForUnlockedTask];
 }
 
 @end

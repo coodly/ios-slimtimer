@@ -27,29 +27,18 @@
 #import "ObjectModel+Settings.h"
 #import "TimerAlertView.h"
 #import "VersionDisplayView.h"
-#import "ProductCell.h"
-#import "RMStore.h"
-#import "ObjectModel+Purchases.h"
 
 NSString *const kSettingButtonCellIdentifier = @"kSettingButtonCellIdentifier";
 NSString *const kSettingSwitchCellIdentifier = @"kSettingSwitchCellIdentifier";
-NSString *const kSettingProductCellIdentifier = @"kSettingProductCellIdentifier";
 
 NSUInteger const kFeedbackSection = 1;
 NSUInteger const kRateAppRow = 0;
 NSUInteger const kSendFeedbackRow = 1;
-NSUInteger const kPurchasesSection = 2;
-NSUInteger const kRemoveAdsRow = 0;
-NSUInteger const kFullHistoryRow = 1;
-NSUInteger const kRestorePurchasesRow = 2;
-NSUInteger const kLogoutSection = 3;
+NSUInteger const kLogoutSection = 2;
 
 @interface SettingsViewController () <MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, strong) SettingSwitchCell *showCompleteTasksCell;
-@property (nonatomic, strong) NSArray *products;
-@property (nonatomic, strong) ProductCell *adsCell;
-@property (nonatomic, strong) ProductCell *historyCell;
 @property (nonatomic, assign) BOOL productsPullError;
 
 @end
@@ -72,7 +61,6 @@ NSUInteger const kLogoutSection = 3;
 
     [self.tableView registerNib:[ButtonCell viewNib] forCellReuseIdentifier:kSettingButtonCellIdentifier];
     [self.tableView registerNib:[SettingSwitchCell viewNib] forCellReuseIdentifier:kSettingSwitchCellIdentifier];
-    [self.tableView registerNib:[ProductCell viewNib] forCellReuseIdentifier:kSettingProductCellIdentifier];
 
     __weak SettingsViewController *weakSelf = self;
     [self setShowCompleteTasksCell:[self.tableView dequeueReusableCellWithIdentifier:kSettingSwitchCellIdentifier]];
@@ -93,26 +81,6 @@ NSUInteger const kLogoutSection = 3;
 
     [self closeSection];
 
-    ProductCell *adsCell = [self.tableView dequeueReusableCellWithIdentifier:kSettingProductCellIdentifier];
-    [self setAdsCell:adsCell];
-    [self addCellForPresentation:adsCell];
-    [adsCell.nameLabel setText:NSLocalizedString(@"settings.controller.products.remove.ads", nil)];
-    [adsCell adjustLabels];
-    [adsCell showUpdating];
-
-    ProductCell *historyCell = [self.tableView dequeueReusableCellWithIdentifier:kSettingProductCellIdentifier];
-    [self setHistoryCell:historyCell];
-    [self addCellForPresentation:historyCell];
-    [historyCell.nameLabel setText:NSLocalizedString(@"settings.controller.products.full.history", nil)];
-    [historyCell adjustLabels];
-    [historyCell showUpdating];
-
-    ButtonCell *restorePurchases = [self.tableView dequeueReusableCellWithIdentifier:kSettingButtonCellIdentifier];
-    [self addCellForPresentation:restorePurchases];
-    [restorePurchases.textLabel setText:NSLocalizedString(@"settings.controller.restore.purchases", nil)];
-
-    [self closeSection];
-
     ButtonCell *logoutCell = [self.tableView dequeueReusableCellWithIdentifier:kSettingButtonCellIdentifier];
     [logoutCell.textLabel setText:NSLocalizedString(@"settings.controller.logout.button", nil)];
     [self addCellForPresentation:logoutCell];
@@ -129,20 +97,6 @@ NSUInteger const kLogoutSection = 3;
     [super viewWillAppear:animated];
 
     [self.showCompleteTasksCell setTitle:NSLocalizedString(@"settings.controller.show.complete.tasks.label", nil) value:self.objectModel.showCompleteTasks];
-
-    if (!self.products) {
-        [self pullProductsInformation];
-    } else {
-        [self updateProductsInformation];
-    }
-
-    if ([self.objectModel adsHaveBeenDisabled]) {
-        [self.adsCell markPurchased];
-    }
-
-    if ([self.objectModel hasPurchasedFullHistory]) {
-        [self.historyCell markPurchased];
-    }
 }
 
 - (void)donePressed {
@@ -164,16 +118,6 @@ NSUInteger const kLogoutSection = 3;
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:reviewURL]];
     } else if (indexPath.section == kFeedbackSection && indexPath.row == kSendFeedbackRow) {
         [self presentMailComposer];
-    } else if (indexPath.section == kPurchasesSection && indexPath.row != kRestorePurchasesRow && self.productsPullError) {
-        TimerAlertView *alertView = [TimerAlertView alertViewWithTitle:NSLocalizedString(@"settings.controller.pull.products.error.title", nil) message:NSLocalizedString(@"settings.controller.pull.products.error.message", nil)];
-        [alertView setConfirmButtonTitle:NSLocalizedString(@"settings.controller.pull.products.error.dismiss.button", nil)];
-        [alertView show];
-    } else if (indexPath.section == kPurchasesSection && indexPath.row == kRemoveAdsRow) {
-        [self purchaseRemoveAds];
-    } else if (indexPath.section == kPurchasesSection && indexPath.row == kFullHistoryRow) {
-        [self purchaseFullHistory];
-    } else if (indexPath.section == kPurchasesSection && indexPath.row == kRestorePurchasesRow) {
-        [self restorePurchases];
     }
 }
 
@@ -221,117 +165,6 @@ NSUInteger const kLogoutSection = 3;
             });
         }];
 
-    }];
-}
-
-- (void)pullProductsInformation {
-    NSSet *productIdentifiers = [NSSet setWithArray:@[kProductIdentifierRemoveAds, kProductIdentifierFullHistory]];
-    [[RMStore defaultStore] requestProducts:productIdentifiers success:^(NSArray *products, NSArray *invalidProductIdentifiers) {
-        [self setProducts:products];
-        [self updateProductsInformation];
-    } failure:^(NSError *error) {
-        TimerLog(@"pullProductsInformation error:%@", error);
-        [self setProductsPullError:YES];
-        if (![self.objectModel adsHaveBeenDisabled]) {
-            [self.adsCell showError];
-        }
-        if (![self.objectModel hasPurchasedFullHistory]) {
-            [self.historyCell showError];
-        }
-    }];
-}
-
-- (void)updateProductsInformation {
-    TimerLog(@"updateProductsInformation");
-    for (SKProduct *product in self.products) {
-        if ([product.productIdentifier isEqualToString:kProductIdentifierRemoveAds] && ![self.objectModel adsHaveBeenDisabled]) {
-            [self.adsCell setPrice:product.price locale:product.priceLocale];
-        } else if ([product.productIdentifier isEqualToString:kProductIdentifierFullHistory] && ![self.objectModel hasPurchasedFullHistory]) {
-            [self.historyCell setPrice:product.price locale:product.priceLocale];
-        }
-    }
-}
-
-- (void)purchaseRemoveAds {
-    if ([self.objectModel adsHaveBeenDisabled]) {
-        return;
-    }
-
-    [self makePurchase:kProductIdentifierRemoveAds success:^{
-        [self.adsCell markPurchased];
-        [[NSNotificationCenter defaultCenter] postNotificationName:kTimerCheckShowAddStatus object:nil];
-    }];
-}
-
-- (void)purchaseFullHistory {
-    if ([self.objectModel hasPurchasedFullHistory]) {
-        return;
-    }
-
-    [self makePurchase:kProductIdentifierFullHistory success:^{
-        [self.historyCell markPurchased];
-        [[NSNotificationCenter defaultCenter] postNotificationName:kTimerCheckFullHistoryStatus object:nil];
-    }];
-}
-
-- (void)makePurchase:(NSString *)identifier success:(JCSActionBlock)successHandler {
-    if (![RMStore canMakePayments]) {
-        TimerAlertView *alertView = [TimerAlertView alertViewWithTitle:NSLocalizedString(@"settings.controller.cant.make.payments.error.title", nil) message:NSLocalizedString(@"settings.controller.cant.make.payments.error.message", nil)];
-        [alertView setConfirmButtonTitle:NSLocalizedString(@"settings.controller.cant.make.payments.error.dismiss.button", nil)];
-        [alertView show];
-        return;
-    }
-
-    TimerProgressHUD *hud = [TimerProgressHUD showHUDOnView:self.navigationController.view];
-    [[RMStore defaultStore] addPayment:identifier success:^(SKPaymentTransaction *transaction) {
-        TimerLog(@"Payment success");
-        [hud hide];
-        successHandler();
-    } failure:^(SKPaymentTransaction *transaction, NSError *error) {
-        TimerLog(@"Payment failed: %@", error);
-        [hud hide];
-
-        if (error.code == SKErrorPaymentCancelled) {
-            return;
-        }
-
-        TimerAlertView *alertView = [TimerAlertView alertViewWithTitle:NSLocalizedString(@"settings.controller.payment.failed.title", nil) error:error];
-        [alertView setConfirmButtonTitle:NSLocalizedString(@"settings.controller.payment.failed.dismiss.button", nil)];
-        [alertView show];
-    }];
-}
-
-- (void)restorePurchases {
-    TimerLog(@"restorePurchases");
-    TimerProgressHUD *hud = [TimerProgressHUD showHUDOnView:self.navigationController.view];
-    [[RMStore defaultStore] restoreTransactionsOnSuccess:^(NSArray *transactions) {
-        TimerLog(@"Restore success");
-        [hud hide];
-        
-        [self updateProductsInformation];
-        [[NSNotificationCenter defaultCenter] postNotificationName:kTimerCheckShowAddStatus object:nil];
-        [[NSNotificationCenter defaultCenter] postNotificationName:kTimerCheckFullHistoryStatus object:nil];
-        
-        if ([self.objectModel adsHaveBeenDisabled]) {
-            [self.adsCell markPurchased];
-        }
-        
-        if ([self.objectModel hasPurchasedFullHistory]) {
-            [self.historyCell markPurchased];
-        }
-        
-        [self updateProductsInformation];
-    } failure:^(NSError *error) {
-        TimerLog(@"Restore error:%@", error);
-        [hud hide];
-        
-        if (error.code == SKErrorPaymentCancelled) {
-            return;
-        }
-        
-        TimerAlertView *alertView = [TimerAlertView alertViewWithTitle:NSLocalizedString(@"settings.controller.restore.failed.title", nil) error:error];
-        [alertView setConfirmButtonTitle:NSLocalizedString(@"settings.controller.restore.failed.dismiss.button", nil)];
-        [alertView show];
     }];
 }
 

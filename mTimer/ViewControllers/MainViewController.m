@@ -21,7 +21,6 @@
 #import "TasksListViewController.h"
 #import "HistoryViewController.h"
 #import "Constants.h"
-#import "ObjectModel+Purchases.h"
 
 @interface MainViewController ()
 
@@ -54,11 +53,6 @@
 
     [tabBarController.view setFrame:self.view.bounds];
     [self.view addSubview:tabBarController.view];
-
-    //[[CDYAdLoader sharedInstance] setMainView:self.view];
-    //[[CDYAdLoader sharedInstance] setContentView:tabBarController.view];
-
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkAdPresentation) name:kTimerCheckShowAddStatus object:nil];
 }
 
 - (void)dealloc {
@@ -84,13 +78,6 @@
 
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
     [self presentViewController:navigationController animated:YES completion:nil];
-}
-
-- (void)checkAdPresentation {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        TimerLog(@"checkAdPresentation - disabled %d", [self.objectModel adsHaveBeenDisabled]);
-        //[[CDYAdLoader sharedInstance] setLoadingAdsDisabled:[self.objectModel adsHaveBeenDisabled]];
-    });
 }
 
 @end

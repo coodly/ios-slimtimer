@@ -26,11 +26,6 @@
 extern NSString *const kTimerErrorDomain;
 extern NSString *const kTimerLoggedInNotification;
 extern NSString *const kTimerLoggedOutNotification;
-extern NSString *const kTimerCheckShowAddStatus;
-extern NSString *const kTimerCheckFullHistoryStatus;
-extern NSString *const kProductIdentifierRemoveAds;
-extern NSString *const kProductIdentifierFullHistory;
-static NSTimeInterval const TimerAdCheckTimeSeconds = 60;
 
 #define kAppStoreId 793812713
 

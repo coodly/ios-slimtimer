@@ -19,7 +19,3 @@
 NSString *const kTimerErrorDomain = @"com.coodly.mtimer";
 NSString *const kTimerLoggedInNotification = @"kTimerLoggedInNotification";
 NSString *const kTimerLoggedOutNotification = @"kTimerLoggedOutNotification";
-NSString *const kTimerCheckShowAddStatus = @"kTimerCheckShowAddStatus";
-NSString *const kTimerCheckFullHistoryStatus = @"kTimerCheckFullHistoryStatus";
-NSString *const kProductIdentifierRemoveAds = @"com.coodly.mtimer.remove.ads";
-NSString *const kProductIdentifierFullHistory = @"com.coodly.mtimer.full.history";

@@ -21,7 +21,7 @@
 #import "Tag.h"
 #import "EditTaskTagsCell.h"
 #import "TagsViewController.h"
-#import "ObjectModel+Purchases.h"
+#import "ObjectModel+SyncStatuses.h"
 
 NSString *const kEditTaskNameCellIdentifier = @"kEditTaskNameCellIdentifier";
 NSString *const kEditTaskTagsCellIdentifier = @"kEditTaskTagsCellIdentifier";

@@ -24,9 +24,6 @@
 #import "TasksListViewController.h"
 #import "EntriesSyncService.h"
 #import "ObjectModel+TimeEntries.h"
-#import "RMStore.h"
-#import "RMStoreAppReceiptVerificator.h"
-#import "RMStoreKeychainPersistence.h"
 #import "UIColor+Theme.h"
 #import "Secrets.h"
 
@@ -35,8 +32,6 @@
 @property (nonatomic, strong) ObjectModel *objectModel;
 @property (nonatomic, strong) MainViewController *mainViewController;
 @property (nonatomic, strong) EntriesSyncService *entriesSync;
-@property (nonatomic, strong) RMStoreAppReceiptVerificator *verificator;
-@property (nonatomic, strong) RMStoreKeychainPersistence *persistence;
 
 @end
 
@@ -54,13 +49,6 @@
 #endif
 
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
-    
-    [self setVerificator:[[RMStoreAppReceiptVerificator alloc] init]];
-    [self.verificator setBundleIdentifier:@"com.coodly.mtimer"];
-    //TODO jaanus: think something with bundle version
-    [[RMStore defaultStore] setReceiptVerificator:self.verificator];
-    [self setPersistence:[[RMStoreKeychainPersistence alloc] init]];
-    [[RMStore defaultStore] setTransactionPersistor:self.persistence];
     
     [Fabric with:@[[Crashlytics class]]];
 
@@ -91,15 +79,6 @@
     return YES;
 }
 
-#if DEBUG
-- (void)removeTransactions {
-    TimerLog(@"Remove transactions");
-    [((RMStoreKeychainPersistence *)[RMStore defaultStore].transactionPersistor) removeTransactions];
-    [[NSNotificationCenter defaultCenter] postNotificationName:kTimerCheckFullHistoryStatus object:nil];
-    [[NSNotificationCenter defaultCenter] postNotificationName:kTimerCheckShowAddStatus object:nil];
-}
-#endif
-
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -119,8 +98,6 @@
     TimerLog(@"applicationDidBecomeActive");
     [self.mainViewController.tasksListViewController checkForRunningEntries];
     [self.entriesSync checkStatusesToPush];
-    [[NSNotificationCenter defaultCenter] postNotificationName:kTimerCheckShowAddStatus object:nil];
-    //[[CDYAdLoader sharedInstance] reloadAds];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
