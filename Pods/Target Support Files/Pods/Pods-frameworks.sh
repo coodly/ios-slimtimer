@@ -80,28 +80,3 @@ strip_invalid_archs() {
   fi
 }
 
-
-if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods/OnePasswordExtension.framework"
-  install_framework "Pods/AFNetworking.framework"
-  install_framework "Pods/CDYFoundation.framework"
-  install_framework "Pods/CDYObjectModel.framework"
-  install_framework "Pods/JCSFoundation.framework"
-  install_framework "Pods/LaughingAdventure.framework"
-  install_framework "Pods/Lockbox.framework"
-  install_framework "Pods/MRProgress.framework"
-  install_framework "Pods/NSString_UrlEncode.framework"
-  install_framework "Pods/SWLogger.framework"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods/OnePasswordExtension.framework"
-  install_framework "Pods/AFNetworking.framework"
-  install_framework "Pods/CDYFoundation.framework"
-  install_framework "Pods/CDYObjectModel.framework"
-  install_framework "Pods/JCSFoundation.framework"
-  install_framework "Pods/LaughingAdventure.framework"
-  install_framework "Pods/Lockbox.framework"
-  install_framework "Pods/MRProgress.framework"
-  install_framework "Pods/NSString_UrlEncode.framework"
-  install_framework "Pods/SWLogger.framework"
-fi

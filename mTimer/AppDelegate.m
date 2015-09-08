@@ -43,9 +43,7 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
-    self.window = [LogCaller shakeWindow];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
 #if DEBUG
     UITapGestureRecognizer *toggleHistoryRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeTransactions)];
@@ -64,8 +62,6 @@
     [self setPersistence:[[RMStoreKeychainPersistence alloc] init]];
     [[RMStore defaultStore] setTransactionPersistor:self.persistence];
     
-    [LogCaller setUp];
-        
     [Fabric with:@[[Crashlytics class]]];
 
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
@@ -80,9 +76,7 @@
     [self setMainViewController:controller];
     [controller setObjectModel:model];
     
-    AppContentContainerController *content = [[AppContentContainerController alloc] init];
-    [content setPresented:controller];
-    [self.window setRootViewController:content];
+    [self.window setRootViewController:controller];
 
     EntriesSyncService *service = [[EntriesSyncService alloc] initWithObjectModel:model];
     [self setEntriesSync:service];

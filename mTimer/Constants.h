@@ -17,7 +17,7 @@
 #import <Foundation/Foundation.h>
 
 #if DEBUG
-    #define TimerLog(s, ...) [LogCaller info:[NSString stringWithFormat:@"<%p %@:(%d)> %@", self, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__]]]
+    #define TimerLog(s, ...) NSLog( @"<%@:%@ (%d)> %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], NSStringFromSelector(_cmd), __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
 #else
     #define TimerLog(s, ...) //
     #define JCSAssert(expression, ...) //

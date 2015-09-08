@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BA665EB06E953FAAC406440A /* ObjectModel+Purchases.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6653AB46AF2E3BC9EF2787 /* ObjectModel+Purchases.m */; };
-		BDE05ABAB009754F9F24F0B7 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41D55B27F687C10A6944B9F3 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		EA00792F18657BFD00D16DFD /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA00792E18657BFD00D16DFD /* HistoryViewController.m */; };
 		EA0079341865880500D16DFD /* DayEntriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0079331865880500D16DFD /* DayEntriesViewController.m */; };
 		EA00793718658AB200D16DFD /* NSDate+Calculations.m in Sources */ = {isa = PBXBuildFile; fileRef = EA00793618658AB200D16DFD /* NSDate+Calculations.m */; };
@@ -62,9 +61,6 @@
 		EA0079D91871CB7D00D16DFD /* Year.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0079D81871CB7D00D16DFD /* Year.m */; };
 		EA0079DC1871D69B00D16DFD /* ObjectModel+Dates.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0079DB1871D69B00D16DFD /* ObjectModel+Dates.m */; };
 		EA0079DF1872A20E00D16DFD /* UIView+AdjustHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0079DE1872A20E00D16DFD /* UIView+AdjustHeight.m */; };
-		EA1E7D401B9AC328001C45C9 /* AppContentContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1E7D3F1B9AC328001C45C9 /* AppContentContainerController.swift */; settings = {ASSET_TAGS = (); }; };
-		EA1E7D421B9AC473001C45C9 /* AppContentContainerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1E7D411B9AC473001C45C9 /* AppContentContainerController.xib */; settings = {ASSET_TAGS = (); }; };
-		EA3911941B96099800895E1D /* LogCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3911931B96099800895E1D /* LogCaller.swift */; settings = {ASSET_TAGS = (); }; };
 		EA3E4EFF187D397D00002667 /* ObjectModel+TimeReports.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E4EFE187D397D00002667 /* ObjectModel+TimeReports.m */; };
 		EA3E4F06187F069D00002667 /* VersionDisplayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA3E4F05187F069D00002667 /* VersionDisplayView.xib */; };
 		EA3E4F09187F06AA00002667 /* VersionDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E4F08187F06AA00002667 /* VersionDisplayView.m */; };
@@ -136,12 +132,12 @@
 		EAB83FD318637B7400FB6605 /* TasksListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAB83FD218637B7400FB6605 /* TasksListCell.xib */; };
 		EAB83FD818641F1200FB6605 /* _TimeEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB83FD518641F1200FB6605 /* _TimeEntry.m */; };
 		EAB83FDE18641F1A00FB6605 /* TimeEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB83FDB18641F1A00FB6605 /* TimeEntry.m */; };
-		EABD0F2B1B92DBCE0030E18D /* RMStore.m in Sources */ = {isa = PBXBuildFile; fileRef = EABD0F2A1B92DBCE0030E18D /* RMStore.m */; settings = {ASSET_TAGS = (); }; };
-		EABD0F2F1B92E1AD0030E18D /* RMStoreAppReceiptVerificator.m in Sources */ = {isa = PBXBuildFile; fileRef = EABD0F2E1B92E1AD0030E18D /* RMStoreAppReceiptVerificator.m */; settings = {ASSET_TAGS = (); }; };
-		EABD0F321B92E1CD0030E18D /* RMStoreKeychainPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = EABD0F311B92E1CD0030E18D /* RMStoreKeychainPersistence.m */; settings = {ASSET_TAGS = (); }; };
-		EABD0F351B92E25A0030E18D /* RMAppReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = EABD0F341B92E25A0030E18D /* RMAppReceipt.m */; settings = {ASSET_TAGS = (); }; };
-		EABD0F891B92E2B70030E18D /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EABD0F861B92E2B70030E18D /* libcrypto.a */; settings = {ASSET_TAGS = (); }; };
-		EABD0F8A1B92E2B70030E18D /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EABD0F871B92E2B70030E18D /* libssl.a */; settings = {ASSET_TAGS = (); }; };
+		EABD0F2B1B92DBCE0030E18D /* RMStore.m in Sources */ = {isa = PBXBuildFile; fileRef = EABD0F2A1B92DBCE0030E18D /* RMStore.m */; };
+		EABD0F2F1B92E1AD0030E18D /* RMStoreAppReceiptVerificator.m in Sources */ = {isa = PBXBuildFile; fileRef = EABD0F2E1B92E1AD0030E18D /* RMStoreAppReceiptVerificator.m */; };
+		EABD0F321B92E1CD0030E18D /* RMStoreKeychainPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = EABD0F311B92E1CD0030E18D /* RMStoreKeychainPersistence.m */; };
+		EABD0F351B92E25A0030E18D /* RMAppReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = EABD0F341B92E25A0030E18D /* RMAppReceipt.m */; };
+		EABD0F891B92E2B70030E18D /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EABD0F861B92E2B70030E18D /* libcrypto.a */; };
+		EABD0F8A1B92E2B70030E18D /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EABD0F871B92E2B70030E18D /* libssl.a */; };
 		EABFA3FF187AA73200030417 /* DeleteEntryRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EABFA3FE187AA73200030417 /* DeleteEntryRequest.m */; };
 		EABFA402187AACCC00030417 /* DeleteEntryResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EABFA401187AACCC00030417 /* DeleteEntryResponse.m */; };
 		EABFA405187ABB9300030417 /* NSError+Slimtimer.m in Sources */ = {isa = PBXBuildFile; fileRef = EABFA404187ABB9300030417 /* NSError+Slimtimer.m */; };
@@ -153,6 +149,7 @@
 		EAE802DF18742AFE00DC4651 /* PushEntryRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE802DE18742AFE00DC4651 /* PushEntryRequest.m */; };
 		EAE802E51874A2CB00DC4651 /* PushEntryResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE802E41874A2CB00DC4651 /* PushEntryResponse.m */; };
 		EAF70CEC188187310011D9F8 /* UIColor+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF70CEB188187310011D9F8 /* UIColor+Theme.m */; };
+		F8AB7CC44175BE4181C1E5D9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF355DE4647108570D47451 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -169,7 +166,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		41D55B27F687C10A6944B9F3 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CF355DE4647108570D47451 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		537D801AC1204340BB8D840F /* libPods-mTimerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mTimerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D5B6E6B3EC21626A4E94869 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B7B8335A2EB462207BE33413 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -266,9 +263,6 @@
 		EA0079DD1872A20E00D16DFD /* UIView+AdjustHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AdjustHeight.h"; sourceTree = "<group>"; };
 		EA0079DE1872A20E00D16DFD /* UIView+AdjustHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AdjustHeight.m"; sourceTree = "<group>"; };
 		EA1CEB461B9394D000B0B3D8 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		EA1E7D3F1B9AC328001C45C9 /* AppContentContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppContentContainerController.swift; sourceTree = "<group>"; };
-		EA1E7D411B9AC473001C45C9 /* AppContentContainerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppContentContainerController.xib; sourceTree = "<group>"; };
-		EA3911931B96099800895E1D /* LogCaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogCaller.swift; sourceTree = "<group>"; };
 		EA3911951B9609BC00895E1D /* mTimer-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mTimer-Bridging-Header.h"; sourceTree = "<group>"; };
 		EA3E4EFD187D397D00002667 /* ObjectModel+TimeReports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ObjectModel+TimeReports.h"; sourceTree = "<group>"; };
 		EA3E4EFE187D397D00002667 /* ObjectModel+TimeReports.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ObjectModel+TimeReports.m"; sourceTree = "<group>"; };
@@ -521,7 +515,7 @@
 				EA96C58E1861735600CA40C2 /* CoreData.framework in Frameworks */,
 				EA96C5881861735600CA40C2 /* Foundation.framework in Frameworks */,
 				EABD0F8A1B92E2B70030E18D /* libssl.a in Frameworks */,
-				BDE05ABAB009754F9F24F0B7 /* Pods.framework in Frameworks */,
+				F8AB7CC44175BE4181C1E5D9 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,14 +529,6 @@
 				B7B8335A2EB462207BE33413 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		EA3911911B96098500895E1D /* Logging */ = {
-			isa = PBXGroup;
-			children = (
-				EA3911931B96099800895E1D /* LogCaller.swift */,
-			);
-			path = Logging;
 			sourceTree = "<group>";
 		};
 		EA77A7A91A0267AF0082E411 /* Thirdparty */ = {
@@ -591,8 +577,8 @@
 				EA96C58D1861735600CA40C2 /* CoreData.framework */,
 				EA96C5A51861735600CA40C2 /* XCTest.framework */,
 				537D801AC1204340BB8D840F /* libPods-mTimerTests.a */,
-				41D55B27F687C10A6944B9F3 /* Pods.framework */,
 				EA1CEB461B9394D000B0B3D8 /* NotificationCenter.framework */,
+				3CF355DE4647108570D47451 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -602,7 +588,6 @@
 			children = (
 				EAB83F651861D67800FB6605 /* Cell */,
 				EAB83F8F1862329D00FB6605 /* Extensions */,
-				EA3911911B96098500895E1D /* Logging */,
 				EAB83F731861E3F600FB6605 /* Network */,
 				EA96C5BD1861774E00CA40C2 /* ObjectModel */,
 				EA96C5901861735600CA40C2 /* Supporting Files */,
@@ -689,8 +674,6 @@
 				EA0079AF18716E3C00D16DFD /* AddTagViewController.h */,
 				EA0079B018716E3C00D16DFD /* AddTagViewController.m */,
 				EA0079B118716E3C00D16DFD /* AddTagViewController.xib */,
-				EA1E7D3F1B9AC328001C45C9 /* AppContentContainerController.swift */,
-				EA1E7D411B9AC473001C45C9 /* AppContentContainerController.xib */,
 				EA0079321865880500D16DFD /* DayEntriesViewController.h */,
 				EA0079331865880500D16DFD /* DayEntriesViewController.m */,
 				EA0079571868489100D16DFD /* DayEntriesViewController.xib */,
@@ -1105,7 +1088,6 @@
 				EA00797B186CB61700D16DFD /* EditTaskTimeCell.xib in Resources */,
 				EA007989186D81F800D16DFD /* EditTaskTimePickerCell.xib in Resources */,
 				EAB83F6D1861D77700FB6605 /* Localizable.strings in Resources */,
-				EA1E7D421B9AC473001C45C9 /* AppContentContainerController.xib in Resources */,
 				EA96C5941861735600CA40C2 /* InfoPlist.strings in Resources */,
 				EA62103B18AFB07200131285 /* EditTaskViewController.xib in Resources */,
 				EA3E4F06187F069D00002667 /* VersionDisplayView.xib in Resources */,
@@ -1277,7 +1259,6 @@
 				EAB83FAB1863244C00FB6605 /* ObjectModel+Users.m in Sources */,
 				EA007979186CB60700D16DFD /* EditTaskTimeCell.m in Sources */,
 				EA00796A186C27C400D16DFD /* EditTaskTaskCell.m in Sources */,
-				EA1E7D401B9AC328001C45C9 /* AppContentContainerController.swift in Sources */,
 				EA00799C186F6A4500D16DFD /* _Tag.m in Sources */,
 				EAB83F851862198B00FB6605 /* Constants.m in Sources */,
 				EAB83F981862C9E500FB6605 /* NSMutableString+Issues.m in Sources */,
@@ -1322,7 +1303,6 @@
 				EA96C5CA18617DC000CA40C2 /* MainViewController.m in Sources */,
 				EA96C5C01861774E00CA40C2 /* mTimer.xcdatamodeld in Sources */,
 				EAB83FDE18641F1A00FB6605 /* TimeEntry.m in Sources */,
-				EA3911941B96099800895E1D /* LogCaller.swift in Sources */,
 				EAB83F92186232AA00FB6605 /* GDataXMLDocument+Helpers.m in Sources */,
 				EAE802D61874208300DC4651 /* EntriesSyncService.m in Sources */,
 				EAB83F951862336900FB6605 /* GDataXMLElement+Extension.m in Sources */,
