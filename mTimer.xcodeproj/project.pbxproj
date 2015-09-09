@@ -61,7 +61,6 @@
 		EA0079D91871CB7D00D16DFD /* Year.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0079D81871CB7D00D16DFD /* Year.m */; };
 		EA0079DC1871D69B00D16DFD /* ObjectModel+Dates.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0079DB1871D69B00D16DFD /* ObjectModel+Dates.m */; };
 		EA0079DF1872A20E00D16DFD /* UIView+AdjustHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0079DE1872A20E00D16DFD /* UIView+AdjustHeight.m */; };
-		EA3E4EFF187D397D00002667 /* ObjectModel+TimeReports.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E4EFE187D397D00002667 /* ObjectModel+TimeReports.m */; };
 		EA3E4F06187F069D00002667 /* VersionDisplayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA3E4F05187F069D00002667 /* VersionDisplayView.xib */; };
 		EA3E4F09187F06AA00002667 /* VersionDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3E4F08187F06AA00002667 /* VersionDisplayView.m */; };
 		EA3E4FF9187F140200002667 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3E4FF8187F140200002667 /* AVFoundation.framework */; };
@@ -69,9 +68,6 @@
 		EA3E4FFD187F143600002667 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3E4FFC187F143600002667 /* AdSupport.framework */; };
 		EA3E4FFF187F145300002667 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3E4FFE187F145300002667 /* AudioToolbox.framework */; };
 		EA5A216B187C082B005C55E5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5A216A187C082B005C55E5 /* MessageUI.framework */; };
-		EA5A217A187D31A7005C55E5 /* TimeReportRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5A2179187D31A7005C55E5 /* TimeReportRequest.m */; };
-		EA5A217D187D32E3005C55E5 /* _TimeReport.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5A217C187D32E3005C55E5 /* _TimeReport.m */; };
-		EA5A2180187D32EC005C55E5 /* TimeReport.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5A217F187D32EC005C55E5 /* TimeReport.m */; };
 		EA62102F18AF6D3C00131285 /* ManageTasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA62102E18AF6D3C00131285 /* ManageTasksViewController.m */; };
 		EA62103318AF6D8B00131285 /* ManageTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA62103118AF6D8B00131285 /* ManageTaskCell.m */; };
 		EA62103418AF6D8B00131285 /* ManageTaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA62103218AF6D8B00131285 /* ManageTaskCell.xib */; };
@@ -271,8 +267,6 @@
 		EA0079DB1871D69B00D16DFD /* ObjectModel+Dates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ObjectModel+Dates.m"; sourceTree = "<group>"; };
 		EA0079DD1872A20E00D16DFD /* UIView+AdjustHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AdjustHeight.h"; sourceTree = "<group>"; };
 		EA0079DE1872A20E00D16DFD /* UIView+AdjustHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AdjustHeight.m"; sourceTree = "<group>"; };
-		EA3E4EFD187D397D00002667 /* ObjectModel+TimeReports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ObjectModel+TimeReports.h"; sourceTree = "<group>"; };
-		EA3E4EFE187D397D00002667 /* ObjectModel+TimeReports.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ObjectModel+TimeReports.m"; sourceTree = "<group>"; };
 		EA3E4F00187D83F200002667 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		EA3E4F05187F069D00002667 /* VersionDisplayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VersionDisplayView.xib; sourceTree = "<group>"; };
 		EA3E4F07187F06AA00002667 /* VersionDisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionDisplayView.h; sourceTree = "<group>"; };
@@ -282,12 +276,6 @@
 		EA3E4FFC187F143600002667 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		EA3E4FFE187F145300002667 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		EA5A216A187C082B005C55E5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		EA5A2178187D31A7005C55E5 /* TimeReportRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeReportRequest.h; sourceTree = "<group>"; };
-		EA5A2179187D31A7005C55E5 /* TimeReportRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeReportRequest.m; sourceTree = "<group>"; };
-		EA5A217B187D32E3005C55E5 /* _TimeReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _TimeReport.h; sourceTree = "<group>"; };
-		EA5A217C187D32E3005C55E5 /* _TimeReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TimeReport.m; sourceTree = "<group>"; };
-		EA5A217E187D32EC005C55E5 /* TimeReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeReport.h; sourceTree = "<group>"; };
-		EA5A217F187D32EC005C55E5 /* TimeReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeReport.m; sourceTree = "<group>"; };
 		EA62102D18AF6D3C00131285 /* ManageTasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageTasksViewController.h; sourceTree = "<group>"; };
 		EA62102E18AF6D3C00131285 /* ManageTasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageTasksViewController.m; sourceTree = "<group>"; };
 		EA62103018AF6D8B00131285 /* ManageTaskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageTaskCell.h; sourceTree = "<group>"; };
@@ -468,6 +456,7 @@
 		EAC074261BA0020300113703 /* UIView+JCSLoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JCSLoadView.m"; sourceTree = "<group>"; };
 		EAC0742E1BA0038200113703 /* JCSCoreDataChangeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSCoreDataChangeAction.h; sourceTree = "<group>"; };
 		EAC0742F1BA0038200113703 /* JCSCoreDataChangeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSCoreDataChangeAction.m; sourceTree = "<group>"; };
+		EAC074311BA0058700113703 /* mTimer3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mTimer3.xcdatamodel; sourceTree = "<group>"; };
 		EAE802D118741F8F00DC4651 /* ObjectModel+SyncStatuses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ObjectModel+SyncStatuses.h"; sourceTree = "<group>"; };
 		EAE802D218741F8F00DC4651 /* ObjectModel+SyncStatuses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ObjectModel+SyncStatuses.m"; sourceTree = "<group>"; };
 		EAE802D41874208300DC4651 /* EntriesSyncService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntriesSyncService.h; sourceTree = "<group>"; };
@@ -634,8 +623,6 @@
 				EAB83FCD1863733000FB6605 /* ObjectModel+Tasks.m */,
 				EA007944186740EE00D16DFD /* ObjectModel+TimeEntries.h */,
 				EA007945186740EE00D16DFD /* ObjectModel+TimeEntries.m */,
-				EA3E4EFD187D397D00002667 /* ObjectModel+TimeReports.h */,
-				EA3E4EFE187D397D00002667 /* ObjectModel+TimeReports.m */,
 				EAB83FA91863244C00FB6605 /* ObjectModel+Users.h */,
 				EAB83FAA1863244C00FB6605 /* ObjectModel+Users.m */,
 				EA96C5C21861793A00CA40C2 /* ObjectModel.h */,
@@ -650,8 +637,6 @@
 				EAB83FCA1863731900FB6605 /* Task.m */,
 				EAB83FDA18641F1A00FB6605 /* TimeEntry.h */,
 				EAB83FDB18641F1A00FB6605 /* TimeEntry.m */,
-				EA5A217E187D32EC005C55E5 /* TimeReport.h */,
-				EA5A217F187D32EC005C55E5 /* TimeReport.m */,
 				EAB83FB0186324A500FB6605 /* User.h */,
 				EAB83FB1186324A500FB6605 /* User.m */,
 				EA0079D71871CB7D00D16DFD /* Year.h */,
@@ -800,8 +785,6 @@
 				EAB83FC4186367B500FB6605 /* TaskObject.m */,
 				EA00794118673DAB00D16DFD /* TimeEntryObject.h */,
 				EA00794218673DAB00D16DFD /* TimeEntryObject.m */,
-				EA5A2178187D31A7005C55E5 /* TimeReportRequest.h */,
-				EA5A2179187D31A7005C55E5 /* TimeReportRequest.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -865,8 +848,6 @@
 				EAB83FC71863731100FB6605 /* _Task.m */,
 				EAB83FD418641F1200FB6605 /* _TimeEntry.h */,
 				EAB83FD518641F1200FB6605 /* _TimeEntry.m */,
-				EA5A217B187D32E3005C55E5 /* _TimeReport.h */,
-				EA5A217C187D32E3005C55E5 /* _TimeReport.m */,
 				EAB83FAD186324A000FB6605 /* _User.h */,
 				EAB83FAE186324A000FB6605 /* _User.m */,
 				EA0079CC1871CB6A00D16DFD /* _Year.h */,
@@ -1198,7 +1179,6 @@
 				EA0079CF1871CB6A00D16DFD /* _Month.m in Sources */,
 				EAC074291BA0020300113703 /* NSString+MD5.m in Sources */,
 				EA0079D01871CB6A00D16DFD /* _Year.m in Sources */,
-				EA5A217D187D32E3005C55E5 /* _TimeReport.m in Sources */,
 				EAC074151BA001CB00113703 /* JCSPopupAlertView.m in Sources */,
 				EA0079A8187025B400D16DFD /* TagsViewController.m in Sources */,
 				EA62104C18B0AC1600131285 /* PushTaskResponse.m in Sources */,
@@ -1231,7 +1211,6 @@
 				EAB83FC218633A6100FB6605 /* ListTasksResponse.m in Sources */,
 				EA007970186C295D00D16DFD /* TaskSelectionViewController.m in Sources */,
 				EA0079BC1871BD6B00D16DFD /* SettingSwitchCell.m in Sources */,
-				EA5A217A187D31A7005C55E5 /* TimeReportRequest.m in Sources */,
 				EAB066DD1B8E3C320087FCF9 /* Secrets.m in Sources */,
 				EAB83FC81863731100FB6605 /* _Task.m in Sources */,
 				EA0079D51871CB7500D16DFD /* Day.m in Sources */,
@@ -1240,7 +1219,6 @@
 				EAE802DF18742AFE00DC4651 /* PushEntryRequest.m in Sources */,
 				EAC073FA1BA0016700113703 /* JCSDropDownCell.m in Sources */,
 				EAC074051BA0016700113703 /* JCSSingleSelectionViewController.m in Sources */,
-				EA5A2180187D32EC005C55E5 /* TimeReport.m in Sources */,
 				EAC074001BA0016700113703 /* JCSNumericInputAccessoryView.m in Sources */,
 				EAC0742A1BA0020300113703 /* UIApplication+Keyboard.m in Sources */,
 				EAB83FC5186367B500FB6605 /* TaskObject.m in Sources */,
@@ -1250,7 +1228,6 @@
 				EA00793718658AB200D16DFD /* NSDate+Calculations.m in Sources */,
 				EA00794018670DE600D16DFD /* ListTimeEntriesResponse.m in Sources */,
 				EA62103318AF6D8B00131285 /* ManageTaskCell.m in Sources */,
-				EA3E4EFF187D397D00002667 /* ObjectModel+TimeReports.m in Sources */,
 				EAC074181BA001CB00113703 /* JCSQuickAlertView.m in Sources */,
 				EAB066E11B8E439A0087FCF9 /* GDataXMLNode.m in Sources */,
 				EAC073FC1BA0016700113703 /* JCSFetchedTableViewController.m in Sources */,
@@ -1537,10 +1514,11 @@
 		EA96C5BE1861774E00CA40C2 /* mTimer.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				EAC074311BA0058700113703 /* mTimer3.xcdatamodel */,
 				EA62103C18AFB18900131285 /* mTimer2.xcdatamodel */,
 				EA96C5BF1861774E00CA40C2 /* mTimer.xcdatamodel */,
 			);
-			currentVersion = EA62103C18AFB18900131285 /* mTimer2.xcdatamodel */;
+			currentVersion = EAC074311BA0058700113703 /* mTimer3.xcdatamodel */;
 			path = mTimer.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

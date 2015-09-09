@@ -11,12 +11,10 @@ extern const struct SyncStatusAttributes {
 
 extern const struct SyncStatusRelationships {
 	__unsafe_unretained NSString *statusForEntry;
-	__unsafe_unretained NSString *statusForReport;
 	__unsafe_unretained NSString *statusForTask;
 } SyncStatusRelationships;
 
 @class TimeEntry;
-@class TimeReport;
 @class Task;
 
 @interface SyncStatusID : NSManagedObjectID {}
@@ -52,10 +50,6 @@ extern const struct SyncStatusRelationships {
 
 //- (BOOL)validateStatusForEntry:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) TimeReport *statusForReport;
-
-//- (BOOL)validateStatusForReport:(id*)value_ error:(NSError**)error_;
-
 @property (nonatomic, strong) Task *statusForTask;
 
 //- (BOOL)validateStatusForTask:(id*)value_ error:(NSError**)error_;
@@ -81,9 +75,6 @@ extern const struct SyncStatusRelationships {
 
 - (TimeEntry*)primitiveStatusForEntry;
 - (void)setPrimitiveStatusForEntry:(TimeEntry*)value;
-
-- (TimeReport*)primitiveStatusForReport;
-- (void)setPrimitiveStatusForReport:(TimeReport*)value;
 
 - (Task*)primitiveStatusForTask;
 - (void)setPrimitiveStatusForTask:(Task*)value;

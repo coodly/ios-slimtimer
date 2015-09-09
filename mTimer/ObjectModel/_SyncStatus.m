@@ -11,7 +11,6 @@ const struct SyncStatusAttributes SyncStatusAttributes = {
 
 const struct SyncStatusRelationships SyncStatusRelationships = {
 	.statusForEntry = @"statusForEntry",
-	.statusForReport = @"statusForReport",
 	.statusForTask = @"statusForTask",
 };
 
@@ -98,8 +97,6 @@ const struct SyncStatusRelationships SyncStatusRelationships = {
 }
 
 @dynamic statusForEntry;
-
-@dynamic statusForReport;
 
 @dynamic statusForTask;
 

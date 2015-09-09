@@ -28,7 +28,6 @@
 #import "JCSQuickActionSheet.h"
 #import "ObjectModel+TimeEntries.h"
 #import "TagsViewController.h"
-#import "ObjectModel+TimeReports.h"
 
 NSUInteger const kTaskNameSection = 0;
 NSUInteger const kTaskTimeSection = 1;
@@ -246,12 +245,8 @@ NSString *const kEditTaskCommentCellIdentifier = @"kEditTaskCommentCellIdentifie
 }
 
 - (void)updateEntryEndTime:(NSDate *)date {
-    BOOL shouldCreateTimeReport = self.timeEntry.endTime == nil;
     [self.timeEntry setEndTime:date];
     [self.timeEntry.task markUpdated];
-    if (shouldCreateTimeReport) {
-        [self.objectModel createTimeReportWithSeconds:[self.timeEntry durationInSeconds]];
-    }
     [self.objectModel saveContext];
     [self updateEntryTimePresentations];
     [self updateToolbarButtons];

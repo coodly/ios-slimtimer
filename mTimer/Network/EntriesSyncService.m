@@ -24,8 +24,6 @@
 #import "_TimeEntry.h"
 #import "TimeEntry.h"
 #import "DeleteEntryRequest.h"
-#import "TimeReport.h"
-#import "TimeReportRequest.h"
 #import "PushTaskRequest.h"
 #import "Task.h"
 #import "JCSFoundationConstants.h"
@@ -106,9 +104,6 @@
                 TimerLog(@"Update");
                 request = [[PushEntryRequest alloc] initWithEntryID:entry.objectID];
             }
-        } else if (status.statusForReport) {
-            TimeReport *report = status.statusForReport;
-            request = [[TimeReportRequest alloc] initWithReportID:report.objectID];
         } else if (status.statusForTask) {
             Task *task = status.statusForTask;
             request = [[PushTaskRequest alloc] initWithTaskID:task.objectID];

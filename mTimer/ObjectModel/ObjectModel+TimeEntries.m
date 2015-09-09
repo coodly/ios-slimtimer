@@ -24,7 +24,6 @@
 #import "ObjectModel+Tasks.h"
 #import "Constants.h"
 #import "SyncStatus.h"
-#import "ObjectModel+TimeReports.h"
 
 @implementation ObjectModel (TimeEntries)
 
@@ -170,7 +169,6 @@
     if (pushChange) {
         [entry markSyncRequired];
     }
-    [self createTimeReportWithSeconds:[entry durationInSeconds]];
 }
 
 - (NSArray *)entriesWithRemoteIds:(NSArray *)remoteIds {
