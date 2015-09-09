@@ -981,6 +981,7 @@
 				EA96C5811861735600CA40C2 /* Frameworks */,
 				EA96C5821861735600CA40C2 /* Resources */,
 				A1CEA1E6B26A4337B060149F /* Copy Pods Resources */,
+				EAC074321BA0076000113703 /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -1119,6 +1120,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "ruby scripts/check_localizable.rb mTimer";
+		};
+		EAC074321BA0076000113703 /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Crashlytics;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/Fabric.framework/run\" 1498b1e841189deded0a8957a47057c88a75503b 84939d122fb533ac07e3e9b3d0fb8601e68f89a868e9f5889891d1a6684b0d72";
 		};
 /* End PBXShellScriptBuildPhase section */
 

@@ -14,7 +14,6 @@
 * limitations under the License.
 */
 
-#import <Crashlytics/Crashlytics.h>
 #import "AppDelegate.h"
 #import "ObjectModel.h"
 #import "MainViewController.h"
@@ -24,7 +23,9 @@
 #import "EntriesSyncService.h"
 #import "ObjectModel+TimeEntries.h"
 #import "UIColor+Theme.h"
-#import "Secrets.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+
 
 @interface AppDelegate ()
 
@@ -41,7 +42,7 @@
 
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
 
-    [Crashlytics startWithAPIKey:@"bf6a713619d873c16d74390dc0463c0387c49052"];
+    [Fabric with:@[CrashlyticsKit]];
 
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [[UINavigationBar appearance] setBarTintColor:[UIColor navigationBarColor]];
