@@ -14,9 +14,9 @@
 * limitations under the License.
 */
 
-#import <JCSFoundation/JCSFoundationConstants.h>
 #import "LoginResponse.h"
 #import "GDataXMLNode+Helpers.h"
+#import "JCSFoundationConstants.h"
 
 @interface LoginResponse ()
 

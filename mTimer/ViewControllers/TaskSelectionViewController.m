@@ -14,12 +14,12 @@
 * limitations under the License.
 */
 
-#import <JCSFoundation/UIView+JCSLoadView.h>
 #import "TaskSelectionViewController.h"
 #import "ObjectModel.h"
 #import "ObjectModel+Tasks.h"
 #import "TaskSelectionCell.h"
 #import "Task.h"
+#import "UIView+CDYLoadHelper.h"
 
 @interface TaskSelectionViewController ()
 

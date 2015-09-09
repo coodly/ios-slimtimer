@@ -21,7 +21,6 @@
 #import "TaskObject.h"
 #import "ObjectModel+Tasks.h"
 #import "Constants.h"
-#import "ObjectModel+Purchases.h"
 
 NSString *const kListTasksPathBase = @"/users/%@/tasks";
 
@@ -72,7 +71,6 @@ NSString *const kListTasksPathBase = @"/users/%@/tasks";
                     [weakSelf executeWithOffset:offset + 50];
                 } else {
                     [weakSelf.objectModel deleteTasksWithIds:weakSelf.knownTaskIds];
-                    [weakSelf.objectModel checkUnlockedTask];
                     weakSelf.responseHandler(YES, nil);
                 }
             }];

@@ -14,7 +14,6 @@
 * limitations under the License.
 */
 
-#import <JCSFoundation/JCSFoundationConstants.h>
 #import <StoreKit/StoreKit.h>
 #import "TimerAlertView.h"
 #import "Constants.h"

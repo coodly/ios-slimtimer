@@ -14,7 +14,6 @@
 * limitations under the License.
 */
 
-#import <JCSFoundation/UIView+JCSLoadView.h>
 #import "TagsViewController.h"
 #import "ObjectModel+Tags.h"
 #import "TagSelectionCell.h"
@@ -22,6 +21,7 @@
 #import "NSString+JCSValidations.h"
 #import "TimerAlertView.h"
 #import "Tag.h"
+#import "UIView+CDYLoadHelper.h"
 
 @interface TagsViewController ()
 

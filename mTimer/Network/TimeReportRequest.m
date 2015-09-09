@@ -16,7 +16,7 @@
 
 #include <sys/sysctl.h>
 #import <Lockbox/Lockbox.h>
-#import <JCSFoundation/NSString+JCSValidations.h>
+#import <CDYFoundation/NSString+CDYUtils.h>
 #import "TimeReportRequest.h"
 #import "Constants.h"
 #import "ObjectModel+Settings.h"

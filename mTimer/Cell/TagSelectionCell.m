@@ -14,8 +14,8 @@
 * limitations under the License.
 */
 
-#import <JCSFoundation/JCSSelectable.h>
 #import "TagSelectionCell.h"
+#import "JCSSelectable.h"
 
 CGFloat const kTagCellSpacing = 10;
 

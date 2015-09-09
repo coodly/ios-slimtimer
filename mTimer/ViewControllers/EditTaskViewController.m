@@ -14,14 +14,14 @@
 * limitations under the License.
 */
 
-#import <JCSFoundation/UIView+JCSLoadView.h>
 #import "EditTaskViewController.h"
 #import "EditTaskNameCell.h"
 #import "Task.h"
 #import "Tag.h"
 #import "EditTaskTagsCell.h"
 #import "TagsViewController.h"
-#import "ObjectModel+Purchases.h"
+#import "ObjectModel+SyncStatuses.h"
+#import "UIView+CDYLoadHelper.h"
 
 NSString *const kEditTaskNameCellIdentifier = @"kEditTaskNameCellIdentifier";
 NSString *const kEditTaskTagsCellIdentifier = @"kEditTaskTagsCellIdentifier";

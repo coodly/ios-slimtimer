@@ -15,7 +15,6 @@
 */
 
 #import "PushTaskRequest.h"
-#import "ObjectModel+Purchases.h"
 #import "Task.h"
 #import "Tag.h"
 #import "ObjectModel+Credentials.h"

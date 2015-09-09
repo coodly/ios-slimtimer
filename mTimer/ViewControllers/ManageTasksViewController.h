@@ -15,7 +15,7 @@
 */
 
 #import <UIKit/UIKit.h>
-#import <JCSFoundation/JCSFetchedTableViewController.h>
+#import "JCSFetchedTableViewController.h"
 
 @class ObjectModel;
 

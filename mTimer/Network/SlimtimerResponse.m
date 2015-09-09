@@ -14,11 +14,11 @@
 * limitations under the License.
 */
 
-#import <JCSFoundation/JCSFoundationConstants.h>
 #import "SlimtimerResponse.h"
 #import "GDataXMLDocument+Helpers.h"
 #import "Constants.h"
 #import "GDataXMLElement+Extension.h"
+#import "JCSFoundationConstants.h"
 
 @interface SlimtimerResponse ()
 

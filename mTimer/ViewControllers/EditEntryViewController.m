@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-#import <JCSFoundation/UIView+JCSLoadView.h>
+#import <CDYFoundation/UIView+CDYLoadHelper.h>
 #import "EditEntryViewController.h"
 #import "EditTaskTaskCell.h"
 #import "TimeEntry.h"

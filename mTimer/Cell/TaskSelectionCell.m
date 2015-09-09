@@ -14,8 +14,8 @@
 * limitations under the License.
 */
 
-#import <JCSFoundation/JCSSelectable.h>
 #import "TaskSelectionCell.h"
+#import "JCSSelectable.h"
 
 @interface TaskSelectionCell ()
 
