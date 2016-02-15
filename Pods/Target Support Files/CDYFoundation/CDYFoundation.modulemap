@@ -1,0 +1,6 @@
+framework module CDYFoundation {
+  umbrella header "CDYFoundation-umbrella.h"
+
+  export *
+  module * { export * }
+}

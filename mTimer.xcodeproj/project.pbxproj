@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F9CF05B03CF4A7BBD2AD24E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4217C2CC8D40818F0A944E /* libPods.a */; };
+		CF2DD76C022E0DF49A2C0762 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027DB11FB1F18740FF6148F7 /* Pods.framework */; };
 		EA00792F18657BFD00D16DFD /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA00792E18657BFD00D16DFD /* HistoryViewController.m */; };
 		EA0079341865880500D16DFD /* DayEntriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0079331865880500D16DFD /* DayEntriesViewController.m */; };
 		EA00793718658AB200D16DFD /* NSDate+Calculations.m in Sources */ = {isa = PBXBuildFile; fileRef = EA00793618658AB200D16DFD /* NSDate+Calculations.m */; };
@@ -171,7 +171,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F4217C2CC8D40818F0A944E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		027DB11FB1F18740FF6148F7 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BEF8A6DE3D22A202A60B67A /* Pods-mTimerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mTimerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mTimerTests/Pods-mTimerTests.release.xcconfig"; sourceTree = "<group>"; };
 		537D801AC1204340BB8D840F /* libPods-mTimerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mTimerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		908F3A031B7AF9CB35FD47A7 /* Pods-mTimerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mTimerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mTimerTests/Pods-mTimerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -488,7 +488,7 @@
 				EA96C58A1861735600CA40C2 /* CoreGraphics.framework in Frameworks */,
 				EA96C58E1861735600CA40C2 /* CoreData.framework in Frameworks */,
 				EA96C5881861735600CA40C2 /* Foundation.framework in Frameworks */,
-				0F9CF05B03CF4A7BBD2AD24E /* libPods.a in Frameworks */,
+				CF2DD76C022E0DF49A2C0762 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,8 +561,8 @@
 				EA96C58B1861735600CA40C2 /* UIKit.framework */,
 				EA96C58D1861735600CA40C2 /* CoreData.framework */,
 				EA96C5A51861735600CA40C2 /* XCTest.framework */,
-				3F4217C2CC8D40818F0A944E /* libPods.a */,
 				537D801AC1204340BB8D840F /* libPods-mTimerTests.a */,
+				027DB11FB1F18740FF6148F7 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -982,6 +982,7 @@
 				EA96C5821861735600CA40C2 /* Resources */,
 				A1CEA1E6B26A4337B060149F /* Copy Pods Resources */,
 				EAC074321BA0076000113703 /* Crashlytics */,
+				EC841997DBF3D965633D0692 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1134,6 +1135,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/Fabric.framework/run\" 1498b1e841189deded0a8957a47057c88a75503b 84939d122fb533ac07e3e9b3d0fb8601e68f89a868e9f5889891d1a6684b0d72";
+		};
+		EC841997DBF3D965633D0692 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1321,7 +1337,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -1353,7 +1369,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1391,14 +1407,11 @@
 					/usr/include/libxml2,
 				);
 				INFOPLIST_FILE = "mTimer/mTimer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
-					"-l\"AFNetworking\"",
-					"-l\"CDYFoundation\"",
-					"-l\"CDYObjectModel\"",
-					"-l\"MRProgress\"",
 					"-l\"c++\"",
 					"-l\"z\"",
 					"-framework",
@@ -1406,17 +1419,11 @@
 					"-framework",
 					"\"CoreGraphics\"",
 					"-framework",
-					"\"Crashlytics\"",
-					"-framework",
-					"\"Fabric\"",
-					"-framework",
 					"\"MobileCoreServices\"",
 					"-framework",
 					"\"QuartzCore\"",
 					"-framework",
 					"\"Security\"",
-					"-framework",
-					"\"StoreKit\"",
 					"-framework",
 					"\"SystemConfiguration\"",
 					"-framework",
@@ -1464,14 +1471,11 @@
 					/usr/include/libxml2,
 				);
 				INFOPLIST_FILE = "mTimer/mTimer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
-					"-l\"AFNetworking\"",
-					"-l\"CDYFoundation\"",
-					"-l\"CDYObjectModel\"",
-					"-l\"MRProgress\"",
 					"-l\"c++\"",
 					"-l\"z\"",
 					"-framework",
@@ -1479,17 +1483,11 @@
 					"-framework",
 					"\"CoreGraphics\"",
 					"-framework",
-					"\"Crashlytics\"",
-					"-framework",
-					"\"Fabric\"",
-					"-framework",
 					"\"MobileCoreServices\"",
 					"-framework",
 					"\"QuartzCore\"",
 					"-framework",
 					"\"Security\"",
-					"-framework",
-					"\"StoreKit\"",
 					"-framework",
 					"\"SystemConfiguration\"",
 					"-framework",
