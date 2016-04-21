@@ -3,22 +3,12 @@
 
 #import "_Tag.h"
 
-const struct TagAttributes TagAttributes = {
-	.value = @"value",
-};
-
-const struct TagRelationships TagRelationships = {
-	.defaultForTasks = @"defaultForTasks",
-	.usedForEntries = @"usedForEntries",
-	.user = @"user",
-};
-
 @implementation TagID
 @end
 
 @implementation _Tag
 
-+ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_ {
++ (instancetype)insertInManagedObjectContext:(NSManagedObjectContext *)moc_ {
 	NSParameterAssert(moc_);
 	return [NSEntityDescription insertNewObjectForEntityForName:@"Tag" inManagedObjectContext:moc_];
 }
@@ -46,10 +36,10 @@ const struct TagRelationships TagRelationships = {
 
 @dynamic defaultForTasks;
 
-- (NSMutableSet*)defaultForTasksSet {
+- (NSMutableSet<Task*>*)defaultForTasksSet {
 	[self willAccessValueForKey:@"defaultForTasks"];
 
-	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"defaultForTasks"];
+	NSMutableSet<Task*> *result = (NSMutableSet<Task*>*)[self mutableSetValueForKey:@"defaultForTasks"];
 
 	[self didAccessValueForKey:@"defaultForTasks"];
 	return result;
@@ -57,10 +47,10 @@ const struct TagRelationships TagRelationships = {
 
 @dynamic usedForEntries;
 
-- (NSMutableSet*)usedForEntriesSet {
+- (NSMutableSet<TimeEntry*>*)usedForEntriesSet {
 	[self willAccessValueForKey:@"usedForEntries"];
 
-	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"usedForEntries"];
+	NSMutableSet<TimeEntry*> *result = (NSMutableSet<TimeEntry*>*)[self mutableSetValueForKey:@"usedForEntries"];
 
 	[self didAccessValueForKey:@"usedForEntries"];
 	return result;
@@ -68,5 +58,23 @@ const struct TagRelationships TagRelationships = {
 
 @dynamic user;
 
+@end
+
+@implementation TagAttributes 
++ (NSString *)value {
+	return @"value";
+}
+@end
+
+@implementation TagRelationships 
++ (NSString *)defaultForTasks {
+	return @"defaultForTasks";
+}
++ (NSString *)usedForEntries {
+	return @"usedForEntries";
+}
++ (NSString *)user {
+	return @"user";
+}
 @end
 

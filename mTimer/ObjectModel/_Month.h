@@ -1,16 +1,9 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
 // Make changes to Month.h instead.
 
-#import <CoreData/CoreData.h>
+@import CoreData;
 
-extern const struct MonthAttributes {
-	__unsafe_unretained NSString *value;
-} MonthAttributes;
-
-extern const struct MonthRelationships {
-	__unsafe_unretained NSString *days;
-	__unsafe_unretained NSString *year;
-} MonthRelationships;
+NS_ASSUME_NONNULL_BEGIN
 
 @class Day;
 @class Year;
@@ -18,33 +11,28 @@ extern const struct MonthRelationships {
 @interface MonthID : NSManagedObjectID {}
 @end
 
-@interface _Month : NSManagedObject {}
-+ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
+@interface _Month : NSManagedObject
++ (instancetype)insertInManagedObjectContext:(NSManagedObjectContext *)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
-@property (nonatomic, readonly, strong) MonthID* objectID;
+@property (nonatomic, readonly, strong) MonthID*objectID;
 
-@property (nonatomic, strong) NSNumber* value;
+@property (nonatomic, strong, nullable) NSNumber* value;
 
 @property (atomic) int32_t valueValue;
 - (int32_t)valueValue;
 - (void)setValueValue:(int32_t)value_;
 
-//- (BOOL)validateValue:(id*)value_ error:(NSError**)error_;
+@property (nonatomic, strong, nullable) NSSet<Day*> *days;
+- (nullable NSMutableSet<Day*>*)daysSet;
 
-@property (nonatomic, strong) NSSet *days;
-
-- (NSMutableSet*)daysSet;
-
-@property (nonatomic, strong) Year *year;
-
-//- (BOOL)validateYear:(id*)value_ error:(NSError**)error_;
+@property (nonatomic, strong, nullable) Year *year;
 
 @end
 
 @interface _Month (DaysCoreDataGeneratedAccessors)
-- (void)addDays:(NSSet*)value_;
-- (void)removeDays:(NSSet*)value_;
+- (void)addDays:(NSSet<Day*>*)value_;
+- (void)removeDays:(NSSet<Day*>*)value_;
 - (void)addDaysObject:(Day*)value_;
 - (void)removeDaysObject:(Day*)value_;
 
@@ -58,10 +46,21 @@ extern const struct MonthRelationships {
 - (int32_t)primitiveValueValue;
 - (void)setPrimitiveValueValue:(int32_t)value_;
 
-- (NSMutableSet*)primitiveDays;
-- (void)setPrimitiveDays:(NSMutableSet*)value;
+- (NSMutableSet<Day*>*)primitiveDays;
+- (void)setPrimitiveDays:(NSMutableSet<Day*>*)value;
 
 - (Year*)primitiveYear;
 - (void)setPrimitiveYear:(Year*)value;
 
 @end
+
+@interface MonthAttributes: NSObject 
++ (NSString *)value;
+@end
+
+@interface MonthRelationships: NSObject
++ (NSString *)days;
++ (NSString *)year;
+@end
+
+NS_ASSUME_NONNULL_END

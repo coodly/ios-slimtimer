@@ -3,27 +3,12 @@
 
 #import "_TimeEntry.h"
 
-const struct TimeEntryAttributes TimeEntryAttributes = {
-	.comment = @"comment",
-	.endTime = @"endTime",
-	.markedForDeletion = @"markedForDeletion",
-	.remoteId = @"remoteId",
-	.startTime = @"startTime",
-	.touchedAt = @"touchedAt",
-};
-
-const struct TimeEntryRelationships TimeEntryRelationships = {
-	.syncStatus = @"syncStatus",
-	.tags = @"tags",
-	.task = @"task",
-};
-
 @implementation TimeEntryID
 @end
 
 @implementation _TimeEntry
 
-+ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_ {
++ (instancetype)insertInManagedObjectContext:(NSManagedObjectContext *)moc_ {
 	NSParameterAssert(moc_);
 	return [NSEntityDescription insertNewObjectForEntityForName:@"TimeEntry" inManagedObjectContext:moc_];
 }
@@ -70,7 +55,7 @@ const struct TimeEntryRelationships TimeEntryRelationships = {
 }
 
 - (void)setMarkedForDeletionValue:(BOOL)value_ {
-	[self setMarkedForDeletion:[NSNumber numberWithBool:value_]];
+	[self setMarkedForDeletion:@(value_)];
 }
 
 - (BOOL)primitiveMarkedForDeletionValue {
@@ -79,7 +64,7 @@ const struct TimeEntryRelationships TimeEntryRelationships = {
 }
 
 - (void)setPrimitiveMarkedForDeletionValue:(BOOL)value_ {
-	[self setPrimitiveMarkedForDeletion:[NSNumber numberWithBool:value_]];
+	[self setPrimitiveMarkedForDeletion:@(value_)];
 }
 
 @dynamic remoteId;
@@ -90,7 +75,7 @@ const struct TimeEntryRelationships TimeEntryRelationships = {
 }
 
 - (void)setRemoteIdValue:(int32_t)value_ {
-	[self setRemoteId:[NSNumber numberWithInt:value_]];
+	[self setRemoteId:@(value_)];
 }
 
 - (int32_t)primitiveRemoteIdValue {
@@ -99,7 +84,7 @@ const struct TimeEntryRelationships TimeEntryRelationships = {
 }
 
 - (void)setPrimitiveRemoteIdValue:(int32_t)value_ {
-	[self setPrimitiveRemoteId:[NSNumber numberWithInt:value_]];
+	[self setPrimitiveRemoteId:@(value_)];
 }
 
 @dynamic startTime;
@@ -110,10 +95,10 @@ const struct TimeEntryRelationships TimeEntryRelationships = {
 
 @dynamic tags;
 
-- (NSMutableSet*)tagsSet {
+- (NSMutableSet<Tag*>*)tagsSet {
 	[self willAccessValueForKey:@"tags"];
 
-	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"tags"];
+	NSMutableSet<Tag*> *result = (NSMutableSet<Tag*>*)[self mutableSetValueForKey:@"tags"];
 
 	[self didAccessValueForKey:@"tags"];
 	return result;
@@ -121,5 +106,38 @@ const struct TimeEntryRelationships TimeEntryRelationships = {
 
 @dynamic task;
 
+@end
+
+@implementation TimeEntryAttributes 
++ (NSString *)comment {
+	return @"comment";
+}
++ (NSString *)endTime {
+	return @"endTime";
+}
++ (NSString *)markedForDeletion {
+	return @"markedForDeletion";
+}
++ (NSString *)remoteId {
+	return @"remoteId";
+}
++ (NSString *)startTime {
+	return @"startTime";
+}
++ (NSString *)touchedAt {
+	return @"touchedAt";
+}
+@end
+
+@implementation TimeEntryRelationships 
++ (NSString *)syncStatus {
+	return @"syncStatus";
+}
++ (NSString *)tags {
+	return @"tags";
+}
++ (NSString *)task {
+	return @"task";
+}
 @end
 

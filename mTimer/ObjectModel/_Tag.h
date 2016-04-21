@@ -1,17 +1,9 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
 // Make changes to Tag.h instead.
 
-#import <CoreData/CoreData.h>
+@import CoreData;
 
-extern const struct TagAttributes {
-	__unsafe_unretained NSString *value;
-} TagAttributes;
-
-extern const struct TagRelationships {
-	__unsafe_unretained NSString *defaultForTasks;
-	__unsafe_unretained NSString *usedForEntries;
-	__unsafe_unretained NSString *user;
-} TagRelationships;
+NS_ASSUME_NONNULL_BEGIN
 
 @class Task;
 @class TimeEntry;
@@ -20,41 +12,35 @@ extern const struct TagRelationships {
 @interface TagID : NSManagedObjectID {}
 @end
 
-@interface _Tag : NSManagedObject {}
-+ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
+@interface _Tag : NSManagedObject
++ (instancetype)insertInManagedObjectContext:(NSManagedObjectContext *)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
-@property (nonatomic, readonly, strong) TagID* objectID;
+@property (nonatomic, readonly, strong) TagID*objectID;
 
 @property (nonatomic, strong) NSString* value;
 
-//- (BOOL)validateValue:(id*)value_ error:(NSError**)error_;
+@property (nonatomic, strong, nullable) NSSet<Task*> *defaultForTasks;
+- (nullable NSMutableSet<Task*>*)defaultForTasksSet;
 
-@property (nonatomic, strong) NSSet *defaultForTasks;
+@property (nonatomic, strong, nullable) NSSet<TimeEntry*> *usedForEntries;
+- (nullable NSMutableSet<TimeEntry*>*)usedForEntriesSet;
 
-- (NSMutableSet*)defaultForTasksSet;
-
-@property (nonatomic, strong) NSSet *usedForEntries;
-
-- (NSMutableSet*)usedForEntriesSet;
-
-@property (nonatomic, strong) User *user;
-
-//- (BOOL)validateUser:(id*)value_ error:(NSError**)error_;
+@property (nonatomic, strong, nullable) User *user;
 
 @end
 
 @interface _Tag (DefaultForTasksCoreDataGeneratedAccessors)
-- (void)addDefaultForTasks:(NSSet*)value_;
-- (void)removeDefaultForTasks:(NSSet*)value_;
+- (void)addDefaultForTasks:(NSSet<Task*>*)value_;
+- (void)removeDefaultForTasks:(NSSet<Task*>*)value_;
 - (void)addDefaultForTasksObject:(Task*)value_;
 - (void)removeDefaultForTasksObject:(Task*)value_;
 
 @end
 
 @interface _Tag (UsedForEntriesCoreDataGeneratedAccessors)
-- (void)addUsedForEntries:(NSSet*)value_;
-- (void)removeUsedForEntries:(NSSet*)value_;
+- (void)addUsedForEntries:(NSSet<TimeEntry*>*)value_;
+- (void)removeUsedForEntries:(NSSet<TimeEntry*>*)value_;
 - (void)addUsedForEntriesObject:(TimeEntry*)value_;
 - (void)removeUsedForEntriesObject:(TimeEntry*)value_;
 
@@ -65,13 +51,25 @@ extern const struct TagRelationships {
 - (NSString*)primitiveValue;
 - (void)setPrimitiveValue:(NSString*)value;
 
-- (NSMutableSet*)primitiveDefaultForTasks;
-- (void)setPrimitiveDefaultForTasks:(NSMutableSet*)value;
+- (NSMutableSet<Task*>*)primitiveDefaultForTasks;
+- (void)setPrimitiveDefaultForTasks:(NSMutableSet<Task*>*)value;
 
-- (NSMutableSet*)primitiveUsedForEntries;
-- (void)setPrimitiveUsedForEntries:(NSMutableSet*)value;
+- (NSMutableSet<TimeEntry*>*)primitiveUsedForEntries;
+- (void)setPrimitiveUsedForEntries:(NSMutableSet<TimeEntry*>*)value;
 
 - (User*)primitiveUser;
 - (void)setPrimitiveUser:(User*)value;
 
 @end
+
+@interface TagAttributes: NSObject 
++ (NSString *)value;
+@end
+
+@interface TagRelationships: NSObject
++ (NSString *)defaultForTasks;
++ (NSString *)usedForEntries;
++ (NSString *)user;
+@end
+
+NS_ASSUME_NONNULL_END

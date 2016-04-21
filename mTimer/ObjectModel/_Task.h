@@ -1,23 +1,9 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
 // Make changes to Task.h instead.
 
-#import <CoreData/CoreData.h>
+@import CoreData;
 
-extern const struct TaskAttributes {
-	__unsafe_unretained NSString *complete;
-	__unsafe_unretained NSString *hidden;
-	__unsafe_unretained NSString *name;
-	__unsafe_unretained NSString *taskId;
-	__unsafe_unretained NSString *temporary;
-	__unsafe_unretained NSString *touchedAt;
-} TaskAttributes;
-
-extern const struct TaskRelationships {
-	__unsafe_unretained NSString *defaultTags;
-	__unsafe_unretained NSString *syncStatus;
-	__unsafe_unretained NSString *timeEntry;
-	__unsafe_unretained NSString *user;
-} TaskRelationships;
+NS_ASSUME_NONNULL_BEGIN
 
 @class Tag;
 @class SyncStatus;
@@ -27,11 +13,11 @@ extern const struct TaskRelationships {
 @interface TaskID : NSManagedObjectID {}
 @end
 
-@interface _Task : NSManagedObject {}
-+ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
+@interface _Task : NSManagedObject
++ (instancetype)insertInManagedObjectContext:(NSManagedObjectContext *)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
-@property (nonatomic, readonly, strong) TaskID* objectID;
+@property (nonatomic, readonly, strong) TaskID*objectID;
 
 @property (nonatomic, strong) NSNumber* complete;
 
@@ -39,27 +25,19 @@ extern const struct TaskRelationships {
 - (BOOL)completeValue;
 - (void)setCompleteValue:(BOOL)value_;
 
-//- (BOOL)validateComplete:(id*)value_ error:(NSError**)error_;
-
 @property (nonatomic, strong) NSNumber* hidden;
 
 @property (atomic) BOOL hiddenValue;
 - (BOOL)hiddenValue;
 - (void)setHiddenValue:(BOOL)value_;
 
-//- (BOOL)validateHidden:(id*)value_ error:(NSError**)error_;
-
 @property (nonatomic, strong) NSString* name;
 
-//- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
-
-@property (nonatomic, strong) NSNumber* taskId;
+@property (nonatomic, strong, nullable) NSNumber* taskId;
 
 @property (atomic) int32_t taskIdValue;
 - (int32_t)taskIdValue;
 - (void)setTaskIdValue:(int32_t)value_;
-
-//- (BOOL)validateTaskId:(id*)value_ error:(NSError**)error_;
 
 @property (nonatomic, strong) NSNumber* temporary;
 
@@ -67,41 +45,31 @@ extern const struct TaskRelationships {
 - (BOOL)temporaryValue;
 - (void)setTemporaryValue:(BOOL)value_;
 
-//- (BOOL)validateTemporary:(id*)value_ error:(NSError**)error_;
+@property (nonatomic, strong, nullable) NSDate* touchedAt;
 
-@property (nonatomic, strong) NSDate* touchedAt;
+@property (nonatomic, strong, nullable) NSSet<Tag*> *defaultTags;
+- (nullable NSMutableSet<Tag*>*)defaultTagsSet;
 
-//- (BOOL)validateTouchedAt:(id*)value_ error:(NSError**)error_;
+@property (nonatomic, strong, nullable) SyncStatus *syncStatus;
 
-@property (nonatomic, strong) NSSet *defaultTags;
+@property (nonatomic, strong, nullable) NSSet<TimeEntry*> *timeEntry;
+- (nullable NSMutableSet<TimeEntry*>*)timeEntrySet;
 
-- (NSMutableSet*)defaultTagsSet;
-
-@property (nonatomic, strong) SyncStatus *syncStatus;
-
-//- (BOOL)validateSyncStatus:(id*)value_ error:(NSError**)error_;
-
-@property (nonatomic, strong) NSSet *timeEntry;
-
-- (NSMutableSet*)timeEntrySet;
-
-@property (nonatomic, strong) User *user;
-
-//- (BOOL)validateUser:(id*)value_ error:(NSError**)error_;
+@property (nonatomic, strong, nullable) User *user;
 
 @end
 
 @interface _Task (DefaultTagsCoreDataGeneratedAccessors)
-- (void)addDefaultTags:(NSSet*)value_;
-- (void)removeDefaultTags:(NSSet*)value_;
+- (void)addDefaultTags:(NSSet<Tag*>*)value_;
+- (void)removeDefaultTags:(NSSet<Tag*>*)value_;
 - (void)addDefaultTagsObject:(Tag*)value_;
 - (void)removeDefaultTagsObject:(Tag*)value_;
 
 @end
 
 @interface _Task (TimeEntryCoreDataGeneratedAccessors)
-- (void)addTimeEntry:(NSSet*)value_;
-- (void)removeTimeEntry:(NSSet*)value_;
+- (void)addTimeEntry:(NSSet<TimeEntry*>*)value_;
+- (void)removeTimeEntry:(NSSet<TimeEntry*>*)value_;
 - (void)addTimeEntryObject:(TimeEntry*)value_;
 - (void)removeTimeEntryObject:(TimeEntry*)value_;
 
@@ -139,16 +107,34 @@ extern const struct TaskRelationships {
 - (NSDate*)primitiveTouchedAt;
 - (void)setPrimitiveTouchedAt:(NSDate*)value;
 
-- (NSMutableSet*)primitiveDefaultTags;
-- (void)setPrimitiveDefaultTags:(NSMutableSet*)value;
+- (NSMutableSet<Tag*>*)primitiveDefaultTags;
+- (void)setPrimitiveDefaultTags:(NSMutableSet<Tag*>*)value;
 
 - (SyncStatus*)primitiveSyncStatus;
 - (void)setPrimitiveSyncStatus:(SyncStatus*)value;
 
-- (NSMutableSet*)primitiveTimeEntry;
-- (void)setPrimitiveTimeEntry:(NSMutableSet*)value;
+- (NSMutableSet<TimeEntry*>*)primitiveTimeEntry;
+- (void)setPrimitiveTimeEntry:(NSMutableSet<TimeEntry*>*)value;
 
 - (User*)primitiveUser;
 - (void)setPrimitiveUser:(User*)value;
 
 @end
+
+@interface TaskAttributes: NSObject 
++ (NSString *)complete;
++ (NSString *)hidden;
++ (NSString *)name;
++ (NSString *)taskId;
++ (NSString *)temporary;
++ (NSString *)touchedAt;
+@end
+
+@interface TaskRelationships: NSObject
++ (NSString *)defaultTags;
++ (NSString *)syncStatus;
++ (NSString *)timeEntry;
++ (NSString *)user;
+@end
+
+NS_ASSUME_NONNULL_END

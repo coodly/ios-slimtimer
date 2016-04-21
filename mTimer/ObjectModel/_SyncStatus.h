@@ -1,18 +1,9 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
 // Make changes to SyncStatus.h instead.
 
-#import <CoreData/CoreData.h>
+@import CoreData;
 
-extern const struct SyncStatusAttributes {
-	__unsafe_unretained NSString *createdAt;
-	__unsafe_unretained NSString *syncFailed;
-	__unsafe_unretained NSString *syncNeeded;
-} SyncStatusAttributes;
-
-extern const struct SyncStatusRelationships {
-	__unsafe_unretained NSString *statusForEntry;
-	__unsafe_unretained NSString *statusForTask;
-} SyncStatusRelationships;
+NS_ASSUME_NONNULL_BEGIN
 
 @class TimeEntry;
 @class Task;
@@ -20,15 +11,13 @@ extern const struct SyncStatusRelationships {
 @interface SyncStatusID : NSManagedObjectID {}
 @end
 
-@interface _SyncStatus : NSManagedObject {}
-+ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
+@interface _SyncStatus : NSManagedObject
++ (instancetype)insertInManagedObjectContext:(NSManagedObjectContext *)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
-@property (nonatomic, readonly, strong) SyncStatusID* objectID;
+@property (nonatomic, readonly, strong) SyncStatusID*objectID;
 
-@property (nonatomic, strong) NSDate* createdAt;
-
-//- (BOOL)validateCreatedAt:(id*)value_ error:(NSError**)error_;
+@property (nonatomic, strong, nullable) NSDate* createdAt;
 
 @property (nonatomic, strong) NSNumber* syncFailed;
 
@@ -36,23 +25,15 @@ extern const struct SyncStatusRelationships {
 - (BOOL)syncFailedValue;
 - (void)setSyncFailedValue:(BOOL)value_;
 
-//- (BOOL)validateSyncFailed:(id*)value_ error:(NSError**)error_;
-
 @property (nonatomic, strong) NSNumber* syncNeeded;
 
 @property (atomic) BOOL syncNeededValue;
 - (BOOL)syncNeededValue;
 - (void)setSyncNeededValue:(BOOL)value_;
 
-//- (BOOL)validateSyncNeeded:(id*)value_ error:(NSError**)error_;
+@property (nonatomic, strong, nullable) TimeEntry *statusForEntry;
 
-@property (nonatomic, strong) TimeEntry *statusForEntry;
-
-//- (BOOL)validateStatusForEntry:(id*)value_ error:(NSError**)error_;
-
-@property (nonatomic, strong) Task *statusForTask;
-
-//- (BOOL)validateStatusForTask:(id*)value_ error:(NSError**)error_;
+@property (nonatomic, strong, nullable) Task *statusForTask;
 
 @end
 
@@ -80,3 +61,16 @@ extern const struct SyncStatusRelationships {
 - (void)setPrimitiveStatusForTask:(Task*)value;
 
 @end
+
+@interface SyncStatusAttributes: NSObject 
++ (NSString *)createdAt;
++ (NSString *)syncFailed;
++ (NSString *)syncNeeded;
+@end
+
+@interface SyncStatusRelationships: NSObject
++ (NSString *)statusForEntry;
++ (NSString *)statusForTask;
+@end
+
+NS_ASSUME_NONNULL_END

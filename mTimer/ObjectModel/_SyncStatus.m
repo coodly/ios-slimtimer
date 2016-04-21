@@ -3,23 +3,12 @@
 
 #import "_SyncStatus.h"
 
-const struct SyncStatusAttributes SyncStatusAttributes = {
-	.createdAt = @"createdAt",
-	.syncFailed = @"syncFailed",
-	.syncNeeded = @"syncNeeded",
-};
-
-const struct SyncStatusRelationships SyncStatusRelationships = {
-	.statusForEntry = @"statusForEntry",
-	.statusForTask = @"statusForTask",
-};
-
 @implementation SyncStatusID
 @end
 
 @implementation _SyncStatus
 
-+ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_ {
++ (instancetype)insertInManagedObjectContext:(NSManagedObjectContext *)moc_ {
 	NSParameterAssert(moc_);
 	return [NSEntityDescription insertNewObjectForEntityForName:@"SyncStatus" inManagedObjectContext:moc_];
 }
@@ -64,7 +53,7 @@ const struct SyncStatusRelationships SyncStatusRelationships = {
 }
 
 - (void)setSyncFailedValue:(BOOL)value_ {
-	[self setSyncFailed:[NSNumber numberWithBool:value_]];
+	[self setSyncFailed:@(value_)];
 }
 
 - (BOOL)primitiveSyncFailedValue {
@@ -73,7 +62,7 @@ const struct SyncStatusRelationships SyncStatusRelationships = {
 }
 
 - (void)setPrimitiveSyncFailedValue:(BOOL)value_ {
-	[self setPrimitiveSyncFailed:[NSNumber numberWithBool:value_]];
+	[self setPrimitiveSyncFailed:@(value_)];
 }
 
 @dynamic syncNeeded;
@@ -84,7 +73,7 @@ const struct SyncStatusRelationships SyncStatusRelationships = {
 }
 
 - (void)setSyncNeededValue:(BOOL)value_ {
-	[self setSyncNeeded:[NSNumber numberWithBool:value_]];
+	[self setSyncNeeded:@(value_)];
 }
 
 - (BOOL)primitiveSyncNeededValue {
@@ -93,12 +82,33 @@ const struct SyncStatusRelationships SyncStatusRelationships = {
 }
 
 - (void)setPrimitiveSyncNeededValue:(BOOL)value_ {
-	[self setPrimitiveSyncNeeded:[NSNumber numberWithBool:value_]];
+	[self setPrimitiveSyncNeeded:@(value_)];
 }
 
 @dynamic statusForEntry;
 
 @dynamic statusForTask;
 
+@end
+
+@implementation SyncStatusAttributes 
++ (NSString *)createdAt {
+	return @"createdAt";
+}
++ (NSString *)syncFailed {
+	return @"syncFailed";
+}
++ (NSString *)syncNeeded {
+	return @"syncNeeded";
+}
+@end
+
+@implementation SyncStatusRelationships 
++ (NSString *)statusForEntry {
+	return @"statusForEntry";
+}
++ (NSString *)statusForTask {
+	return @"statusForTask";
+}
 @end
 

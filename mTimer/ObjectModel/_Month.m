@@ -3,21 +3,12 @@
 
 #import "_Month.h"
 
-const struct MonthAttributes MonthAttributes = {
-	.value = @"value",
-};
-
-const struct MonthRelationships MonthRelationships = {
-	.days = @"days",
-	.year = @"year",
-};
-
 @implementation MonthID
 @end
 
 @implementation _Month
 
-+ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_ {
++ (instancetype)insertInManagedObjectContext:(NSManagedObjectContext *)moc_ {
 	NSParameterAssert(moc_);
 	return [NSEntityDescription insertNewObjectForEntityForName:@"Month" inManagedObjectContext:moc_];
 }
@@ -55,7 +46,7 @@ const struct MonthRelationships MonthRelationships = {
 }
 
 - (void)setValueValue:(int32_t)value_ {
-	[self setValue:[NSNumber numberWithInt:value_]];
+	[self setValue:@(value_)];
 }
 
 - (int32_t)primitiveValueValue {
@@ -64,15 +55,15 @@ const struct MonthRelationships MonthRelationships = {
 }
 
 - (void)setPrimitiveValueValue:(int32_t)value_ {
-	[self setPrimitiveValue:[NSNumber numberWithInt:value_]];
+	[self setPrimitiveValue:@(value_)];
 }
 
 @dynamic days;
 
-- (NSMutableSet*)daysSet {
+- (NSMutableSet<Day*>*)daysSet {
 	[self willAccessValueForKey:@"days"];
 
-	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"days"];
+	NSMutableSet<Day*> *result = (NSMutableSet<Day*>*)[self mutableSetValueForKey:@"days"];
 
 	[self didAccessValueForKey:@"days"];
 	return result;
@@ -80,5 +71,20 @@ const struct MonthRelationships MonthRelationships = {
 
 @dynamic year;
 
+@end
+
+@implementation MonthAttributes 
++ (NSString *)value {
+	return @"value";
+}
+@end
+
+@implementation MonthRelationships 
++ (NSString *)days {
+	return @"days";
+}
++ (NSString *)year {
+	return @"year";
+}
 @end
 

@@ -1,22 +1,9 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
 // Make changes to TimeEntry.h instead.
 
-#import <CoreData/CoreData.h>
+@import CoreData;
 
-extern const struct TimeEntryAttributes {
-	__unsafe_unretained NSString *comment;
-	__unsafe_unretained NSString *endTime;
-	__unsafe_unretained NSString *markedForDeletion;
-	__unsafe_unretained NSString *remoteId;
-	__unsafe_unretained NSString *startTime;
-	__unsafe_unretained NSString *touchedAt;
-} TimeEntryAttributes;
-
-extern const struct TimeEntryRelationships {
-	__unsafe_unretained NSString *syncStatus;
-	__unsafe_unretained NSString *tags;
-	__unsafe_unretained NSString *task;
-} TimeEntryRelationships;
+NS_ASSUME_NONNULL_BEGIN
 
 @class SyncStatus;
 @class Tag;
@@ -25,19 +12,15 @@ extern const struct TimeEntryRelationships {
 @interface TimeEntryID : NSManagedObjectID {}
 @end
 
-@interface _TimeEntry : NSManagedObject {}
-+ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
+@interface _TimeEntry : NSManagedObject
++ (instancetype)insertInManagedObjectContext:(NSManagedObjectContext *)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
-@property (nonatomic, readonly, strong) TimeEntryID* objectID;
+@property (nonatomic, readonly, strong) TimeEntryID*objectID;
 
-@property (nonatomic, strong) NSString* comment;
+@property (nonatomic, strong, nullable) NSString* comment;
 
-//- (BOOL)validateComment:(id*)value_ error:(NSError**)error_;
-
-@property (nonatomic, strong) NSDate* endTime;
-
-//- (BOOL)validateEndTime:(id*)value_ error:(NSError**)error_;
+@property (nonatomic, strong, nullable) NSDate* endTime;
 
 @property (nonatomic, strong) NSNumber* markedForDeletion;
 
@@ -45,41 +28,28 @@ extern const struct TimeEntryRelationships {
 - (BOOL)markedForDeletionValue;
 - (void)setMarkedForDeletionValue:(BOOL)value_;
 
-//- (BOOL)validateMarkedForDeletion:(id*)value_ error:(NSError**)error_;
-
-@property (nonatomic, strong) NSNumber* remoteId;
+@property (nonatomic, strong, nullable) NSNumber* remoteId;
 
 @property (atomic) int32_t remoteIdValue;
 - (int32_t)remoteIdValue;
 - (void)setRemoteIdValue:(int32_t)value_;
 
-//- (BOOL)validateRemoteId:(id*)value_ error:(NSError**)error_;
-
 @property (nonatomic, strong) NSDate* startTime;
 
-//- (BOOL)validateStartTime:(id*)value_ error:(NSError**)error_;
+@property (nonatomic, strong, nullable) NSDate* touchedAt;
 
-@property (nonatomic, strong) NSDate* touchedAt;
+@property (nonatomic, strong, nullable) SyncStatus *syncStatus;
 
-//- (BOOL)validateTouchedAt:(id*)value_ error:(NSError**)error_;
+@property (nonatomic, strong, nullable) NSSet<Tag*> *tags;
+- (nullable NSMutableSet<Tag*>*)tagsSet;
 
-@property (nonatomic, strong) SyncStatus *syncStatus;
-
-//- (BOOL)validateSyncStatus:(id*)value_ error:(NSError**)error_;
-
-@property (nonatomic, strong) NSSet *tags;
-
-- (NSMutableSet*)tagsSet;
-
-@property (nonatomic, strong) Task *task;
-
-//- (BOOL)validateTask:(id*)value_ error:(NSError**)error_;
+@property (nonatomic, strong, nullable) Task *task;
 
 @end
 
 @interface _TimeEntry (TagsCoreDataGeneratedAccessors)
-- (void)addTags:(NSSet*)value_;
-- (void)removeTags:(NSSet*)value_;
+- (void)addTags:(NSSet<Tag*>*)value_;
+- (void)removeTags:(NSSet<Tag*>*)value_;
 - (void)addTagsObject:(Tag*)value_;
 - (void)removeTagsObject:(Tag*)value_;
 
@@ -114,10 +84,27 @@ extern const struct TimeEntryRelationships {
 - (SyncStatus*)primitiveSyncStatus;
 - (void)setPrimitiveSyncStatus:(SyncStatus*)value;
 
-- (NSMutableSet*)primitiveTags;
-- (void)setPrimitiveTags:(NSMutableSet*)value;
+- (NSMutableSet<Tag*>*)primitiveTags;
+- (void)setPrimitiveTags:(NSMutableSet<Tag*>*)value;
 
 - (Task*)primitiveTask;
 - (void)setPrimitiveTask:(Task*)value;
 
 @end
+
+@interface TimeEntryAttributes: NSObject 
++ (NSString *)comment;
++ (NSString *)endTime;
++ (NSString *)markedForDeletion;
++ (NSString *)remoteId;
++ (NSString *)startTime;
++ (NSString *)touchedAt;
+@end
+
+@interface TimeEntryRelationships: NSObject
++ (NSString *)syncStatus;
++ (NSString *)tags;
++ (NSString *)task;
+@end
+
+NS_ASSUME_NONNULL_END

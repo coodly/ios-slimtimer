@@ -3,20 +3,12 @@
 
 #import "_Day.h"
 
-const struct DayAttributes DayAttributes = {
-	.value = @"value",
-};
-
-const struct DayRelationships DayRelationships = {
-	.month = @"month",
-};
-
 @implementation DayID
 @end
 
 @implementation _Day
 
-+ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_ {
++ (instancetype)insertInManagedObjectContext:(NSManagedObjectContext *)moc_ {
 	NSParameterAssert(moc_);
 	return [NSEntityDescription insertNewObjectForEntityForName:@"Day" inManagedObjectContext:moc_];
 }
@@ -54,7 +46,7 @@ const struct DayRelationships DayRelationships = {
 }
 
 - (void)setValueValue:(int32_t)value_ {
-	[self setValue:[NSNumber numberWithInt:value_]];
+	[self setValue:@(value_)];
 }
 
 - (int32_t)primitiveValueValue {
@@ -63,10 +55,22 @@ const struct DayRelationships DayRelationships = {
 }
 
 - (void)setPrimitiveValueValue:(int32_t)value_ {
-	[self setPrimitiveValue:[NSNumber numberWithInt:value_]];
+	[self setPrimitiveValue:@(value_)];
 }
 
 @dynamic month;
 
+@end
+
+@implementation DayAttributes 
++ (NSString *)value {
+	return @"value";
+}
+@end
+
+@implementation DayRelationships 
++ (NSString *)month {
+	return @"month";
+}
 @end
 

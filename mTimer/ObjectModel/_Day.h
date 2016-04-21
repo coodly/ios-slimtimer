@@ -1,38 +1,28 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
 // Make changes to Day.h instead.
 
-#import <CoreData/CoreData.h>
+@import CoreData;
 
-extern const struct DayAttributes {
-	__unsafe_unretained NSString *value;
-} DayAttributes;
-
-extern const struct DayRelationships {
-	__unsafe_unretained NSString *month;
-} DayRelationships;
+NS_ASSUME_NONNULL_BEGIN
 
 @class Month;
 
 @interface DayID : NSManagedObjectID {}
 @end
 
-@interface _Day : NSManagedObject {}
-+ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
+@interface _Day : NSManagedObject
++ (instancetype)insertInManagedObjectContext:(NSManagedObjectContext *)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
-@property (nonatomic, readonly, strong) DayID* objectID;
+@property (nonatomic, readonly, strong) DayID*objectID;
 
-@property (nonatomic, strong) NSNumber* value;
+@property (nonatomic, strong, nullable) NSNumber* value;
 
 @property (atomic) int32_t valueValue;
 - (int32_t)valueValue;
 - (void)setValueValue:(int32_t)value_;
 
-//- (BOOL)validateValue:(id*)value_ error:(NSError**)error_;
-
-@property (nonatomic, strong) Month *month;
-
-//- (BOOL)validateMonth:(id*)value_ error:(NSError**)error_;
+@property (nonatomic, strong, nullable) Month *month;
 
 @end
 
@@ -48,3 +38,13 @@ extern const struct DayRelationships {
 - (void)setPrimitiveMonth:(Month*)value;
 
 @end
+
+@interface DayAttributes: NSObject 
++ (NSString *)value;
+@end
+
+@interface DayRelationships: NSObject
++ (NSString *)month;
+@end
+
+NS_ASSUME_NONNULL_END

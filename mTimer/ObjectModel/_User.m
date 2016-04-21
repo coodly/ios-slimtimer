@@ -3,22 +3,12 @@
 
 #import "_User.h"
 
-const struct UserAttributes UserAttributes = {
-	.userId = @"userId",
-};
-
-const struct UserRelationships UserRelationships = {
-	.tags = @"tags",
-	.tasks = @"tasks",
-	.years = @"years",
-};
-
 @implementation UserID
 @end
 
 @implementation _User
 
-+ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_ {
++ (instancetype)insertInManagedObjectContext:(NSManagedObjectContext *)moc_ {
 	NSParameterAssert(moc_);
 	return [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:moc_];
 }
@@ -56,7 +46,7 @@ const struct UserRelationships UserRelationships = {
 }
 
 - (void)setUserIdValue:(int32_t)value_ {
-	[self setUserId:[NSNumber numberWithInt:value_]];
+	[self setUserId:@(value_)];
 }
 
 - (int32_t)primitiveUserIdValue {
@@ -65,15 +55,15 @@ const struct UserRelationships UserRelationships = {
 }
 
 - (void)setPrimitiveUserIdValue:(int32_t)value_ {
-	[self setPrimitiveUserId:[NSNumber numberWithInt:value_]];
+	[self setPrimitiveUserId:@(value_)];
 }
 
 @dynamic tags;
 
-- (NSMutableSet*)tagsSet {
+- (NSMutableSet<Tag*>*)tagsSet {
 	[self willAccessValueForKey:@"tags"];
 
-	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"tags"];
+	NSMutableSet<Tag*> *result = (NSMutableSet<Tag*>*)[self mutableSetValueForKey:@"tags"];
 
 	[self didAccessValueForKey:@"tags"];
 	return result;
@@ -81,10 +71,10 @@ const struct UserRelationships UserRelationships = {
 
 @dynamic tasks;
 
-- (NSMutableSet*)tasksSet {
+- (NSMutableSet<Task*>*)tasksSet {
 	[self willAccessValueForKey:@"tasks"];
 
-	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"tasks"];
+	NSMutableSet<Task*> *result = (NSMutableSet<Task*>*)[self mutableSetValueForKey:@"tasks"];
 
 	[self didAccessValueForKey:@"tasks"];
 	return result;
@@ -92,14 +82,32 @@ const struct UserRelationships UserRelationships = {
 
 @dynamic years;
 
-- (NSMutableSet*)yearsSet {
+- (NSMutableSet<Year*>*)yearsSet {
 	[self willAccessValueForKey:@"years"];
 
-	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"years"];
+	NSMutableSet<Year*> *result = (NSMutableSet<Year*>*)[self mutableSetValueForKey:@"years"];
 
 	[self didAccessValueForKey:@"years"];
 	return result;
 }
 
+@end
+
+@implementation UserAttributes 
++ (NSString *)userId {
+	return @"userId";
+}
+@end
+
+@implementation UserRelationships 
++ (NSString *)tags {
+	return @"tags";
+}
++ (NSString *)tasks {
+	return @"tasks";
+}
++ (NSString *)years {
+	return @"years";
+}
 @end
 

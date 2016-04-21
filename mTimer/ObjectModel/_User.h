@@ -1,17 +1,9 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
 // Make changes to User.h instead.
 
-#import <CoreData/CoreData.h>
+@import CoreData;
 
-extern const struct UserAttributes {
-	__unsafe_unretained NSString *userId;
-} UserAttributes;
-
-extern const struct UserRelationships {
-	__unsafe_unretained NSString *tags;
-	__unsafe_unretained NSString *tasks;
-	__unsafe_unretained NSString *years;
-} UserRelationships;
+NS_ASSUME_NONNULL_BEGIN
 
 @class Tag;
 @class Task;
@@ -20,11 +12,11 @@ extern const struct UserRelationships {
 @interface UserID : NSManagedObjectID {}
 @end
 
-@interface _User : NSManagedObject {}
-+ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
+@interface _User : NSManagedObject
++ (instancetype)insertInManagedObjectContext:(NSManagedObjectContext *)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
-@property (nonatomic, readonly, strong) UserID* objectID;
+@property (nonatomic, readonly, strong) UserID*objectID;
 
 @property (nonatomic, strong) NSNumber* userId;
 
@@ -32,41 +24,36 @@ extern const struct UserRelationships {
 - (int32_t)userIdValue;
 - (void)setUserIdValue:(int32_t)value_;
 
-//- (BOOL)validateUserId:(id*)value_ error:(NSError**)error_;
+@property (nonatomic, strong, nullable) NSSet<Tag*> *tags;
+- (nullable NSMutableSet<Tag*>*)tagsSet;
 
-@property (nonatomic, strong) NSSet *tags;
+@property (nonatomic, strong, nullable) NSSet<Task*> *tasks;
+- (nullable NSMutableSet<Task*>*)tasksSet;
 
-- (NSMutableSet*)tagsSet;
-
-@property (nonatomic, strong) NSSet *tasks;
-
-- (NSMutableSet*)tasksSet;
-
-@property (nonatomic, strong) NSSet *years;
-
-- (NSMutableSet*)yearsSet;
+@property (nonatomic, strong, nullable) NSSet<Year*> *years;
+- (nullable NSMutableSet<Year*>*)yearsSet;
 
 @end
 
 @interface _User (TagsCoreDataGeneratedAccessors)
-- (void)addTags:(NSSet*)value_;
-- (void)removeTags:(NSSet*)value_;
+- (void)addTags:(NSSet<Tag*>*)value_;
+- (void)removeTags:(NSSet<Tag*>*)value_;
 - (void)addTagsObject:(Tag*)value_;
 - (void)removeTagsObject:(Tag*)value_;
 
 @end
 
 @interface _User (TasksCoreDataGeneratedAccessors)
-- (void)addTasks:(NSSet*)value_;
-- (void)removeTasks:(NSSet*)value_;
+- (void)addTasks:(NSSet<Task*>*)value_;
+- (void)removeTasks:(NSSet<Task*>*)value_;
 - (void)addTasksObject:(Task*)value_;
 - (void)removeTasksObject:(Task*)value_;
 
 @end
 
 @interface _User (YearsCoreDataGeneratedAccessors)
-- (void)addYears:(NSSet*)value_;
-- (void)removeYears:(NSSet*)value_;
+- (void)addYears:(NSSet<Year*>*)value_;
+- (void)removeYears:(NSSet<Year*>*)value_;
 - (void)addYearsObject:(Year*)value_;
 - (void)removeYearsObject:(Year*)value_;
 
@@ -80,13 +67,25 @@ extern const struct UserRelationships {
 - (int32_t)primitiveUserIdValue;
 - (void)setPrimitiveUserIdValue:(int32_t)value_;
 
-- (NSMutableSet*)primitiveTags;
-- (void)setPrimitiveTags:(NSMutableSet*)value;
+- (NSMutableSet<Tag*>*)primitiveTags;
+- (void)setPrimitiveTags:(NSMutableSet<Tag*>*)value;
 
-- (NSMutableSet*)primitiveTasks;
-- (void)setPrimitiveTasks:(NSMutableSet*)value;
+- (NSMutableSet<Task*>*)primitiveTasks;
+- (void)setPrimitiveTasks:(NSMutableSet<Task*>*)value;
 
-- (NSMutableSet*)primitiveYears;
-- (void)setPrimitiveYears:(NSMutableSet*)value;
+- (NSMutableSet<Year*>*)primitiveYears;
+- (void)setPrimitiveYears:(NSMutableSet<Year*>*)value;
 
 @end
+
+@interface UserAttributes: NSObject 
++ (NSString *)userId;
+@end
+
+@interface UserRelationships: NSObject
++ (NSString *)tags;
++ (NSString *)tasks;
++ (NSString *)years;
+@end
+
+NS_ASSUME_NONNULL_END

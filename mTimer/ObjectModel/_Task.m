@@ -3,28 +3,12 @@
 
 #import "_Task.h"
 
-const struct TaskAttributes TaskAttributes = {
-	.complete = @"complete",
-	.hidden = @"hidden",
-	.name = @"name",
-	.taskId = @"taskId",
-	.temporary = @"temporary",
-	.touchedAt = @"touchedAt",
-};
-
-const struct TaskRelationships TaskRelationships = {
-	.defaultTags = @"defaultTags",
-	.syncStatus = @"syncStatus",
-	.timeEntry = @"timeEntry",
-	.user = @"user",
-};
-
 @implementation TaskID
 @end
 
 @implementation _Task
 
-+ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_ {
++ (instancetype)insertInManagedObjectContext:(NSManagedObjectContext *)moc_ {
 	NSParameterAssert(moc_);
 	return [NSEntityDescription insertNewObjectForEntityForName:@"Task" inManagedObjectContext:moc_];
 }
@@ -77,7 +61,7 @@ const struct TaskRelationships TaskRelationships = {
 }
 
 - (void)setCompleteValue:(BOOL)value_ {
-	[self setComplete:[NSNumber numberWithBool:value_]];
+	[self setComplete:@(value_)];
 }
 
 - (BOOL)primitiveCompleteValue {
@@ -86,7 +70,7 @@ const struct TaskRelationships TaskRelationships = {
 }
 
 - (void)setPrimitiveCompleteValue:(BOOL)value_ {
-	[self setPrimitiveComplete:[NSNumber numberWithBool:value_]];
+	[self setPrimitiveComplete:@(value_)];
 }
 
 @dynamic hidden;
@@ -97,7 +81,7 @@ const struct TaskRelationships TaskRelationships = {
 }
 
 - (void)setHiddenValue:(BOOL)value_ {
-	[self setHidden:[NSNumber numberWithBool:value_]];
+	[self setHidden:@(value_)];
 }
 
 - (BOOL)primitiveHiddenValue {
@@ -106,7 +90,7 @@ const struct TaskRelationships TaskRelationships = {
 }
 
 - (void)setPrimitiveHiddenValue:(BOOL)value_ {
-	[self setPrimitiveHidden:[NSNumber numberWithBool:value_]];
+	[self setPrimitiveHidden:@(value_)];
 }
 
 @dynamic name;
@@ -119,7 +103,7 @@ const struct TaskRelationships TaskRelationships = {
 }
 
 - (void)setTaskIdValue:(int32_t)value_ {
-	[self setTaskId:[NSNumber numberWithInt:value_]];
+	[self setTaskId:@(value_)];
 }
 
 - (int32_t)primitiveTaskIdValue {
@@ -128,7 +112,7 @@ const struct TaskRelationships TaskRelationships = {
 }
 
 - (void)setPrimitiveTaskIdValue:(int32_t)value_ {
-	[self setPrimitiveTaskId:[NSNumber numberWithInt:value_]];
+	[self setPrimitiveTaskId:@(value_)];
 }
 
 @dynamic temporary;
@@ -139,7 +123,7 @@ const struct TaskRelationships TaskRelationships = {
 }
 
 - (void)setTemporaryValue:(BOOL)value_ {
-	[self setTemporary:[NSNumber numberWithBool:value_]];
+	[self setTemporary:@(value_)];
 }
 
 - (BOOL)primitiveTemporaryValue {
@@ -148,17 +132,17 @@ const struct TaskRelationships TaskRelationships = {
 }
 
 - (void)setPrimitiveTemporaryValue:(BOOL)value_ {
-	[self setPrimitiveTemporary:[NSNumber numberWithBool:value_]];
+	[self setPrimitiveTemporary:@(value_)];
 }
 
 @dynamic touchedAt;
 
 @dynamic defaultTags;
 
-- (NSMutableSet*)defaultTagsSet {
+- (NSMutableSet<Tag*>*)defaultTagsSet {
 	[self willAccessValueForKey:@"defaultTags"];
 
-	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"defaultTags"];
+	NSMutableSet<Tag*> *result = (NSMutableSet<Tag*>*)[self mutableSetValueForKey:@"defaultTags"];
 
 	[self didAccessValueForKey:@"defaultTags"];
 	return result;
@@ -168,10 +152,10 @@ const struct TaskRelationships TaskRelationships = {
 
 @dynamic timeEntry;
 
-- (NSMutableSet*)timeEntrySet {
+- (NSMutableSet<TimeEntry*>*)timeEntrySet {
 	[self willAccessValueForKey:@"timeEntry"];
 
-	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"timeEntry"];
+	NSMutableSet<TimeEntry*> *result = (NSMutableSet<TimeEntry*>*)[self mutableSetValueForKey:@"timeEntry"];
 
 	[self didAccessValueForKey:@"timeEntry"];
 	return result;
@@ -179,5 +163,41 @@ const struct TaskRelationships TaskRelationships = {
 
 @dynamic user;
 
+@end
+
+@implementation TaskAttributes 
++ (NSString *)complete {
+	return @"complete";
+}
++ (NSString *)hidden {
+	return @"hidden";
+}
++ (NSString *)name {
+	return @"name";
+}
++ (NSString *)taskId {
+	return @"taskId";
+}
++ (NSString *)temporary {
+	return @"temporary";
+}
++ (NSString *)touchedAt {
+	return @"touchedAt";
+}
+@end
+
+@implementation TaskRelationships 
++ (NSString *)defaultTags {
+	return @"defaultTags";
+}
++ (NSString *)syncStatus {
+	return @"syncStatus";
+}
++ (NSString *)timeEntry {
+	return @"timeEntry";
+}
++ (NSString *)user {
+	return @"user";
+}
 @end
 
