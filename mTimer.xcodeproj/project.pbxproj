@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CF2DD76C022E0DF49A2C0762 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027DB11FB1F18740FF6148F7 /* Pods.framework */; };
+		45B90CCEC77038A364865218 /* Pods_mTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDFBDD873B7CE9FE06D792F /* Pods_mTimer.framework */; };
 		EA00792F18657BFD00D16DFD /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA00792E18657BFD00D16DFD /* HistoryViewController.m */; };
 		EA0079341865880500D16DFD /* DayEntriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0079331865880500D16DFD /* DayEntriesViewController.m */; };
 		EA00793718658AB200D16DFD /* NSDate+Calculations.m in Sources */ = {isa = PBXBuildFile; fileRef = EA00793618658AB200D16DFD /* NSDate+Calculations.m */; };
@@ -172,11 +172,9 @@
 
 /* Begin PBXFileReference section */
 		027DB11FB1F18740FF6148F7 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4BEF8A6DE3D22A202A60B67A /* Pods-mTimerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mTimerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mTimerTests/Pods-mTimerTests.release.xcconfig"; sourceTree = "<group>"; };
-		537D801AC1204340BB8D840F /* libPods-mTimerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mTimerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		908F3A031B7AF9CB35FD47A7 /* Pods-mTimerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mTimerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mTimerTests/Pods-mTimerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9D5B6E6B3EC21626A4E94869 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		B7B8335A2EB462207BE33413 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		11C628C76CDB74E2650D64B6 /* Pods-mTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mTimer.release.xcconfig"; path = "Pods/Target Support Files/Pods-mTimer/Pods-mTimer.release.xcconfig"; sourceTree = "<group>"; };
+		BEDFBDD873B7CE9FE06D792F /* Pods_mTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA7F1AC2A9FFB69D25965BB1 /* Pods-mTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mTimer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mTimer/Pods-mTimer.debug.xcconfig"; sourceTree = "<group>"; };
 		EA00792D18657BFD00D16DFD /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
 		EA00792E18657BFD00D16DFD /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
 		EA0079321865880500D16DFD /* DayEntriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayEntriesViewController.h; sourceTree = "<group>"; };
@@ -488,20 +486,18 @@
 				EA96C58A1861735600CA40C2 /* CoreGraphics.framework in Frameworks */,
 				EA96C58E1861735600CA40C2 /* CoreData.framework in Frameworks */,
 				EA96C5881861735600CA40C2 /* Foundation.framework in Frameworks */,
-				CF2DD76C022E0DF49A2C0762 /* Pods.framework in Frameworks */,
+				45B90CCEC77038A364865218 /* Pods_mTimer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		83815433987714F3EC7F47FC /* Pods */ = {
+		9C1D2F9DB6063CEC3362D2F4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9D5B6E6B3EC21626A4E94869 /* Pods.debug.xcconfig */,
-				B7B8335A2EB462207BE33413 /* Pods.release.xcconfig */,
-				908F3A031B7AF9CB35FD47A7 /* Pods-mTimerTests.debug.xcconfig */,
-				4BEF8A6DE3D22A202A60B67A /* Pods-mTimerTests.release.xcconfig */,
+				DA7F1AC2A9FFB69D25965BB1 /* Pods-mTimer.debug.xcconfig */,
+				11C628C76CDB74E2650D64B6 /* Pods-mTimer.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -533,8 +529,8 @@
 				EA96C58F1861735600CA40C2 /* mTimer */,
 				EA96C5861861735600CA40C2 /* Frameworks */,
 				EA96C5851861735600CA40C2 /* Products */,
-				83815433987714F3EC7F47FC /* Pods */,
 				EA77A7A91A0267AF0082E411 /* Thirdparty */,
+				9C1D2F9DB6063CEC3362D2F4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -561,8 +557,8 @@
 				EA96C58B1861735600CA40C2 /* UIKit.framework */,
 				EA96C58D1861735600CA40C2 /* CoreData.framework */,
 				EA96C5A51861735600CA40C2 /* XCTest.framework */,
-				537D801AC1204340BB8D840F /* libPods-mTimerTests.a */,
 				027DB11FB1F18740FF6148F7 /* Pods.framework */,
+				BEDFBDD873B7CE9FE06D792F /* Pods_mTimer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -974,15 +970,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA96C5B61861735600CA40C2 /* Build configuration list for PBXNativeTarget "mTimer" */;
 			buildPhases = (
-				593802E46A3246888C6968A0 /* Check Pods Manifest.lock */,
+				DA862CC859349ED26DAE68FA /* [CP] Check Pods Manifest.lock */,
 				EAB83FB6186333AD00FB6605 /* Language check */,
 				EA96C5C11861777000CA40C2 /* mogenerator */,
 				EA96C5801861735600CA40C2 /* Sources */,
 				EA96C5811861735600CA40C2 /* Frameworks */,
 				EA96C5821861735600CA40C2 /* Resources */,
-				A1CEA1E6B26A4337B060149F /* Copy Pods Resources */,
 				EAC074321BA0076000113703 /* Crashlytics */,
-				EC841997DBF3D965633D0692 /* Embed Pods Frameworks */,
+				0A1B6EE3C04D2C8F3AE21E0A /* [CP] Embed Pods Frameworks */,
+				DD05A385A44183CBC78F215A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1064,14 +1060,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		593802E46A3246888C6968A0 /* Check Pods Manifest.lock */ = {
+		0A1B6EE3C04D2C8F3AE21E0A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mTimer/Pods-mTimer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA862CC859349ED26DAE68FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1079,19 +1090,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		A1CEA1E6B26A4337B060149F /* Copy Pods Resources */ = {
+		DD05A385A44183CBC78F215A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mTimer/Pods-mTimer-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EA96C5C11861777000CA40C2 /* mogenerator */ = {
@@ -1135,21 +1146,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 1498b1e841189deded0a8957a47057c88a75503b 84939d122fb533ac07e3e9b3d0fb8601e68f89a868e9f5889891d1a6684b0d72";
-		};
-		EC841997DBF3D965633D0692 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1377,7 +1373,7 @@
 		};
 		EA96C5B71861735600CA40C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D5B6E6B3EC21626A4E94869 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = DA7F1AC2A9FFB69D25965BB1 /* Pods-mTimer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1438,7 +1434,7 @@
 		};
 		EA96C5B81861735600CA40C2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7B8335A2EB462207BE33413 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 11C628C76CDB74E2650D64B6 /* Pods-mTimer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

@@ -15,6 +15,12 @@
     "file": "LICENSE.txt"
   },
   "requires_arc": true,
+  "platforms": {
+    "osx": null,
+    "ios": null,
+    "tvos": null,
+    "watchos": null
+  },
   "subspecs": [
     {
       "name": "Core",
